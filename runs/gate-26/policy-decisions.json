@@ -1,0 +1,49 @@
+{
+  "without_approval": {
+    "action_id": "action-refund-1",
+    "outcome": "pending",
+    "reason": "parameter-bound approval required",
+    "policy_version": "action-policy-v1",
+    "evidence_ids": [
+      "obs-order",
+      "obs-identity"
+    ],
+    "conflict_ids": []
+  },
+  "with_approval": {
+    "action_id": "action-refund-1",
+    "outcome": "allowed",
+    "reason": "valid parameter-bound approval",
+    "policy_version": "action-policy-v1",
+    "evidence_ids": [
+      "obs-order",
+      "obs-identity"
+    ],
+    "conflict_ids": [],
+    "approval_id": "approval-88"
+  },
+  "mutated_parameters": {
+    "action_id": "action-refund-mutated",
+    "outcome": "denied",
+    "reason": "approval scope mismatch",
+    "policy_version": "action-policy-v1",
+    "evidence_ids": [
+      "obs-order",
+      "obs-identity"
+    ],
+    "conflict_ids": []
+  },
+  "open_conflict": {
+    "action_id": "action-lock-1",
+    "outcome": "denied",
+    "reason": "open evidence conflict",
+    "policy_version": "action-policy-v1",
+    "evidence_ids": [
+      "obs-camera-door",
+      "obs-reed-door"
+    ],
+    "conflict_ids": [
+      "conflict-door-0001"
+    ]
+  }
+}

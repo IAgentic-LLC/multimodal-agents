@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Temporal evidence comparison</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1200px; height: 700px; }
+    body { background: #f3f6fb; color: #14213d;
+      font: 20px Inter, Arial, sans-serif; padding: 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    .sub { color: #58677f; margin: 0 0 34px; }
+    .timeline { display: grid; grid-template-columns: 1fr 90px 1fr;
+      align-items: center; }
+    .frame { background: white; border: 1px solid #ccd5e3;
+      border-radius: 14px; overflow: hidden; }
+    .label { display: flex; justify-content: space-between; padding: 14px 18px;
+      font-weight: 700; }
+    img { display: block; width: 100%; }
+    .arrow { color: #3767d6; font-size: 58px; text-align: center; }
+    .answers { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      margin-top: 28px; }
+    .answer { background: #14213d; border-radius: 12px; color: white;
+      padding: 18px 22px; }
+    .answer strong { color: #7de2d1; display: block; font-size: 22px;
+      margin-bottom: 5px; }
+  </style>
+  <style>
+    /* Flat editorial treatment for reproducible book figures. */
+    body { background: #f4f2eb !important; color: #1f2933 !important;
+      font-family: Arial, Helvetica, sans-serif !important; }
+    .card, .summary, article, figure, section, .panel, .result, .metric {
+      border-radius: 0 !important; box-shadow: none !important;
+      backdrop-filter: none !important; }
+    .card, article, figure, .panel, .result, .metric {
+      border-color: #9aa3ab !important; }
+    .summary, .card, .answer, .result { background: #fff !important;
+      color: #1f2933 !important; border: 1px solid #495057 !important; }
+    .summary strong, .card strong, .answer strong, .result strong {
+      color: #006b4f !important; }
+    .badge { border-radius: 2px !important; }
+    button { border-radius: 2px !important; box-shadow: none !important; }
+  </style>
+</head>
+<body>
+  <h1>An image has no before</h1>
+  <p class="sub">Motion is a relationship between observations, not a
+    property contained in one frame.</p>
+  <main class="timeline">
+    <section class="frame"><div class="label"><span>frame-001</span>
+      <span>0 ms</span></div><img src="temporal/frame-001.png"
+      alt="Red block on the left"></section>
+    <div class="arrow">→</div>
+    <section class="frame"><div class="label"><span>frame-002</span>
+      <span>1,000 ms</span></div><img src="temporal/frame-002.png"
+      alt="Red block on the right"></section>
+  </main>
+  <div class="answers"><div class="answer"><strong>One frame</strong>
+    insufficient_history · cites frame-002</div>
+    <div class="answer"><strong>Two frames</strong>
+    supported: moved right · cites frame-001 + frame-002</div></div>
+</body>
+</html>

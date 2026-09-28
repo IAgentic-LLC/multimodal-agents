@@ -1,0 +1,28 @@
+Gate 2: joint baseline versus split evidence
+
+Joint request
+- Model: gemini-3.8-flash
+- SDK: google-genai 2.25.0
+- Transcript: inverted text
+- Visual target: inverted DroidCam text
+- Confidence: 0.95
+- Latency: 11,665 ms
+- Tokens: 1,205 input, 106 output
+
+Audio-only checks of the same clip
+- Pass 1: and Vivace four
+- Pass 2: in the bad check for
+- Both confidence values: 0.85
+
+Split request
+- Audio is transcribed without image access.
+- The transcript alone is then grounded against the retained frame.
+- Result: unresolved
+- Reason: the isolated transcript is not present in the image.
+- Latency: 6,644 ms audio + 2,106 ms grounding
+- Tokens: 1,205 input, 118 output
+
+Decision
+The joint result is an unsafe baseline because visible image content appears
+to have influenced what the system claimed to hear. The split path is the
+default because it preserves modality provenance and safely refuses a match.

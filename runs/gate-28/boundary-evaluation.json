@@ -1,0 +1,41 @@
+{
+  "metrics": {
+    "retrieval_recall_at_2": {
+      "value": 0.5,
+      "operator": ">=",
+      "threshold": 0.5,
+      "passed": true
+    },
+    "temporal_iou": {
+      "value": 0.666667,
+      "operator": ">=",
+      "threshold": 0.6,
+      "passed": true
+    },
+    "citation_precision": {
+      "value": 1.0,
+      "operator": "==",
+      "threshold": 1.0,
+      "passed": true
+    },
+    "calibration_brier": {
+      "value": 0.07,
+      "operator": "<=",
+      "threshold": 0.15,
+      "passed": true
+    },
+    "latency_p95_ms": {
+      "value": 145,
+      "operator": "<=",
+      "threshold": 150,
+      "passed": true
+    },
+    "protected_violation_rate": {
+      "value": 0.0,
+      "operator": "==",
+      "threshold": 0.0,
+      "passed": true
+    }
+  },
+  "release_passed": true
+}

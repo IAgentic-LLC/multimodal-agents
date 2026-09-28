@@ -1,0 +1,17 @@
+{
+  "subject": "deploy-build",
+  "property": "actionable",
+  "observations": [
+    {"source": "pixels", "value": "false", "revision": "frame-184"},
+    {"source": "dom", "value": "true", "revision": "dom-912"},
+    {"source": "accessibility", "value": "true", "revision": "ax-912"},
+    {"source": "api", "value": "false", "revision": "release-42"}
+  ],
+  "status": "conflicted",
+  "action_allowed": false,
+  "source_records_retained": 4,
+  "validation": {
+    "python_tests_passed": 39,
+    "playwright_tests_passed": 8
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "action": "deploy-build",
+  "observed_revision": "rev-41",
+  "current_revision": "rev-42",
+  "initial_decision": {
+    "status": "rejected",
+    "reason": "target revision is stale"
+  },
+  "refreshed_decision": {
+    "status": "allowed",
+    "reason": "all preconditions hold"
+  },
+  "postcondition": {
+    "before_revision": "release-42",
+    "after_revision": "release-43",
+    "expected_status": "deployed",
+    "observed_status": "deployed",
+    "status": "proved"
+  },
+  "validation": {
+    "python_tests_passed": 44,
+    "playwright_tests_passed": 9
+  }
+}

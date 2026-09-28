@@ -1,0 +1,12 @@
+test_identical_regions_have_full_overlap ... ok
+test_memory_retains_inspectable_evidence ... ok
+test_wrong_frame_is_a_protected_violation ... ok
+
+Ran 3 tests in 0.027s
+
+OK
+object correct: True
+frame correct:  True
+region IoU:    1.00
+memory found:  True
+violations:    0

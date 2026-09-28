@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incident latency fixture</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1200px; height: 800px; }
+    body {
+      background: #f3f6fb;
+      color: #15213b;
+      font: 22px/1.35 Inter, Arial, sans-serif;
+      padding: 48px 60px;
+    }
+    h1 { font-size: 38px; margin: 0 0 8px; }
+    .subtitle { color: #53627d; margin: 0 0 34px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .card {
+      background: white;
+      border: 1px solid #ccd5e3;
+      border-radius: 14px;
+      box-shadow: 0 8px 26px rgb(31 50 81 / 8%);
+      height: 500px;
+      padding: 28px;
+    }
+    h2 { font-size: 27px; margin: 0 0 24px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border-bottom: 1px solid #dce3ed; padding: 16px 8px; }
+    th { color: #53627d; font-size: 18px; text-align: left; }
+    td:last-child, th:last-child { text-align: right; }
+    .chart { display: flex; height: 330px; gap: 42px; align-items: end; }
+    .bar-group { flex: 1; text-align: center; }
+    .value { font-weight: 700; margin-bottom: 8px; }
+    .bar { border-radius: 8px 8px 0 0; margin: auto; width: 94px; }
+    .blue { background: #3767d6; height: 117px; }
+    .amber { background: #e69b2e; height: 265px; }
+    .label { color: #53627d; font-size: 18px; margin-top: 10px; }
+    .note { color: #53627d; font-size: 17px; margin-top: 24px; }
+  </style>
+  <style>
+    /* Flat editorial treatment for reproducible book figures. */
+    body { background: #f4f2eb !important; color: #1f2933 !important;
+      font-family: Arial, Helvetica, sans-serif !important; }
+    .card, .summary, article, figure, section, .panel, .result, .metric {
+      border-radius: 0 !important; box-shadow: none !important;
+      backdrop-filter: none !important; }
+    .card, article, figure, .panel, .result, .metric {
+      border-color: #9aa3ab !important; }
+    .summary, .card, .answer, .result { background: #fff !important;
+      color: #1f2933 !important; border: 1px solid #495057 !important; }
+    .summary strong, .card strong, .answer strong, .result strong {
+      color: #006b4f !important; }
+    .badge { border-radius: 2px !important; }
+    button { border-radius: 2px !important; box-shadow: none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Checkout incident review</h1>
+    <p class="subtitle">The chart and table describe the same two services.</p>
+    <section class="grid">
+      <article class="card" id="table-card">
+        <h2>Measured latency</h2>
+        <table aria-label="Measured latency by service">
+          <thead><tr><th>Service</th><th>p95 latency</th></tr></thead>
+          <tbody>
+            <tr><td>Catalog</td><td>180 ms</td></tr>
+            <tr><td>Checkout</td><td>410 ms</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Threshold: 300 ms. Checkout exceeds it.</p>
+      </article>
+      <figure class="card" id="chart-card">
+        <h2>p95 latency by service</h2>
+        <div class="chart" aria-label="Bar chart of p95 latency">
+          <div class="bar-group">
+            <div class="value">180</div>
+            <div class="bar blue"></div>
+            <div class="label">Catalog</div>
+          </div>
+          <div class="bar-group">
+            <div class="value">410</div>
+            <div class="bar amber"></div>
+            <div class="label">Checkout</div>
+          </div>
+        </div>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

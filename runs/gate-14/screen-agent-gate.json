@@ -1,0 +1,30 @@
+{
+  "successful_scenario": {
+    "action_id": "action-001",
+    "permission": "release.deploy",
+    "approval_id": "approval-7",
+    "sandbox_before": "release-42 ready",
+    "sandbox_after": "release-43 deployed",
+    "events": [
+      "action.requested",
+      "action.executed",
+      "postcondition.proved"
+    ]
+  },
+  "refusal_scenario": {
+    "observed_revision": "rev-41",
+    "current_revision": "rev-42",
+    "result": "refused",
+    "reason": "target revision is stale",
+    "side_effects": 0
+  },
+  "recovery": {
+    "same_action_id_replayed": true,
+    "duplicate_side_effects": 0,
+    "event": "action.recovered"
+  },
+  "validation": {
+    "python_tests_passed": 48,
+    "playwright_tests_passed": 10
+  }
+}

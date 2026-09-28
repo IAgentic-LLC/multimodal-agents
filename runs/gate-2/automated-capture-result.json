@@ -1,0 +1,78 @@
+{
+  "provider_trace": {
+    "input_tokens": 1205,
+    "latency_ms": 11665,
+    "model": "gemini-3.8-flash",
+    "output_tokens": 106,
+    "provider": "google",
+    "response": {
+      "bottom": 0.6,
+      "confidence": 0.95,
+      "description": "the inverted text reading 'Start DroidCam' below the normal text",
+      "left": 0.39,
+      "object_name": "inverted text",
+      "resolved": true,
+      "right": 0.59,
+      "spoken_text": "inverted text",
+      "top": 0.54
+    },
+    "response_id": "eqq5arb2Gu-0vdIPpuWowAc"
+  },
+  "speech_event": {
+    "confidence": 1.0,
+    "created_at": "2026-09-27T23:45:08.576860+00:00",
+    "event_id": "evt-048b16d4-f32d-4362-925e-724e2854784e",
+    "event_type": "spoken_reference_captured",
+    "evidence": {
+      "asset": "session-44b84e62-d3b5-4429-869c-3bb67e697313/audio/capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0.webm",
+      "captured_at": "2026-09-27T23:36:57.279Z",
+      "region": null
+    },
+    "modality": "speech",
+    "observation": {
+      "capture_id": "capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0"
+    },
+    "related_event_ids": [],
+    "session_id": "session-44b84e62-d3b5-4429-869c-3bb67e697313",
+    "session_offset_ms": 717,
+    "time_range": {
+      "end_ms": 2027,
+      "start_ms": 717
+    }
+  },
+  "status": "grounded",
+  "visual_event": {
+    "confidence": 0.95,
+    "created_at": "2026-09-27T23:45:08.576860+00:00",
+    "event_id": "evt-2f368184-14b6-46e0-83eb-2b63990bf273",
+    "event_type": "reference_grounded",
+    "evidence": {
+      "asset": "session-44b84e62-d3b5-4429-869c-3bb67e697313/frames/capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0.jpg",
+      "captured_at": "2026-09-27T23:36:57.279Z",
+      "region": {
+        "bottom": 0.6,
+        "left": 0.39,
+        "right": 0.59,
+        "top": 0.54
+      }
+    },
+    "modality": "image",
+    "observation": {
+      "capture_id": "capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0",
+      "description": "the inverted text reading 'Start DroidCam' below the normal text",
+      "input_tokens": 1205,
+      "latency_ms": 11665,
+      "model": "gemini-3.8-flash",
+      "object": "inverted text",
+      "output_tokens": 106,
+      "provider": "google",
+      "spoken_text": "inverted text"
+    },
+    "related_event_ids": [
+      "evt-048b16d4-f32d-4362-925e-724e2854784e"
+    ],
+    "session_id": "session-44b84e62-d3b5-4429-869c-3bb67e697313",
+    "session_offset_ms": 717,
+    "time_range": null
+  }
+}

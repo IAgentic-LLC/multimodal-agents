@@ -1,0 +1,104 @@
+{
+  "model": "gemini-3.8-flash",
+  "question": "Which service requires investigation?",
+  "evidence_items": [
+    {
+      "evidence_id": "report:p1:paragraph:1",
+      "modality": "text",
+      "locator": "document-layout.docx#paragraph=2",
+      "content": "The investigation threshold is 2.0 percent. Search API measured 3.4 percent; Vision API measured 0.8 percent.",
+      "supports": [
+        "Search API"
+      ]
+    },
+    {
+      "evidence_id": "report:p1:table:1:row:search-api",
+      "modality": "table",
+      "locator": "document-layout.docx#table=1&row=search-api",
+      "content": "Service | Error rate | Decision\nSearch API | 3.4% | Investigate",
+      "supports": [
+        "Search API"
+      ]
+    },
+    {
+      "evidence_id": "report:p1:figure:1:region:search-api",
+      "modality": "image",
+      "locator": "document-error-rates.png#xywh=pixel:400,122,91,179",
+      "content": "Search API 3.4%",
+      "supports": [
+        "Search API"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "variant": "complete",
+      "modalities": [
+        "text",
+        "table",
+        "image"
+      ],
+      "answer": "Search API requires investigation because its error rate is 3.4%, exceeding the threshold.",
+      "citations": [
+        {
+          "evidence_id": "report:p1:table:1:row:search-api",
+          "quote": "Search API | 3.4% | Investigate"
+        }
+      ],
+      "citation_errors": [],
+      "supported": true,
+      "latency_ms": 4936
+    },
+    {
+      "variant": "without_text",
+      "modalities": [
+        "table",
+        "image"
+      ],
+      "answer": "Search API requires investigation.",
+      "citations": [
+        {
+          "evidence_id": "report:p1:table:1:row:search-api",
+          "quote": "Search API | 3.4% | Investigate"
+        }
+      ],
+      "citation_errors": [],
+      "supported": true,
+      "latency_ms": 3057
+    },
+    {
+      "variant": "without_table",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "answer": "Search API requires investigation because its error rate of 3.4 percent exceeds the 2.0 percent investigation threshold.",
+      "citations": [
+        {
+          "evidence_id": "report:p1:paragraph:1",
+          "quote": "The investigation threshold is 2.0 percent. Search API measured 3.4 percent; Vision API measured 0.8 percent."
+        }
+      ],
+      "citation_errors": [],
+      "supported": true,
+      "latency_ms": 2318
+    },
+    {
+      "variant": "without_image",
+      "modalities": [
+        "text",
+        "table"
+      ],
+      "answer": "Search API requires investigation because its error rate exceeds the investigation threshold and has been marked for investigation.",
+      "citations": [
+        {
+          "evidence_id": "report:p1:table:1:row:search-api",
+          "quote": "Search API | 3.4% | Investigate"
+        }
+      ],
+      "citation_errors": [],
+      "supported": true,
+      "latency_ms": 1788
+    }
+  ]
+}

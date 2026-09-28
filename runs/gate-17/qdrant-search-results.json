@@ -1,0 +1,51 @@
+{
+  "engine": "qdrant",
+  "engine_version": "1.19.1",
+  "collection": "multimodal_evidence",
+  "dimensions": 768,
+  "distance": "Cosine",
+  "query": "Which service exceeds the threshold?",
+  "required_tenant": "tenant-blue",
+  "excluded_decoy_tenant": "tenant-red",
+  "latency_ms": 10.87,
+  "payload_indexes": [
+    "tenant_id",
+    "object_type",
+    "source_id"
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "score": 0.699244,
+      "object_id": "report:p1:paragraph:1",
+      "object_type": "paragraph",
+      "tenant_id": "tenant-blue",
+      "source_id": "release-report-v1",
+      "contains_answer": false,
+      "embedding_model": "gemini-embedding-2",
+      "dimensions": 768
+    },
+    {
+      "rank": 2,
+      "score": 0.682303,
+      "object_id": "report:p1:table:1",
+      "object_type": "table",
+      "tenant_id": "tenant-blue",
+      "source_id": "release-report-v1",
+      "contains_answer": true,
+      "embedding_model": "gemini-embedding-2",
+      "dimensions": 768
+    },
+    {
+      "rank": 3,
+      "score": 0.632736,
+      "object_id": "report:p1:figure:1",
+      "object_type": "image",
+      "tenant_id": "tenant-blue",
+      "source_id": "release-report-v1",
+      "contains_answer": true,
+      "embedding_model": "gemini-embedding-2",
+      "dimensions": 768
+    }
+  ]
+}

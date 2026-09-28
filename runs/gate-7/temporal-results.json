@@ -1,0 +1,39 @@
+{
+  "single_frame": {
+    "provider": "google",
+    "model": "gemini-3.8-flash",
+    "latency_ms": 2416,
+    "input_tokens": 1153,
+    "candidate_tokens": 72,
+    "thought_tokens": 161,
+    "billed_output_tokens": 233,
+    "total_tokens": 1386,
+    "response": {
+      "status": "insufficient_history",
+      "direction": "none",
+      "evidence_ids": [
+        "frame-002"
+      ],
+      "explanation": "Only one frame (frame-002) is provided. A single image is insufficient to determine whether motion occurred."
+    }
+  },
+  "two_frames": {
+    "provider": "google",
+    "model": "gemini-3.8-flash",
+    "latency_ms": 2406,
+    "input_tokens": 2261,
+    "candidate_tokens": 100,
+    "thought_tokens": 159,
+    "billed_output_tokens": 259,
+    "total_tokens": 2520,
+    "response": {
+      "status": "supported",
+      "direction": "right",
+      "evidence_ids": [
+        "frame-001",
+        "frame-002"
+      ],
+      "explanation": "In frame-001, the red block is positioned on the left side of the canvas. In frame-002, it appears further to the right while keeping the same vertical position, demonstrating rightward horizontal motion."
+    }
+  }
+}

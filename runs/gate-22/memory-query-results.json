@@ -1,0 +1,30 @@
+{
+  "where_known_at_19_43": {
+    "answer": "kitchen counter",
+    "event_id": "video",
+    "locator": "kitchen.mp4#t=4,6",
+    "known_by": "2026-09-28T19:43:00+03:00"
+  },
+  "where_known_at_19_45": {
+    "answer": "kitchen drawer",
+    "event_id": "correction",
+    "locator": "review:1",
+    "known_by": "2026-09-28T19:45:00+03:00"
+  },
+  "changes": [
+    {
+      "changed_at": "2026-09-28T19:44:00+03:00",
+      "from": "kitchen counter",
+      "to": "kitchen drawer",
+      "evidence": [
+        "video",
+        "correction"
+      ]
+    }
+  ],
+  "event_order": [
+    "voice",
+    "video",
+    "correction"
+  ]
+}

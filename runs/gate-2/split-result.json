@@ -1,0 +1,27 @@
+{
+  "provider_trace": {
+    "audio_latency_ms": 6644,
+    "grounding": {
+      "bottom": 0,
+      "confidence": 0,
+      "description": "The requested text 'in the bad check for' is not present in the image.",
+      "left": 0,
+      "object_name": "",
+      "resolved": false,
+      "right": 0,
+      "top": 0
+    },
+    "grounding_latency_ms": 2106,
+    "input_tokens": 1205,
+    "model": "gemini-3.8-flash",
+    "output_tokens": 118,
+    "provider": "google",
+    "transcription": {
+      "confidence": 0.85,
+      "has_intelligible_speech": true,
+      "transcript": "in the bad check for"
+    }
+  },
+  "reason": "The requested text 'in the bad check for' is not present in the image.",
+  "status": "unresolved"
+}

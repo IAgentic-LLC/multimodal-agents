@@ -1,0 +1,77 @@
+{
+  "properties": {
+    "door_state": {
+      "status": "conflicted",
+      "observations": [
+        {
+          "observation_id": "obs-camera-door",
+          "source": "camera-7",
+          "property": "door_state",
+          "value": "closed",
+          "unit": null,
+          "phenomenon_time": "2026-01-01T09:00:00.000+00:00",
+          "result_time": "2026-01-01T09:00:02+00:00",
+          "quality": "good",
+          "reliability": 0.72,
+          "locator": "video/warehouse.mp4#t=8,10"
+        },
+        {
+          "observation_id": "obs-reed-door",
+          "source": "reed-switch-2",
+          "property": "door_state",
+          "value": "open",
+          "unit": null,
+          "phenomenon_time": "2026-01-01T09:00:00.100+00:00",
+          "result_time": "2026-01-01T09:00:02+00:00",
+          "quality": "good",
+          "reliability": 0.99,
+          "locator": "iot/reed-switch-2/8841"
+        }
+      ]
+    },
+    "temperature": {
+      "status": "agreed",
+      "observations": [
+        {
+          "observation_id": "obs-temperature",
+          "source": "thermocouple-4",
+          "property": "temperature",
+          "value": 68.0,
+          "unit": "Cel",
+          "phenomenon_time": "2026-01-01T09:00:00.500+00:00",
+          "result_time": "2026-01-01T09:00:02+00:00",
+          "quality": "good",
+          "reliability": 0.97,
+          "locator": "iot/thermocouple-4/9918"
+        }
+      ]
+    },
+    "acoustic_event": {
+      "status": "agreed",
+      "observations": [
+        {
+          "observation_id": "obs-alarm",
+          "source": "microphone-3",
+          "property": "acoustic_event",
+          "value": "alarm",
+          "unit": null,
+          "phenomenon_time": "2026-01-01T09:00:01.200+00:00",
+          "result_time": "2026-01-01T09:00:02+00:00",
+          "quality": "good",
+          "reliability": 0.88,
+          "locator": "audio/warehouse.wav#t=1.0,1.8"
+        }
+      ]
+    }
+  },
+  "derived_claims": {
+    "hazard": {
+      "status": "supported",
+      "claim": "high temperature with concurrent alarm",
+      "evidence": [
+        "obs-temperature",
+        "obs-alarm"
+      ]
+    }
+  }
+}

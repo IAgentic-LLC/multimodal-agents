@@ -1,0 +1,15 @@
+{
+  "gate": "deterministic-evidence-path",
+  "recorded_at": "2026-09-28",
+  "runtime": "CPython 3.12",
+  "network_calls": 0,
+  "model_calls": 0,
+  "cases": 3,
+  "protected_violations": 0,
+  "status": "pass",
+  "limitations": [
+    "No live camera or microphone was used",
+    "No model grounding behavior was measured",
+    "The perfect scores validate mechanics, not multimodal intelligence"
+  ]
+}

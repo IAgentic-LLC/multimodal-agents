@@ -1,0 +1,103 @@
+{
+  "image": "runs\\gate-4\\shapes.png",
+  "results": [
+    {
+      "case": {
+        "case_id": "present-red-rectangle",
+        "expected_object": "red rectangle",
+        "expected_region": {
+          "bottom": 0.75,
+          "left": 0.125,
+          "right": 0.375,
+          "top": 0.25
+        },
+        "present": true,
+        "query": "red rectangle"
+      },
+      "provider_trace": {
+        "input_tokens": 1127,
+        "latency_ms": 6351,
+        "model": "gemini-3.8-flash",
+        "output_tokens": 95,
+        "provider": "google",
+        "response": {
+          "bottom": 0.75,
+          "confidence": 1.0,
+          "description": "A vertical red rectangle located on the left side of the image.",
+          "left": 0.125,
+          "object_name": "red rectangle",
+          "resolved": true,
+          "right": 0.375,
+          "top": 0.25
+        },
+        "response_id": "WMe5auzFKpepnsEPvovuuQw"
+      },
+      "result": {
+        "confidence": 1.0,
+        "description": "A vertical red rectangle located on the left side of the image.",
+        "input_tokens": 1127,
+        "latency_ms": 6351,
+        "object_name": "red rectangle",
+        "output_tokens": 95,
+        "region": {
+          "bottom": 0.75,
+          "left": 0.125,
+          "right": 0.375,
+          "top": 0.25
+        },
+        "resolved": true
+      },
+      "score": {
+        "correct_object": true,
+        "correct_resolution": true,
+        "localized_at_50": true,
+        "protected_violations": 0,
+        "region_iou": 1.0
+      }
+    },
+    {
+      "case": {
+        "case_id": "absent-green-triangle",
+        "expected_object": "green triangle",
+        "expected_region": null,
+        "present": false,
+        "query": "green triangle"
+      },
+      "provider_trace": {
+        "input_tokens": 1127,
+        "latency_ms": 1431,
+        "model": "gemini-3.8-flash",
+        "output_tokens": 86,
+        "provider": "google",
+        "response": {
+          "bottom": 0.0,
+          "confidence": 0.0,
+          "description": "The requested green triangle is absent from the image.",
+          "left": 0.0,
+          "object_name": "green triangle",
+          "resolved": false,
+          "right": 0.0,
+          "top": 0.0
+        },
+        "response_id": "Xse5aqyKOeTrnsEPjY6SoAw"
+      },
+      "result": {
+        "confidence": 0.0,
+        "description": "The requested green triangle is absent from the image.",
+        "input_tokens": 1127,
+        "latency_ms": 1431,
+        "object_name": "green triangle",
+        "output_tokens": 86,
+        "region": null,
+        "resolved": false
+      },
+      "score": {
+        "correct_object": true,
+        "correct_resolution": true,
+        "localized_at_50": null,
+        "protected_violations": 0,
+        "region_iou": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "scenario": "enabled_dom_action_occluded_by_visual_overlay",
+  "target": {
+    "role": "button",
+    "accessible_name": "Deploy build",
+    "dom_disabled": false
+  },
+  "blocked_state": {
+    "pixel_observation": "button occluded",
+    "accessibility_observation": "button Deploy build",
+    "center_point_hit_target": "sync overlay",
+    "safe_to_click": false
+  },
+  "resolved_state": {
+    "pixel_observation": "button visible",
+    "center_point_hit_target": "deploy button",
+    "safe_to_click": true
+  },
+  "validation": {
+    "playwright_tests_passed": 7,
+    "browser": "Chromium",
+    "figure_width_px": 1041,
+    "figure_height_px": 432
+  },
+  "scope": "deterministic browser fixture"
+}

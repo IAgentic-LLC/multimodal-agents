@@ -1,0 +1,82 @@
+{
+  "provider_trace": {
+    "billed_output_tokens": 1209,
+    "candidate_tokens": 114,
+    "input_tokens": 1205,
+    "latency_ms": 6444,
+    "model": "gemini-3.8-flash",
+    "provider": "google",
+    "response": {
+      "bottom": 0.592,
+      "confidence": 0.95,
+      "description": "The horizontally mirrored text reading 'Start DroidCam' situated below the normal text.",
+      "left": 0.395,
+      "object_name": "the backward text",
+      "resolved": true,
+      "right": 0.59,
+      "spoken_text": "the backward text",
+      "top": 0.546
+    },
+    "response_id": "5si5aui9IeTrnsEPjY6SoAw",
+    "thought_tokens": 1095,
+    "total_tokens": 2414
+  },
+  "score": null,
+  "speech_event": {
+    "confidence": 1.0,
+    "created_at": "2026-09-28T01:54:51.445494+00:00",
+    "event_id": "evt-030e8794-3919-4b59-bbb9-ae6eb436fdee",
+    "event_type": "spoken_reference_captured",
+    "evidence": {
+      "asset": "session-44b84e62-d3b5-4429-869c-3bb67e697313/audio/capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0.webm",
+      "captured_at": "2026-09-27T23:36:57.279Z",
+      "region": null
+    },
+    "modality": "speech",
+    "observation": {
+      "capture_id": "capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0"
+    },
+    "related_event_ids": [],
+    "session_id": "session-44b84e62-d3b5-4429-869c-3bb67e697313",
+    "session_offset_ms": 717,
+    "time_range": {
+      "end_ms": 2027,
+      "start_ms": 717
+    }
+  },
+  "status": "grounded",
+  "visual_event": {
+    "confidence": 0.95,
+    "created_at": "2026-09-28T01:54:51.445494+00:00",
+    "event_id": "evt-2f65ce9c-1972-489c-a6c8-dd994d6f8752",
+    "event_type": "reference_grounded",
+    "evidence": {
+      "asset": "session-44b84e62-d3b5-4429-869c-3bb67e697313/frames/capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0.jpg",
+      "captured_at": "2026-09-27T23:36:57.279Z",
+      "region": {
+        "bottom": 0.592,
+        "left": 0.395,
+        "right": 0.59,
+        "top": 0.546
+      }
+    },
+    "modality": "image",
+    "observation": {
+      "capture_id": "capture-a58cc9c4-5a49-4e52-9456-49d657a22eb0",
+      "description": "The horizontally mirrored text reading 'Start DroidCam' situated below the normal text.",
+      "input_tokens": 1205,
+      "latency_ms": 6444,
+      "model": "gemini-3.8-flash",
+      "object": "the backward text",
+      "output_tokens": 1209,
+      "provider": "google",
+      "spoken_text": "the backward text"
+    },
+    "related_event_ids": [
+      "evt-030e8794-3919-4b59-bbb9-ae6eb436fdee"
+    ],
+    "session_id": "session-44b84e62-d3b5-4429-869c-3bb67e697313",
+    "session_offset_ms": 717,
+    "time_range": null
+  }
+}

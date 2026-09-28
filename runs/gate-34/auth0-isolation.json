@@ -1,0 +1,9 @@
+{
+  "auth0_live": true,
+  "organizations": [
+    "acme",
+    "globex"
+  ],
+  "own_rows_visible": true,
+  "cross_tenant_rows": 0
+}

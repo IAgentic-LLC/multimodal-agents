@@ -1,0 +1,24 @@
+{
+  "gate": 32,
+  "provider": "Oracle Cloud Infrastructure",
+  "region": "eu-frankfurt-1",
+  "architecture": "arm64",
+  "service": "multimodal-studio",
+  "binding": "127.0.0.1:8091",
+  "health_endpoint": "/healthz",
+  "observed": {
+    "http_status": 200,
+    "body": "ok",
+    "container_status": "running",
+    "container_health": "healthy",
+    "user": "101",
+    "read_only_root_filesystem": true,
+    "capabilities_dropped": ["ALL"],
+    "no_new_privileges": true
+  },
+  "scope": {
+    "publicly_exposed": false,
+    "existing_voice_stack_restarted": false,
+    "existing_voice_stack_modified": false
+  }
+}

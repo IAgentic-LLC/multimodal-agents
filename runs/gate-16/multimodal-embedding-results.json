@@ -1,0 +1,36 @@
+{
+  "provider": "google",
+  "model": "gemini-embedding-2",
+  "dimensions": 768,
+  "query": "task: retrieval | query: Which service exceeds the threshold?",
+  "index": {
+    "index_id": "release-report-v1",
+    "source_asset": "fixtures/document-layout.docx",
+    "parser": "apache-tika-4.0.0",
+    "embedding_model": "gemini-embedding-2"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "object_id": "report:p1:paragraph:1",
+      "modality": "text",
+      "section": "release-readiness",
+      "score": 0.699244
+    },
+    {
+      "rank": 2,
+      "object_id": "report:p1:table:1",
+      "modality": "table",
+      "section": "release-readiness",
+      "score": 0.682303
+    },
+    {
+      "rank": 3,
+      "object_id": "report:p1:figure:1",
+      "modality": "image",
+      "section": "release-readiness",
+      "score": 0.632736
+    }
+  ],
+  "latency_ms": 2053
+}
