@@ -1,0 +1,95 @@
+{
+  "ready": true,
+  "summary": {
+    "passed": 8,
+    "total": 8,
+    "missing_areas": [],
+    "failed_controls": [],
+    "duplicate_areas": []
+  },
+  "controls": [
+    {
+      "control_id": "CTL-ACCESS-01",
+      "area": "access",
+      "requirement": "Runtime uses least privilege and no browser-held cloud key",
+      "evidence": "non-root, read-only OCI container with all capabilities dropped",
+      "implemented": true,
+      "frameworks": [
+        "NIST AI RMF GOVERN",
+        "OWASP agent least privilege"
+      ]
+    },
+    {
+      "control_id": "CTL-CONSENT-01",
+      "area": "consent",
+      "requirement": "Capture begins only after an explicit user action",
+      "evidence": "tested Start consented session control",
+      "implemented": true,
+      "frameworks": [
+        "NIST AI RMF MAP"
+      ]
+    },
+    {
+      "control_id": "CTL-RETENTION-01",
+      "area": "retention",
+      "requirement": "Every artifact has a retention class and expiry policy",
+      "evidence": "evidence schema plus deploy-time lifecycle policy requirement",
+      "implemented": true,
+      "frameworks": [
+        "NIST AI RMF GOVERN",
+        "OCI Object Lifecycle Management"
+      ]
+    },
+    {
+      "control_id": "CTL-DELETE-01",
+      "area": "deletion",
+      "requirement": "Deletion covers objects, derived indexes, and event tombstones",
+      "evidence": "deletion runbook requires propagation and verification receipt",
+      "implemented": true,
+      "frameworks": [
+        "NIST AI RMF MANAGE"
+      ]
+    },
+    {
+      "control_id": "CTL-TENANT-01",
+      "area": "tenant_isolation",
+      "requirement": "Tenant scope is enforced before retrieval and artifact access",
+      "evidence": "tenant-first filters and cross-tenant negative tests",
+      "implemented": true,
+      "frameworks": [
+        "OWASP agent least privilege"
+      ]
+    },
+    {
+      "control_id": "CTL-A11Y-01",
+      "area": "accessibility",
+      "requirement": "Critical Studio workflows remain keyboard operable",
+      "evidence": "Playwright tab-role and arrow-key interaction test",
+      "implemented": true,
+      "frameworks": [
+        "WCAG 2.2 Operable"
+      ]
+    },
+    {
+      "control_id": "CTL-IR-01",
+      "area": "incident_response",
+      "requirement": "Runbook preserves evidence and supports containment and rollback",
+      "evidence": "versioned triage, credential rotation, isolation, and replay steps",
+      "implemented": true,
+      "frameworks": [
+        "NIST AI RMF MANAGE"
+      ]
+    },
+    {
+      "control_id": "CTL-COST-01",
+      "area": "cost",
+      "requirement": "Sessions have bounded model, tool, retry, and storage budgets",
+      "evidence": "queue limits, retry ceilings, quotas, and cost telemetry",
+      "implemented": true,
+      "frameworks": [
+        "OWASP denial of wallet"
+      ]
+    }
+  ],
+  "mapping_notice": "Framework labels are engineering traceability, not a legal opinion or certification."
+}

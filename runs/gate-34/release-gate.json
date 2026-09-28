@@ -1,0 +1,26 @@
+{
+  "infrastructure_ready": true,
+  "release_ready": true,
+  "postgres": {
+    "blue_rows": 1,
+    "red_rows": 1,
+    "blue_cross_tenant_rows": 0,
+    "red_cross_tenant_rows": 0,
+    "row_level_security": "enabled and forced"
+  },
+  "load": {
+    "requests": 100,
+    "failures": 0,
+    "median_ms": 35.4,
+    "p95_ms": 61.27,
+    "max_ms": 72.22
+  },
+  "auth0": {
+    "live_jwt_validated": true,
+    "bounded_clock_leeway_seconds": 10,
+    "organization_tokens_validated": ["acme", "globex"],
+    "authorized_scopes": ["read:sessions", "write:sessions"],
+    "cross_tenant_rows": 0,
+    "release_identity_status": "ready"
+  }
+}

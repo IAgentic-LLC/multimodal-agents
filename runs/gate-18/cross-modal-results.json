@@ -1,0 +1,99 @@
+{
+  "provider": "google",
+  "model": "gemini-embedding-2",
+  "engine": "qdrant-1.19.1",
+  "collection": "cross_modal_evidence",
+  "corpus": {
+    "images": 3,
+    "incidents": 3
+  },
+  "directions": [
+    {
+      "direction": "text_to_image",
+      "expected": "image:checkout-latency",
+      "latency_ms": 16.1,
+      "hits": [
+        {
+          "rank": 1,
+          "score": 0.713428,
+          "object_id": "image:checkout-latency",
+          "object_type": "image",
+          "tenant_id": "tenant-blue"
+        },
+        {
+          "rank": 2,
+          "score": 0.563906,
+          "object_id": "image:search-error-rate",
+          "object_type": "image",
+          "tenant_id": "tenant-blue"
+        },
+        {
+          "rank": 3,
+          "score": 0.51163,
+          "object_id": "image:shape-grounding",
+          "object_type": "image",
+          "tenant_id": "tenant-blue"
+        }
+      ],
+      "top1_correct": true
+    },
+    {
+      "direction": "screenshot_to_incident",
+      "expected": "incident:checkout-latency",
+      "latency_ms": 14.72,
+      "hits": [
+        {
+          "rank": 1,
+          "score": 0.718273,
+          "object_id": "incident:checkout-latency",
+          "object_type": "incident",
+          "tenant_id": "tenant-blue"
+        },
+        {
+          "rank": 2,
+          "score": 0.561851,
+          "object_id": "incident:search-error-rate",
+          "object_type": "incident",
+          "tenant_id": "tenant-blue"
+        },
+        {
+          "rank": 3,
+          "score": 0.424568,
+          "object_id": "incident:shape-grounding",
+          "object_type": "incident",
+          "tenant_id": "tenant-blue"
+        }
+      ],
+      "top1_correct": true
+    },
+    {
+      "direction": "image_to_image",
+      "expected": "image:checkout-latency",
+      "latency_ms": 31.09,
+      "hits": [
+        {
+          "rank": 1,
+          "score": 1.0,
+          "object_id": "image:checkout-latency",
+          "object_type": "image",
+          "tenant_id": "tenant-blue"
+        },
+        {
+          "rank": 2,
+          "score": 0.760937,
+          "object_id": "image:search-error-rate",
+          "object_type": "image",
+          "tenant_id": "tenant-blue"
+        },
+        {
+          "rank": 3,
+          "score": 0.669219,
+          "object_id": "image:shape-grounding",
+          "object_type": "image",
+          "tenant_id": "tenant-blue"
+        }
+      ],
+      "top1_correct": true
+    }
+  ]
+}

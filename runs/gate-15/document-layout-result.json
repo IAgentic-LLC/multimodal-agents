@@ -1,0 +1,44 @@
+{
+  "flat_text": "Release Readiness Report The release decision depends on both the service metrics and the chart below. Service Error rate Decision Vision API 0.8% pass Search API 3.4% investigate Error rates by service. Search API exceeds the two percent review threshold. Figure 1: Service error-rate evidence for the release review. The Search API requires investigation because its error rate exceeds the review threshold shown in Figure 1. rId9.png",
+  "structured": {
+    "heading_count": 1,
+    "parser_generated_headings": [
+      "rId9.png"
+    ],
+    "table_count": 1,
+    "table_rows": [
+      [
+        "Service",
+        "Error rate",
+        "Decision"
+      ],
+      [
+        "Vision API",
+        "0.8%",
+        "pass"
+      ],
+      [
+        "Search API",
+        "3.4%",
+        "investigate"
+      ]
+    ],
+    "figure_count": 1,
+    "figure": {
+      "asset": "embedded:rId9.png",
+      "caption": "Error rates by service. Search API exceeds the two percent review threshold."
+    },
+    "relationships": [
+      {
+        "type": "caption_of",
+        "from": "figure-caption-1",
+        "to": "figure-1"
+      }
+    ]
+  },
+  "parser": {
+    "name": "Apache Tika",
+    "version": "4.0.0",
+    "container_digest": "sha256:a8b442501f601fb15015de974f9afe13dd242b0f14e49a2b144fadcb214a555b"
+  }
+}

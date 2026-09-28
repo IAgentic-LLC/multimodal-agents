@@ -1,0 +1,11 @@
+{
+  "audio_only_response": {
+    "confidence": 0.85,
+    "has_intelligible_speech": true,
+    "transcript": "and Vivace four"
+  },
+  "input_tokens": 70,
+  "latency_ms": 2489,
+  "model": "gemini-3.8-flash",
+  "output_tokens": 37
+}

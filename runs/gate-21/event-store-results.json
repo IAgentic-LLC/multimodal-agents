@@ -1,0 +1,97 @@
+{
+  "store": "sqlite-in-memory",
+  "append_sequences": [
+    1,
+    2,
+    3
+  ],
+  "history": [
+    {
+      "sequence": 1,
+      "event_id": "evt-keys-voice",
+      "event_type": "speech.observed",
+      "valid_at": "2026-09-28T19:41:58+03:00",
+      "recorded_at": "2026-09-28T19:41:59+03:00",
+      "modality": "voice",
+      "locator": "session-17#audio&t=1.2,2.8",
+      "payload": {
+        "utterance": "I will put these here."
+      },
+      "derived_from": [],
+      "corrects": null,
+      "digest": "99f99ba5e5160d1e07cd935c2e15a23e883e5b0bc6dee034b711aec1b1185e60"
+    },
+    {
+      "sequence": 2,
+      "event_id": "evt-keys-video",
+      "event_type": "object.observed",
+      "valid_at": "2026-09-28T19:42:00+03:00",
+      "recorded_at": "2026-09-28T19:42:03+03:00",
+      "modality": "video",
+      "locator": "kitchen.mp4#t=4,6&xywh=410,220,90,55",
+      "payload": {
+        "confidence": 0.88,
+        "location": "kitchen counter"
+      },
+      "derived_from": [
+        "evt-keys-voice"
+      ],
+      "corrects": null,
+      "digest": "d8b81699ea306d18180baef9e4468e54767dd172f03e92e3eff684ae6974c3d4"
+    },
+    {
+      "sequence": 3,
+      "event_id": "evt-keys-correction",
+      "event_type": "observation.corrected",
+      "valid_at": "2026-09-28T19:42:00+03:00",
+      "recorded_at": "2026-09-28T19:44:00+03:00",
+      "modality": "human",
+      "locator": "review://session-17/correction-1",
+      "payload": {
+        "confidence": 1.0,
+        "location": "kitchen drawer"
+      },
+      "derived_from": [
+        "evt-keys-video"
+      ],
+      "corrects": "evt-keys-video",
+      "digest": "cac1db15f8043b899b0a44e44278c8420e7ba8f13019039a4f4f129dc87e634a"
+    }
+  ],
+  "projection_before_correction": {
+    "sequence": 2,
+    "event_id": "evt-keys-video",
+    "event_type": "object.observed",
+    "valid_at": "2026-09-28T19:42:00+03:00",
+    "recorded_at": "2026-09-28T19:42:03+03:00",
+    "modality": "video",
+    "locator": "kitchen.mp4#t=4,6&xywh=410,220,90,55",
+    "payload": {
+      "confidence": 0.88,
+      "location": "kitchen counter"
+    },
+    "derived_from": [
+      "evt-keys-voice"
+    ],
+    "corrects": null,
+    "digest": "d8b81699ea306d18180baef9e4468e54767dd172f03e92e3eff684ae6974c3d4"
+  },
+  "projection_after_correction": {
+    "sequence": 3,
+    "event_id": "evt-keys-correction",
+    "event_type": "observation.corrected",
+    "valid_at": "2026-09-28T19:42:00+03:00",
+    "recorded_at": "2026-09-28T19:44:00+03:00",
+    "modality": "human",
+    "locator": "review://session-17/correction-1",
+    "payload": {
+      "confidence": 1.0,
+      "location": "kitchen drawer"
+    },
+    "derived_from": [
+      "evt-keys-video"
+    ],
+    "corrects": "evt-keys-video",
+    "digest": "cac1db15f8043b899b0a44e44278c8420e7ba8f13019039a4f4f129dc87e634a"
+  }
+}

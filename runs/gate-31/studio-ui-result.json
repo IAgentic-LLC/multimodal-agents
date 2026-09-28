@@ -1,0 +1,21 @@
+{
+  "session_id": "session-kitchen-104",
+  "tenant_id": "tenant-blue",
+  "timeline_events": 4,
+  "workspaces": [
+    "timeline",
+    "evidence",
+    "search",
+    "evaluation",
+    "replay"
+  ],
+  "keyboard_tab_navigation": true,
+  "evaluation": {
+    "retrieval": 1.0,
+    "attribution": 1.0,
+    "safety": "PASS",
+    "latency_p95_ms": 84
+  },
+  "playwright_status": "passed",
+  "production_build_status": "passed"
+}

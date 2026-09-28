@@ -1,0 +1,66 @@
+{
+  "replay": {
+    "scenario_id": "warehouse-alarm-001",
+    "seed": 24028,
+    "trace": [
+      {
+        "sequence": 0,
+        "at_ms": 0,
+        "modality": "video",
+        "kind": "door_state",
+        "payload": {
+          "value": "closed"
+        }
+      },
+      {
+        "sequence": 1,
+        "at_ms": 100,
+        "modality": "sensor",
+        "kind": "door_state",
+        "payload": {
+          "value": "open"
+        }
+      },
+      {
+        "sequence": 2,
+        "at_ms": 500,
+        "modality": "sensor",
+        "kind": "temperature",
+        "payload": {
+          "value": 68,
+          "unit": "Cel"
+        }
+      },
+      {
+        "sequence": 3,
+        "at_ms": 1200,
+        "modality": "audio",
+        "kind": "acoustic_event",
+        "payload": {
+          "value": "alarm"
+        }
+      },
+      {
+        "sequence": 4,
+        "at_ms": 1400,
+        "modality": "voice",
+        "kind": "request",
+        "payload": {
+          "text": "Lock the door"
+        }
+      }
+    ],
+    "trace_digest": "9c6f27305452cc5706be84bac05db7db6f1389b410077f20aee09ab23fcdf583"
+  },
+  "replay_digest_equal": true,
+  "score": {
+    "passed": true,
+    "checks": {
+      "hazard": true,
+      "door_state": true,
+      "action": true
+    },
+    "passed_count": 3,
+    "total_count": 3
+  }
+}

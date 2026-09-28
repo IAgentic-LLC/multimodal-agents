@@ -1,0 +1,9 @@
+{
+  "fps": 30,
+  "duration_ms": 6000,
+  "event": "yellow triangle appears",
+  "start_frame": 36,
+  "end_frame": 48,
+  "start_ms": 1200,
+  "end_ms": 1600
+}

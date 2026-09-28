@@ -1,0 +1,200 @@
+{
+  "engine": "qdrant-1.19.1",
+  "dense_model": "gemini-embedding-2",
+  "sparse_method": "client-bm25",
+  "reranker": "gemini-3.8-flash",
+  "corpus_size": 6,
+  "results": [
+    {
+      "name": "exact_identifier",
+      "text": "INC-4827",
+      "expected": "incident:inc-4827",
+      "dense": [
+        {
+          "rank": 1,
+          "object_id": "release:inc-4828",
+          "score": 0.781721
+        },
+        {
+          "rank": 2,
+          "object_id": "incident:inc-4827",
+          "score": 0.738384
+        },
+        {
+          "rank": 3,
+          "object_id": "incident:search-errors",
+          "score": 0.672825
+        },
+        {
+          "rank": 4,
+          "object_id": "note:vision",
+          "score": 0.64503
+        }
+      ],
+      "sparse": [
+        {
+          "rank": 1,
+          "object_id": "incident:inc-4827",
+          "score": 2.152798
+        }
+      ],
+      "rrf": [
+        {
+          "rank": 1,
+          "object_id": "incident:inc-4827",
+          "score": 0.833333
+        },
+        {
+          "rank": 2,
+          "object_id": "release:inc-4828",
+          "score": 0.5
+        },
+        {
+          "rank": 3,
+          "object_id": "incident:search-errors",
+          "score": 0.25
+        },
+        {
+          "rank": 4,
+          "object_id": "note:vision",
+          "score": 0.2
+        }
+      ],
+      "fusion_latency_ms": 28.95,
+      "rerank_latency_ms": 1814,
+      "reranker": {
+        "supported": true,
+        "best_object_id": "incident:inc-4827",
+        "evidence_quote": "Reference INC-4827.",
+        "reason": "The candidate explicitly references INC-4827."
+      }
+    },
+    {
+      "name": "semantic_paraphrase",
+      "text": "proof of purchase appears too slowly after paying",
+      "expected": "incident:inc-4827",
+      "dense": [
+        {
+          "rank": 1,
+          "object_id": "incident:inc-4827",
+          "score": 0.754337
+        },
+        {
+          "rank": 2,
+          "object_id": "incident:checkout-authorization",
+          "score": 0.735494
+        },
+        {
+          "rank": 3,
+          "object_id": "runbook:receipt-worker",
+          "score": 0.696284
+        },
+        {
+          "rank": 4,
+          "object_id": "note:vision",
+          "score": 0.624775
+        }
+      ],
+      "sparse": [
+        {
+          "rank": 1,
+          "object_id": "incident:checkout-authorization",
+          "score": 1.008543
+        },
+        {
+          "rank": 2,
+          "object_id": "incident:inc-4827",
+          "score": 0.961755
+        }
+      ],
+      "rrf": [
+        {
+          "rank": 1,
+          "object_id": "incident:checkout-authorization",
+          "score": 0.833333
+        },
+        {
+          "rank": 2,
+          "object_id": "incident:inc-4827",
+          "score": 0.833333
+        },
+        {
+          "rank": 3,
+          "object_id": "runbook:receipt-worker",
+          "score": 0.25
+        },
+        {
+          "rank": 4,
+          "object_id": "note:vision",
+          "score": 0.2
+        }
+      ],
+      "fusion_latency_ms": 33.37,
+      "rerank_latency_ms": 3515,
+      "reranker": {
+        "supported": true,
+        "best_object_id": "incident:inc-4827",
+        "evidence_quote": "Checkout receipts arrive late after a completed payment.",
+        "reason": "The candidate directly states that checkout receipts arrive late following a completed payment, supporting the issue of proof of purchase appearing too slowly after paying."
+      }
+    },
+    {
+      "name": "unsupported_secret",
+      "text": "Which database password was leaked?",
+      "expected": null,
+      "dense": [
+        {
+          "rank": 1,
+          "object_id": "incident:search-errors",
+          "score": 0.594959
+        },
+        {
+          "rank": 2,
+          "object_id": "release:inc-4828",
+          "score": 0.589996
+        },
+        {
+          "rank": 3,
+          "object_id": "note:vision",
+          "score": 0.564193
+        },
+        {
+          "rank": 4,
+          "object_id": "runbook:receipt-worker",
+          "score": 0.56176
+        }
+      ],
+      "sparse": [],
+      "rrf": [
+        {
+          "rank": 1,
+          "object_id": "incident:search-errors",
+          "score": 0.5
+        },
+        {
+          "rank": 2,
+          "object_id": "release:inc-4828",
+          "score": 0.333333
+        },
+        {
+          "rank": 3,
+          "object_id": "note:vision",
+          "score": 0.25
+        },
+        {
+          "rank": 4,
+          "object_id": "runbook:receipt-worker",
+          "score": 0.2
+        }
+      ],
+      "fusion_latency_ms": 24.95,
+      "rerank_latency_ms": 1572,
+      "reranker": {
+        "supported": false,
+        "best_object_id": null,
+        "evidence_quote": null,
+        "reason": "None of the candidates mention any leaked database password."
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "fixture": "fixtures/acoustic-events.wav",
+  "sample_rate_hz": 16000,
+  "frame_ms": 20,
+  "threshold_rms": 0.08,
+  "events": [
+    {
+      "label": "alarm_tone",
+      "truth": {
+        "onset_s": 0.8,
+        "offset_s": 1.4
+      },
+      "detected": {
+        "onset_s": 0.8,
+        "offset_s": 1.4
+      },
+      "onset_error_ms": 0,
+      "offset_error_ms": 0
+    },
+    {
+      "label": "knock",
+      "truth": {
+        "onset_s": 2.0,
+        "offset_s": 2.03
+      },
+      "detected": {
+        "onset_s": 2.0,
+        "offset_s": 2.02
+      },
+      "onset_error_ms": 0,
+      "offset_error_ms": -10
+    }
+  ],
+  "false_positives": 0,
+  "missed_events": 0
+}

@@ -1,0 +1,41 @@
+{
+  "provider_trace": {
+    "audio_latency_ms": 3961,
+    "audio_usage": {
+      "billed_output": 427,
+      "candidate": 37,
+      "input": 67,
+      "thought": 390,
+      "total": 494
+    },
+    "grounding": {
+      "bottom": 0,
+      "confidence": 0,
+      "description": "The requested phrase does not correspond to any visible object or text in the image.",
+      "left": 0,
+      "object_name": "il vivace qua",
+      "resolved": false,
+      "right": 0,
+      "top": 0
+    },
+    "grounding_latency_ms": 1846,
+    "grounding_usage": {
+      "billed_output": 221,
+      "candidate": 84,
+      "input": 1137,
+      "thought": 137,
+      "total": 1358
+    },
+    "input_tokens": 1204,
+    "model": "gemini-3.8-flash",
+    "output_tokens": 648,
+    "provider": "google",
+    "transcription": {
+      "confidence": 0.85,
+      "has_intelligible_speech": true,
+      "transcript": "il vivace qua"
+    }
+  },
+  "reason": "The requested phrase does not correspond to any visible object or text in the image.",
+  "status": "unresolved"
+}

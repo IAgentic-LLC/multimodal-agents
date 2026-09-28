@@ -1,0 +1,109 @@
+{
+  "image": "runs\\gate-4\\shapes.png",
+  "results": [
+    {
+      "case": {
+        "case_id": "present-red-rectangle",
+        "expected_object": "red rectangle",
+        "expected_region": {
+          "bottom": 0.75,
+          "left": 0.125,
+          "right": 0.375,
+          "top": 0.25
+        },
+        "present": true,
+        "query": "red rectangle"
+      },
+      "provider_trace": {
+        "billed_output_tokens": 746,
+        "candidate_tokens": 97,
+        "input_tokens": 1127,
+        "latency_ms": 3770,
+        "model": "gemini-3.8-flash",
+        "provider": "google",
+        "response": {
+          "bottom": 0.75,
+          "confidence": 1.0,
+          "description": "A solid red vertical rectangle situated on the left half of the white background.",
+          "left": 0.125,
+          "object_name": "red rectangle",
+          "resolved": true,
+          "right": 0.375,
+          "top": 0.25
+        },
+        "response_id": "l8e5apK9MKepkdUPtvrqiQw",
+        "thought_tokens": 649,
+        "total_tokens": 1873
+      },
+      "result": {
+        "confidence": 1.0,
+        "description": "A solid red vertical rectangle situated on the left half of the white background.",
+        "input_tokens": 1127,
+        "latency_ms": 3770,
+        "object_name": "red rectangle",
+        "output_tokens": 746,
+        "region": {
+          "bottom": 0.75,
+          "left": 0.125,
+          "right": 0.375,
+          "top": 0.25
+        },
+        "resolved": true
+      },
+      "score": {
+        "correct_object": true,
+        "correct_resolution": true,
+        "localized_at_50": true,
+        "protected_violations": 0,
+        "region_iou": 1.0
+      }
+    },
+    {
+      "case": {
+        "case_id": "absent-green-triangle",
+        "expected_object": "green triangle",
+        "expected_region": null,
+        "present": false,
+        "query": "green triangle"
+      },
+      "provider_trace": {
+        "billed_output_tokens": 145,
+        "candidate_tokens": 88,
+        "input_tokens": 1127,
+        "latency_ms": 1427,
+        "model": "gemini-3.8-flash",
+        "provider": "google",
+        "response": {
+          "bottom": 0,
+          "confidence": 0,
+          "description": "The requested green triangle is not present in the image; only a red rectangle and a blue circle are visible.",
+          "left": 0,
+          "object_name": "green triangle",
+          "resolved": false,
+          "right": 0,
+          "top": 0
+        },
+        "response_id": "m8e5atyFHbL8kdUP_fjSQA",
+        "thought_tokens": 57,
+        "total_tokens": 1272
+      },
+      "result": {
+        "confidence": 0,
+        "description": "The requested green triangle is not present in the image; only a red rectangle and a blue circle are visible.",
+        "input_tokens": 1127,
+        "latency_ms": 1427,
+        "object_name": "green triangle",
+        "output_tokens": 145,
+        "region": null,
+        "resolved": false
+      },
+      "score": {
+        "correct_object": true,
+        "correct_resolution": true,
+        "localized_at_50": null,
+        "protected_violations": 0,
+        "region_iou": null
+      }
+    }
+  ]
+}

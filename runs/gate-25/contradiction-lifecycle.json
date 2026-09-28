@@ -1,0 +1,42 @@
+{
+  "open": {
+    "contradiction_id": "conflict-door-0001",
+    "kind": "value_conflict",
+    "property": "door_state",
+    "observation_ids": [
+      "obs-camera-door",
+      "obs-reed-door"
+    ],
+    "values": [
+      "closed",
+      "open"
+    ],
+    "status": "open",
+    "detected_at": "2026-01-01T09:00:02+00:00",
+    "resolution_id": null,
+    "resolution_reason": null
+  },
+  "resolved": {
+    "contradiction_id": "conflict-door-0001",
+    "kind": "value_conflict",
+    "property": "door_state",
+    "observation_ids": [
+      "obs-camera-door",
+      "obs-reed-door"
+    ],
+    "values": [
+      "closed",
+      "open"
+    ],
+    "status": "resolved",
+    "detected_at": "2026-01-01T09:00:02+00:00",
+    "resolution_id": "obs-human-door",
+    "resolution_reason": "on-site reviewer inspected the physical latch"
+  },
+  "retained_observations": [
+    "obs-camera-door",
+    "obs-reed-door",
+    "obs-human-door"
+  ],
+  "action_allowed_while_open": false
+}

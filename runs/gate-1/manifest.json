@@ -1,0 +1,30 @@
+{
+  "gate": 1,
+  "name": "consented browser evidence capture",
+  "frontend": "React and TypeScript production build",
+  "transport": "localhost HTTP",
+  "capture": {
+    "frame_width": 1280,
+    "frame_height": 720,
+    "frame_offset_ms": 717,
+    "voice_start_ms": 717,
+    "voice_end_ms": 2027,
+    "jpeg_bytes": 16535,
+    "audio_bytes": 20511,
+    "manifest_bytes": 582
+  },
+  "tests": {
+    "python": 6,
+    "typescript": "passed",
+    "production_build": "passed",
+    "desktop_playwright": "passed",
+    "mobile_playwright": "passed"
+  },
+  "claims_excluded": [
+    "transcription",
+    "object recognition",
+    "region grounding",
+    "model latency",
+    "model cost"
+  ]
+}

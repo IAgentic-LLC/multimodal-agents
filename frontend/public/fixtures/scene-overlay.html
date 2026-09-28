@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scene extraction overlay</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1200px; height: 800px; }
+    body { font: 16px Inter, Arial, sans-serif; overflow: hidden; }
+    iframe { border: 0; width: 1200px; height: 800px; }
+    .box { position: absolute; border: 4px dashed; pointer-events: none; }
+    .box span {
+      color: white; font-weight: 700; left: -4px; padding: 5px 9px;
+      position: absolute; top: -32px;
+    }
+    .title { border-color: #ad2ed1; left: 5%; top: 11%;
+      width: 42%; height: 14%; }
+    .title span { background: #ad2ed1; }
+    .table { border-color: #0a8f78; left: 5%; top: 21%;
+      width: 44%; height: 63%; }
+    .table span { background: #0a8f78; }
+    .chart { border-color: #cf5c19; left: 55%; top: 24%;
+      width: 37%; height: 62%; }
+    .chart span { background: #cf5c19; }
+    .result {
+      background: #14213d; border-radius: 10px; bottom: 18px; color: white;
+      left: 312px; padding: 12px 18px; position: absolute; width: 576px;
+    }
+    .result strong { color: #7de2d1; }
+  </style>
+  <style>
+    /* Flat editorial treatment for reproducible book figures. */
+    body { background: #f4f2eb !important; color: #1f2933 !important;
+      font-family: Arial, Helvetica, sans-serif !important; }
+    .card, .summary, article, figure, section, .panel, .result, .metric {
+      border-radius: 0 !important; box-shadow: none !important;
+      backdrop-filter: none !important; }
+    .card, article, figure, .panel, .result, .metric {
+      border-color: #9aa3ab !important; }
+    .summary, .card, .answer, .result { background: #fff !important;
+      color: #1f2933 !important; border: 1px solid #495057 !important; }
+    .summary strong, .card strong, .answer strong, .result strong {
+      color: #006b4f !important; }
+    .badge { border-radius: 2px !important; }
+    button { border-radius: 2px !important; box-shadow: none !important; }
+  </style>
+</head>
+<body>
+  <iframe src="scene-dashboard.html" title="Dashboard fixture"></iframe>
+  <div class="box title"><span>title</span></div>
+  <div class="box table"><span>table</span></div>
+  <div class="box chart"><span>chart</span></div>
+  <div class="result">
+    <strong>Structure:</strong> 3/3 types, 1/1 relationship &nbsp;|&nbsp;
+    <strong>Mean region IoU:</strong> 0.584
+  </div>
+</body>
+</html>

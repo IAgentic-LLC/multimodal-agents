@@ -1,0 +1,10 @@
+.venv
+frontend/node_modules
+frontend/test-results
+frontend/playwright-report
+runs
+tests
+__pycache__
+.pytest_cache
+.git
+*.log

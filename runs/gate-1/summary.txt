@@ -1,0 +1,32 @@
+Gate 1: consented browser evidence capture
+
+Automated
+- Python unit tests: 6 passed
+- TypeScript strict type-check: passed
+- Vite production build: passed
+
+Live Playwright run
+- Frontend: production React build served by the local Python server
+- Media tracks: audio live, video live
+- Video frame: 1280x720
+- Frame offset: 717 ms
+- Voice interval: 717-2027 ms
+- JPEG persisted: 16,535 bytes
+- Opus/WebM persisted: 20,511 bytes
+- JSONL event persisted: 582 bytes
+
+Responsive Playwright run
+- Viewport: 390x844
+- Horizontal overflow: false
+- Minimum tested control height: 48 px
+- Evidence layout: one column
+
+Observed failure and correction
+- First live save was rejected because the audio blob was empty.
+- The recorder was changed to an audio-only stream with 250 ms chunks.
+- The same live path then completed successfully.
+
+Limit
+This gate validates capture plumbing and inspectable evidence retention. It
+does not claim transcription, object recognition, region grounding, model
+latency, model cost, or agent correctness.
