@@ -5,15 +5,13 @@ description = "Evidence-first multimodal agent experiments"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi==0.119.1",
+    "google-genai==2.25.0",
     "opentelemetry-sdk==1.38.0",
     "pillow==12.3.0",
     "psycopg[binary]==3.2.12",
     "pyjwt[crypto]==2.15.0",
     "uvicorn[standard]==0.38.0",
 ]
-
-[project.optional-dependencies]
-gemini = ["google-genai==2.25.0"]
 
 [project.scripts]
 multimodal-capture = "multimodal_agents.server:main"

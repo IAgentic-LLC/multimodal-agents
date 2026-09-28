@@ -912,16 +912,12 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
+    { name = "google-genai" },
     { name = "opentelemetry-sdk" },
     { name = "pillow" },
     { name = "psycopg", extra = ["binary"] },
     { name = "pyjwt", extra = ["crypto"] },
     { name = "uvicorn", extra = ["standard"] },
-]
-
-[package.optional-dependencies]
-gemini = [
-    { name = "google-genai" },
 ]
 
 [package.dev-dependencies]
@@ -933,14 +929,13 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi", specifier = "==0.119.1" },
-    { name = "google-genai", marker = "extra == 'gemini'", specifier = "==2.25.0" },
+    { name = "google-genai", specifier = "==2.25.0" },
     { name = "opentelemetry-sdk", specifier = "==1.38.0" },
     { name = "pillow", specifier = "==12.3.0" },
     { name = "psycopg", extras = ["binary"], specifier = "==3.2.12" },
     { name = "pyjwt", extras = ["crypto"], specifier = "==2.15.0" },
     { name = "uvicorn", extras = ["standard"], specifier = "==0.38.0" },
 ]
-provides-extras = ["gemini"]
 
 [package.metadata.requires-dev]
 dev = [

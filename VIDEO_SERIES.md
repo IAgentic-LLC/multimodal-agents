@@ -36,7 +36,7 @@ Never hide a setup step behind “and now it works.” If a service needs Docker
 
 ## The 34-episode path
 
-### Episode 01 — The Frame Behind This
+### Episode 01: The Frame Behind This
 
 **Build:** Capture synchronized camera, microphone, and monotonic timing evidence.
 
@@ -58,7 +58,7 @@ uv run python scripts/verify_chapter.py 1
 
 **Retain:** `runs/gate-1`. **Environment:** Local browser; camera and microphone permission.
 
-### Episode 02 — An Evidence Event
+### Episode 02: An Evidence Event
 
 **Build:** Define and validate the evidence-event contract.
 
@@ -80,7 +80,7 @@ uv run python scripts/verify_chapter.py 2
 
 **Retain:** `runs/gate-0 and runs/gate-1`. **Environment:** Deterministic local replay.
 
-### Episode 03 — Keep Each Modality Honest
+### Episode 03: Keep Each Modality Honest
 
 **Build:** Separate provider output from normalized observations.
 
@@ -102,7 +102,7 @@ uv run python scripts/verify_chapter.py 3
 
 **Retain:** `runs/gate-2`. **Environment:** Live Gemini run requires GOOGLE_API_KEY; retained replay does not.
 
-### Episode 04 — Build the First World State
+### Episode 04: Build the First World State
 
 **Build:** Reduce immutable evidence events into queryable world state.
 
@@ -124,7 +124,7 @@ uv run python scripts/verify_chapter.py 4
 
 **Retain:** `runs/gate-0`. **Environment:** Deterministic local replay.
 
-### Episode 05 — Pixels Are Not Objects
+### Episode 05: Pixels Are Not Objects
 
 **Build:** Convert safely among pixel, normalized, and display coordinates.
 
@@ -146,7 +146,7 @@ uv run python scripts/verify_chapter.py 5
 
 **Retain:** `runs/gate-3/coordinate-results.json`. **Environment:** Deterministic local run.
 
-### Episode 06 — Ground the Claim
+### Episode 06: Ground the Claim
 
 **Build:** Require claims to carry regions and source evidence.
 
@@ -168,7 +168,7 @@ uv run python scripts/verify_chapter.py 6
 
 **Retain:** `runs/gate-4`. **Environment:** Live Gemini run requires GOOGLE_API_KEY; retained replay does not.
 
-### Episode 07 — Read the Scene
+### Episode 07: Read the Scene
 
 **Build:** Extract a structured scene graph from visual evidence.
 
@@ -190,7 +190,7 @@ uv run python scripts/verify_chapter.py 7
 
 **Retain:** `runs/gate-5`. **Environment:** Live Gemini run requires GOOGLE_API_KEY; retained replay does not.
 
-### Episode 08 — Test What the Agent Sees
+### Episode 08: Test What the Agent Sees
 
 **Build:** Evaluate vision under blur, darkness, compression, and low resolution.
 
@@ -212,7 +212,7 @@ uv run python scripts/verify_chapter.py 8
 
 **Retain:** `runs/gate-6`. **Environment:** Live Gemini run optional; fixtures and tests are deterministic.
 
-### Episode 09 — An Image Has No Before
+### Episode 09: An Image Has No Before
 
 **Build:** Represent ordered observations and change events.
 
@@ -234,7 +234,7 @@ uv run python scripts/verify_chapter.py 9
 
 **Retain:** `runs/gate-7`. **Environment:** Deterministic fixtures.
 
-### Episode 10 — Sample What Matters
+### Episode 10: Sample What Matters
 
 **Build:** Compare uniform and change-aware video sampling.
 
@@ -256,7 +256,7 @@ uv run python scripts/verify_chapter.py 10
 
 **Retain:** `runs/gate-8`. **Environment:** Local FFmpeg plus optional Gemini.
 
-### Episode 11 — Find the Moment
+### Episode 11: Find the Moment
 
 **Build:** Retrieve evidence intervals instead of isolated frames.
 
@@ -278,7 +278,7 @@ uv run python scripts/verify_chapter.py 11
 
 **Retain:** `runs/gate-9`. **Environment:** Deterministic local replay.
 
-### Episode 12 — Resolve This While the World Moves
+### Episode 12: Resolve This While the World Moves
 
 **Build:** Join speech references to the correct live visual context.
 
@@ -300,7 +300,7 @@ uv run python scripts/verify_chapter.py 12
 
 **Retain:** `runs/gate-10`. **Environment:** Browser simulation; camera optional.
 
-### Episode 13 — See the Screen, Read the Interface
+### Episode 13: See the Screen, Read the Interface
 
 **Build:** Capture screen state as visual and structured evidence.
 
@@ -322,7 +322,7 @@ uv run python scripts/verify_chapter.py 13
 
 **Retain:** `runs/gate-11`. **Environment:** Deterministic browser fixture.
 
-### Episode 14 — Prefer Structure When It Exists
+### Episode 14: Prefer Structure When It Exists
 
 **Build:** Fuse pixels with DOM or accessibility evidence and preserve disagreements.
 
@@ -344,7 +344,7 @@ uv run python scripts/verify_chapter.py 14
 
 **Retain:** `runs/gate-12`. **Environment:** Deterministic browser fixture.
 
-### Episode 15 — Turn Observations into Actions
+### Episode 15: Turn Observations into Actions
 
 **Build:** Create typed proposals, risk checks, and confirmation boundaries.
 
@@ -366,7 +366,7 @@ uv run python scripts/verify_chapter.py 15
 
 **Retain:** `runs/gate-13`. **Environment:** Deterministic simulation; no external mutation.
 
-### Episode 16 — Build a Safe Screen Agent
+### Episode 16: Build a Safe Screen Agent
 
 **Build:** Join perception, planning, policy, action, and postcondition checks.
 
@@ -388,7 +388,7 @@ uv run python scripts/verify_chapter.py 16
 
 **Retain:** `runs/gate-14`. **Environment:** Deterministic sandbox.
 
-### Episode 17 — A Page Is More Than Its Text
+### Episode 17: A Page Is More Than Its Text
 
 **Build:** Extract text, tables, figures, captions, and layout relations.
 
@@ -410,7 +410,7 @@ uv run python scripts/verify_chapter.py 17
 
 **Retain:** `runs/gate-15`. **Environment:** Deterministic generated document.
 
-### Episode 18 — Search Beyond Text
+### Episode 18: Search Beyond Text
 
 **Build:** Index multimodal records locally and in Qdrant.
 
@@ -432,7 +432,7 @@ uv run python scripts/verify_chapter.py 18
 
 **Retain:** `runs/gate-16 and runs/gate-17`. **Environment:** Docker and local Qdrant; live embedding requires GEMINI_API_KEY.
 
-### Episode 19 — Cross-Modal Search
+### Episode 19: Cross-Modal Search
 
 **Build:** Use text to retrieve images and images to retrieve related evidence.
 
@@ -454,7 +454,7 @@ uv run python scripts/verify_chapter.py 19
 
 **Retain:** `runs/gate-18`. **Environment:** Live Gemini run requires GOOGLE_API_KEY; retained replay does not.
 
-### Episode 20 — Hybrid Retrieval and Reranking
+### Episode 20: Hybrid Retrieval and Reranking
 
 **Build:** Fuse lexical, vector, and metadata signals with explainable scores.
 
@@ -476,7 +476,7 @@ uv run python scripts/verify_chapter.py 20
 
 **Retain:** `runs/gate-19`. **Environment:** Deterministic local run.
 
-### Episode 21 — Multimodal RAG with Citations
+### Episode 21: Multimodal RAG with Citations
 
 **Build:** Assemble bounded evidence packages and modality-specific citations.
 
@@ -498,7 +498,7 @@ uv run python scripts/verify_chapter.py 21
 
 **Retain:** `runs/gate-20`. **Environment:** Deterministic evidence assembly; provider generation optional.
 
-### Episode 22 — Memory Is an Event Store
+### Episode 22: Memory Is an Event Store
 
 **Build:** Persist append-only multimodal events and materialize state.
 
@@ -520,7 +520,7 @@ uv run python scripts/verify_chapter.py 22
 
 **Retain:** `runs/gate-21`. **Environment:** Deterministic local store.
 
-### Episode 23 — Ask the Past
+### Episode 23: Ask the Past
 
 **Build:** Query memory by entity, time, modality, and evidence relation.
 
@@ -542,7 +542,7 @@ uv run python scripts/verify_chapter.py 23
 
 **Retain:** `runs/gate-22`. **Environment:** Deterministic local replay.
 
-### Episode 24 — Audio Beyond Speech
+### Episode 24: Audio Beyond Speech
 
 **Build:** Detect and localize non-speech acoustic events.
 
@@ -564,7 +564,7 @@ uv run python scripts/verify_chapter.py 24
 
 **Retain:** `runs/gate-23`. **Environment:** Deterministic synthesized audio.
 
-### Episode 25 — Sensors and World State
+### Episode 25: Sensors and World State
 
 **Build:** Normalize timestamped sensor readings into shared world state.
 
@@ -586,7 +586,7 @@ uv run python scripts/verify_chapter.py 25
 
 **Retain:** `runs/gate-24`. **Environment:** Deterministic sensor simulation.
 
-### Episode 26 — When Modalities Disagree
+### Episode 26: When Modalities Disagree
 
 **Build:** Represent contradictions without silently overwriting evidence.
 
@@ -608,7 +608,7 @@ uv run python scripts/verify_chapter.py 26
 
 **Retain:** `runs/gate-25`. **Environment:** Deterministic scenarios.
 
-### Episode 27 — Evidence Before Action
+### Episode 27: Evidence Before Action
 
 **Build:** Gate actions on provenance, freshness, corroboration, and risk.
 
@@ -630,7 +630,7 @@ uv run python scripts/verify_chapter.py 27
 
 **Retain:** `runs/gate-26`. **Environment:** Deterministic policy simulation.
 
-### Episode 28 — Build the Multimodal Sandbox
+### Episode 28: Build the Multimodal Sandbox
 
 **Build:** Replay time-aligned world scenarios with known ground truth.
 
@@ -652,7 +652,7 @@ uv run python scripts/verify_chapter.py 28
 
 **Retain:** `runs/gate-27`. **Environment:** Deterministic simulator.
 
-### Episode 29 — Evaluate Every Boundary
+### Episode 29: Evaluate Every Boundary
 
 **Build:** Score perception, retrieval, grounding, policy, and outcomes separately.
 
@@ -674,7 +674,7 @@ uv run python scripts/verify_chapter.py 29
 
 **Retain:** `runs/gate-28`. **Environment:** Deterministic benchmark.
 
-### Episode 30 — Break It Deliberately
+### Episode 30: Break It Deliberately
 
 **Build:** Inject stale, missing, delayed, corrupted, and contradictory evidence.
 
@@ -696,7 +696,7 @@ uv run python scripts/verify_chapter.py 30
 
 **Retain:** `runs/gate-29`. **Environment:** Deterministic fault injection.
 
-### Episode 31 — Design the Runtime
+### Episode 31: Design the Runtime
 
 **Build:** Add bounded queues, tracing, metrics, and backpressure.
 
@@ -718,7 +718,7 @@ uv run python scripts/verify_chapter.py 31
 
 **Retain:** `runs/gate-30`. **Environment:** Deterministic load simulation.
 
-### Episode 32 — Build IAgentic Multimodal Studio
+### Episode 32: Build IAgentic Multimodal Studio
 
 **Build:** Assemble the React and TypeScript operator experience.
 
@@ -740,7 +740,7 @@ uv run python scripts/verify_chapter.py 32
 
 **Retain:** `runs/gate-31/studio-ui-result.json`. **Environment:** Local browser.
 
-### Episode 33 — Deploy Without Losing the Evidence
+### Episode 33: Deploy Without Losing the Evidence
 
 **Build:** Run production-shaped services with health, security, and persistence controls.
 
@@ -762,7 +762,7 @@ uv run python scripts/verify_chapter.py 33
 
 **Retain:** `runs/gate-32 and runs/gate-33`. **Environment:** Docker locally; Oracle Cloud deployment optional.
 
-### Episode 34 — Release with Tenant Boundaries
+### Episode 34: Release with Tenant Boundaries
 
 **Build:** Enforce Auth0 organization identity and PostgreSQL row-level isolation.
 
