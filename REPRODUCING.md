@@ -19,11 +19,10 @@ The verifier runs mapped deterministic tests, rejects missing or empty
 retained artifacts, and parses every JSON and JSONL record. It does not call a
 paid provider or overwrite evidence.
 
-Install the pinned Gemini SDK only when repeating provider-backed runs:
-
-```bash
-uv sync --all-extras
-```
+The pinned Gemini SDK is installed by `uv sync` because the deterministic
+suite imports the same provider adapters used by live runs. Tests do not call
+Gemini and require no provider key; only the explicit live-run commands make
+network requests.
 
 ## Chapter command map
 
