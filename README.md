@@ -17,6 +17,10 @@ not belong in version control.
 
 Repository: <https://github.com/IAgentic-LLC/multimodal-agents>
 
+## Get the book
+
+📘 [Amazon (Kindle)](https://www.amazon.com/dp/B0HLCQVVLV) · [Amazon (Paperback)](https://www.amazon.com/dp/B0HLCSPFRK)
+
 ## Start from a clean checkout
 
 Python 3.12 or later is required. Install `uv`, then run:
