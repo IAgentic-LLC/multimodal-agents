@@ -19,7 +19,7 @@ Repository: <https://github.com/IAgentic-LLC/multimodal-agents>
 
 ## Get the book
 
-📘 [Amazon (Kindle)](https://www.amazon.com/dp/B0HLCQVVLV) · [Amazon (Paperback)](https://www.amazon.com/dp/B0HLCSPFRK)
+📘 [Amazon (Kindle)](https://www.amazon.com/dp/B0HLCQVVLV) · [Amazon (Paperback)](https://www.amazon.com/dp/B0HLCSPFRK) · [Leanpub](https://leanpub.com/buildingproductionmultimodalaiagentsmultimodal-agents)
 
 ## Start from a clean checkout
 
