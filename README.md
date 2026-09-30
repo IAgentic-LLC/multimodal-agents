@@ -1,5 +1,7 @@
 # Multimodal Agents
 
+<img src="cover.png" alt="Building Production Multimodal AI Agents cover" width="220" align="right">
+
 Companion code for *Building Production Multimodal AI Agents* (Book 6 of the
 Production AI Agent Engineering series).
 
