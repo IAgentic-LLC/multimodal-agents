@@ -1,0 +1,102 @@
+{
+  "capability": "medical-segmentation",
+  "claim": "7 high-density region(s) above 300 HU",
+  "evidence_ids": [
+    "region-1",
+    "region-2",
+    "region-8",
+    "region-10",
+    "region-14",
+    "region-15",
+    "region-17"
+  ],
+  "model": "hu-threshold-connected-components",
+  "regions": [
+    {
+      "bbox": [
+        6,
+        59,
+        30,
+        76
+      ],
+      "label": "high-density candidate",
+      "mean_hu": 395.2,
+      "region_id": "region-1",
+      "voxel_count": 60
+    },
+    {
+      "bbox": [
+        7,
+        45,
+        19,
+        57
+      ],
+      "label": "high-density candidate",
+      "mean_hu": 396.8,
+      "region_id": "region-2",
+      "voxel_count": 51
+    },
+    {
+      "bbox": [
+        32,
+        28,
+        80,
+        83
+      ],
+      "label": "high-density candidate",
+      "mean_hu": 551.1,
+      "region_id": "region-8",
+      "voxel_count": 778
+    },
+    {
+      "bbox": [
+        33,
+        63,
+        48,
+        77
+      ],
+      "label": "high-density candidate",
+      "mean_hu": 385.1,
+      "region_id": "region-10",
+      "voxel_count": 67
+    },
+    {
+      "bbox": [
+        37,
+        46,
+        39,
+        50
+      ],
+      "label": "high-density candidate",
+      "mean_hu": 321.8,
+      "region_id": "region-14",
+      "voxel_count": 8
+    },
+    {
+      "bbox": [
+        38,
+        66,
+        40,
+        73
+      ],
+      "label": "high-density candidate",
+      "mean_hu": 320.5,
+      "region_id": "region-15",
+      "voxel_count": 13
+    },
+    {
+      "bbox": [
+        63,
+        15,
+        68,
+        16
+      ],
+      "label": "high-density candidate",
+      "mean_hu": 376.8,
+      "region_id": "region-17",
+      "voxel_count": 10
+    }
+  ],
+  "source": "C:\\Users\\HomePC\\Desktop\\Project\\multimodal-agents\\.venv\\Lib\\site-packages\\pydicom\\data\\test_files\\CT_small.dcm",
+  "status": "completed"
+}

@@ -1,0 +1,576 @@
+{
+  "source": "Zenodo DOI 10.5281/zenodo.22078388, 001-mini tier, real nuclear-tracked light-sheet organoid data, CC-BY 4.0",
+  "crop_window": {
+    "t": "all 5 real timepoints",
+    "c": "all 2 real channels (membrane, nuclear marker)",
+    "z": [
+      30,
+      55
+    ],
+    "y": [
+      140,
+      250
+    ],
+    "x": [
+      265,
+      365
+    ]
+  },
+  "raw_shape": [
+    5,
+    2,
+    25,
+    110,
+    100
+  ],
+  "raw_dtype": "uint16",
+  "label_shapes": {
+    "nucleus": [
+      5,
+      25,
+      110,
+      100
+    ],
+    "cell": [
+      5,
+      25,
+      110,
+      100
+    ],
+    "lumen": [
+      5,
+      25,
+      110,
+      100
+    ]
+  },
+  "real_tracked_nuclei_in_crop": 29,
+  "real_tracked_nuclei_total_in_dataset": 29,
+  "nodes": [
+    {
+      "id": 513,
+      "t_idx": 0,
+      "track_id": 7,
+      "label_id": 1,
+      "z": 85.17,
+      "y": 47.35,
+      "x": 74.86,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 296.9
+    },
+    {
+      "id": 514,
+      "t_idx": 0,
+      "track_id": 8,
+      "label_id": 2,
+      "z": 89.18,
+      "y": 56.93,
+      "x": 78.01,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 318.53
+    },
+    {
+      "id": 515,
+      "t_idx": 0,
+      "track_id": 5,
+      "label_id": 3,
+      "z": 80.81,
+      "y": 41.72,
+      "x": 85.16,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 512.0
+    },
+    {
+      "id": 516,
+      "t_idx": 0,
+      "track_id": 6,
+      "label_id": 4,
+      "z": 76.38,
+      "y": 48.95,
+      "x": 89.42,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 689.52
+    },
+    {
+      "id": 517,
+      "t_idx": 0,
+      "track_id": 9,
+      "label_id": 5,
+      "z": 92.43,
+      "y": 50.81,
+      "x": 85.32,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 324.34
+    },
+    {
+      "id": 518,
+      "t_idx": 0,
+      "track_id": 10,
+      "label_id": 6,
+      "z": 83.42,
+      "y": 58.33,
+      "x": 85.74,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 286.76
+    },
+    {
+      "id": 519,
+      "t_idx": 1,
+      "track_id": 7,
+      "label_id": 1,
+      "z": 85.86,
+      "y": 47.4,
+      "x": 74.12,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 265.4
+    },
+    {
+      "id": 520,
+      "t_idx": 1,
+      "track_id": 8,
+      "label_id": 2,
+      "z": 89.25,
+      "y": 55.95,
+      "x": 78.66,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 308.8
+    },
+    {
+      "id": 521,
+      "t_idx": 1,
+      "track_id": 5,
+      "label_id": 3,
+      "z": 80.81,
+      "y": 43.87,
+      "x": 84.69,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 342.73
+    },
+    {
+      "id": 522,
+      "t_idx": 1,
+      "track_id": 6,
+      "label_id": 4,
+      "z": 78.04,
+      "y": 46.2,
+      "x": 88.41,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 309.74
+    },
+    {
+      "id": 523,
+      "t_idx": 1,
+      "track_id": 9,
+      "label_id": 5,
+      "z": 91.38,
+      "y": 49.97,
+      "x": 87.27,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 329.35
+    },
+    {
+      "id": 524,
+      "t_idx": 1,
+      "track_id": 10,
+      "label_id": 6,
+      "z": 82.42,
+      "y": 58.94,
+      "x": 86.62,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 268.24
+    },
+    {
+      "id": 525,
+      "t_idx": 2,
+      "track_id": 7,
+      "label_id": 1,
+      "z": 86.06,
+      "y": 46.74,
+      "x": 75.31,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 251.34
+    },
+    {
+      "id": 526,
+      "t_idx": 2,
+      "track_id": 8,
+      "label_id": 2,
+      "z": 87.84,
+      "y": 56.46,
+      "x": 79.25,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 235.25
+    },
+    {
+      "id": 527,
+      "t_idx": 2,
+      "track_id": 9,
+      "label_id": 3,
+      "z": 91.93,
+      "y": 48.25,
+      "x": 86.58,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 290.68
+    },
+    {
+      "id": 528,
+      "t_idx": 2,
+      "track_id": 11,
+      "label_id": 4,
+      "z": 80.81,
+      "y": 45.92,
+      "x": 86.93,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": true,
+      "is_merge_node": true,
+      "nucleus_volume": 730.35
+    },
+    {
+      "id": 529,
+      "t_idx": 2,
+      "track_id": 10,
+      "label_id": 5,
+      "z": 82.02,
+      "y": 58.71,
+      "x": 87.13,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 236.33
+    },
+    {
+      "id": 530,
+      "t_idx": 3,
+      "track_id": 12,
+      "label_id": 1,
+      "z": 83.65,
+      "y": 42.56,
+      "x": 76.57,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 292.17
+    },
+    {
+      "id": 531,
+      "t_idx": 3,
+      "track_id": 7,
+      "label_id": 2,
+      "z": 86.56,
+      "y": 50.15,
+      "x": 75.31,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 217.54
+    },
+    {
+      "id": 532,
+      "t_idx": 3,
+      "track_id": 8,
+      "label_id": 3,
+      "z": 84.27,
+      "y": 56.07,
+      "x": 77.2,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 225.51
+    },
+    {
+      "id": 533,
+      "t_idx": 3,
+      "track_id": 9,
+      "label_id": 4,
+      "z": 89.87,
+      "y": 46.93,
+      "x": 86.45,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 246.06
+    },
+    {
+      "id": 534,
+      "t_idx": 3,
+      "track_id": 13,
+      "label_id": 5,
+      "z": 77.2,
+      "y": 56.21,
+      "x": 88.71,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 298.52
+    },
+    {
+      "id": 535,
+      "t_idx": 3,
+      "track_id": 10,
+      "label_id": 6,
+      "z": 84.96,
+      "y": 57.2,
+      "x": 87.41,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 251.74
+    },
+    {
+      "id": 536,
+      "t_idx": 4,
+      "track_id": 7,
+      "label_id": 1,
+      "z": 89.18,
+      "y": 50.69,
+      "x": 74.92,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 260.4
+    },
+    {
+      "id": 537,
+      "t_idx": 4,
+      "track_id": 8,
+      "label_id": 2,
+      "z": 86.16,
+      "y": 59.32,
+      "x": 77.19,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 343.54
+    },
+    {
+      "id": 538,
+      "t_idx": 4,
+      "track_id": 12,
+      "label_id": 3,
+      "z": 83.65,
+      "y": 42.18,
+      "x": 77.6,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 479.69
+    },
+    {
+      "id": 539,
+      "t_idx": 4,
+      "track_id": 9,
+      "label_id": 4,
+      "z": 91.31,
+      "y": 47.75,
+      "x": 85.4,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 329.89
+    },
+    {
+      "id": 540,
+      "t_idx": 4,
+      "track_id": 13,
+      "label_id": 5,
+      "z": 75.09,
+      "y": 54.9,
+      "x": 89.35,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 431.29
+    },
+    {
+      "id": 541,
+      "t_idx": 4,
+      "track_id": 10,
+      "label_id": 6,
+      "z": 85.75,
+      "y": 56.18,
+      "x": 87.16,
+      "is_root_node": false,
+      "is_leaf_node": false,
+      "is_split_node": false,
+      "is_merge_node": false,
+      "nucleus_volume": 345.3
+    }
+  ],
+  "edges": [
+    {
+      "source": 513,
+      "target": 519
+    },
+    {
+      "source": 514,
+      "target": 520
+    },
+    {
+      "source": 515,
+      "target": 521
+    },
+    {
+      "source": 516,
+      "target": 522
+    },
+    {
+      "source": 517,
+      "target": 523
+    },
+    {
+      "source": 518,
+      "target": 524
+    },
+    {
+      "source": 519,
+      "target": 525
+    },
+    {
+      "source": 520,
+      "target": 526
+    },
+    {
+      "source": 523,
+      "target": 527
+    },
+    {
+      "source": 521,
+      "target": 528
+    },
+    {
+      "source": 522,
+      "target": 528
+    },
+    {
+      "source": 524,
+      "target": 529
+    },
+    {
+      "source": 528,
+      "target": 530
+    },
+    {
+      "source": 525,
+      "target": 531
+    },
+    {
+      "source": 526,
+      "target": 532
+    },
+    {
+      "source": 527,
+      "target": 533
+    },
+    {
+      "source": 528,
+      "target": 534
+    },
+    {
+      "source": 529,
+      "target": 535
+    },
+    {
+      "source": 531,
+      "target": 536
+    },
+    {
+      "source": 532,
+      "target": 537
+    },
+    {
+      "source": 530,
+      "target": 538
+    },
+    {
+      "source": 533,
+      "target": 539
+    },
+    {
+      "source": 534,
+      "target": 540
+    },
+    {
+      "source": 535,
+      "target": 541
+    }
+  ],
+  "label_voxel_counts": {
+    "nucleus": {
+      "1": 2196,
+      "2": 2356,
+      "3": 3787,
+      "4": 5088,
+      "5": 2399,
+      "6": 2121
+    },
+    "cell": {
+      "1": 11502,
+      "2": 9935,
+      "4": 34512,
+      "5": 14431,
+      "6": 11578
+    },
+    "lumen": {
+      "1": 32,
+      "2": 96241
+    }
+  }
+}

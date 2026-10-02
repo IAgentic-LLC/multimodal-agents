@@ -31,6 +31,15 @@ import RuntimeLab from "./RuntimeLab";
 import MultimodalStudio from "./MultimodalStudio";
 import ProductionControlLab from "./ProductionControlLab";
 import ReleaseGateLab from "./ReleaseGateLab";
+import MultiAgentLab from "./MultiAgentLab";
+import CapstoneLab from "./CapstoneLab";
+import StudioDetectionWorkbench from "./StudioDetectionWorkbench";
+import StudioLoginGate from "./StudioAuth";
+import StudioTiffWorkbench from "./StudioTiffWorkbench";
+import StudioTrackingWorkbench from "./StudioTrackingWorkbench";
+import StudioVolumeWorkbench from "./StudioVolumeWorkbench";
+import StudioZarrWorkbench from "./StudioZarrWorkbench";
+import DetectionSegmentationLab from "./DetectionSegmentationLab";
 import OpeningEvidenceLabs from "./OpeningEvidenceLabs";
 import type {
   CaptureMetadata,
@@ -509,6 +518,7 @@ export default function App() {
       </section>
       <OpeningEvidenceLabs />
       <GeometryLab />
+      <DetectionSegmentationLab />
       <LiveSessionLab />
       <ScreenStateLab />
       <FusionLab />
@@ -532,6 +542,16 @@ export default function App() {
       <MultimodalStudio />
       <ProductionControlLab />
       <ReleaseGateLab />
+      <MultiAgentLab />
+      <CapstoneLab />
+      {/* TEMPORARY: real Auth0 + upload + render end-to-end proof, remove after verification */}
+      <StudioLoginGate>
+        <StudioVolumeWorkbench />
+        <StudioZarrWorkbench />
+        <StudioTiffWorkbench />
+        <StudioDetectionWorkbench />
+        <StudioTrackingWorkbench />
+      </StudioLoginGate>
     </main>
   );
 }

@@ -81,7 +81,7 @@ test("remains usable on a narrow viewport", async ({ page }) => {
   expect(overflow).toBe(false);
   for (const button of await page.getByRole("button").all()) {
     const box = await button.boundingBox();
-    expect(box?.height).toBeGreaterThanOrEqual(48);
+    expect(box?.height, await button.textContent()).toBeGreaterThanOrEqual(48);
   }
 });
 
@@ -216,6 +216,7 @@ for (const [fixture, file, width, height] of [
   ["temporal-evidence.html", "ch09-temporal-evidence.png", 1200, 700],
   ["sampling-comparison.html", "ch10-video-sampling.png", 1200, 700],
   ["interval-retrieval.html", "ch11-interval-retrieval.png", 1200, 720],
+  ["multi-agent-orchestration.html", "ch36-multi-agent-orchestration.png", 1060, 510],
 ] as const) {
   test(`captures editorial fixture ${fixture}`, async ({ page }) => {
     await page.setViewportSize({ width, height });
@@ -568,6 +569,41 @@ test("final gate releases with verified organization claims", async ({ page }) =
     path: path.resolve("..", "..", "multimodal-agents-book", "figures",
       "ch34-final-release-gate.png"),
   });
+});
+
+test("multi-agent coordinator preserves partial failure and authority", async ({ page }) => {
+  await page.route("**/api/orchestrations", async (route) => route.fulfill({
+    contentType: "application/json",
+    body: JSON.stringify({
+      trace_id: "trace-test-035",
+      authority: "observe_only",
+      status: "partial_failure",
+      duration_ms: 184,
+      specialists: [
+        {
+          role: "vision", status: "completed", latency_ms: 81,
+          claim: "door appears closed", evidence_ids: ["frame-087#region-door"],
+        },
+        {
+          role: "retrieval", status: "failed",
+          detail: "upstream unavailable",
+        },
+      ],
+      evidence_backed_claims: 1,
+      action_gate: "blocked_without_explicit_authority",
+    }),
+  }));
+  await page.goto("/");
+  const lab = page.getByRole("region", { name: "Delegate capabilities, not trust" });
+  await lab.getByRole("button", { name: "Run live orchestration" }).click();
+  await expect(lab.getByRole("article")).toHaveCount(2);
+  await expect(lab.getByText("upstream unavailable")).toBeVisible();
+  await expect(lab.getByText("PARTIAL_FAILURE", { exact: true })).toBeVisible();
+  await expect(lab.getByText("BLOCKED", { exact: true })).toBeVisible();
+  // This scenario (a live 2-specialist mocked partial failure) is a
+  // behavioral check on MultiAgentLab, not the chapter 36 figure. The real
+  // deterministic 4-task figure comes from the multi-agent-orchestration.html
+  // fixture above, built from the retained Gate 35 run.
 });
 
 for (const [name, file, articles] of [

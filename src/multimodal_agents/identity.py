@@ -1,9 +1,12 @@
+import logging
 import os
 from dataclasses import dataclass
 
 import jwt
 from fastapi import HTTPException
 from jwt import PyJWKClient
+
+LOGGER = logging.getLogger("multimodal.auth0")
 
 
 @dataclass(frozen=True)
@@ -55,6 +58,9 @@ def decode_auth0_token(token: str) -> dict:
             leeway=10,
         )
     except jwt.PyJWTError as error:
+        LOGGER.warning(
+            "Auth0 JWT rejected: %s: %s", type(error).__name__, error
+        )
         raise HTTPException(401, "invalid access token") from error
 
 

@@ -35,6 +35,7 @@ const chapters = [
   ["32-build-iagentic-multimodal-studio", /Build IAgentic Multimodal Studio/],
   ["33-deploy-without-losing-the-evidence", /Deploy Without Losing the Evidence/],
   ["34-release-with-tenant-boundaries", /Release with Tenant Boundaries/],
+  ["35-orchestrate-multimodal-specialists", /Orchestrate Multimodal Specialists/],
 ] as const;
 
 test("all chapters render accessible evidence on desktop and mobile", async ({

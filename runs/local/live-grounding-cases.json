@@ -1,0 +1,21 @@
+[
+  {
+    "case_id": "present-red-rectangle",
+    "expected_object": "red rectangle",
+    "expected_region": {
+      "bottom": 0.75,
+      "left": 0.125,
+      "right": 0.375,
+      "top": 0.25
+    },
+    "present": true,
+    "query": "red rectangle"
+  },
+  {
+    "case_id": "absent-green-triangle",
+    "expected_object": "green triangle",
+    "expected_region": null,
+    "present": false,
+    "query": "green triangle"
+  }
+]

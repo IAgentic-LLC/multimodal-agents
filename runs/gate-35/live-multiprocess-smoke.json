@@ -1,0 +1,44 @@
+{
+  "processes": 2,
+  "cards": [
+    {
+      "name": "vision-specialist",
+      "role": "vision",
+      "skills": [
+        "locate door"
+      ]
+    },
+    {
+      "name": "retrieval-specialist",
+      "role": "retrieval",
+      "skills": [
+        "find door state"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "task_id": "task-8761",
+      "specialist": "vision",
+      "status": "completed",
+      "claim": "door appears closed",
+      "evidence_ids": [
+        "frame-087#region-door"
+      ],
+      "trace_id": "trace-live-035"
+    },
+    {
+      "task_id": "task-8762",
+      "specialist": "retrieval",
+      "status": "completed",
+      "claim": "sensor event reports closed",
+      "evidence_ids": [
+        "sensor-door-441"
+      ],
+      "trace_id": "trace-live-035"
+    }
+  ],
+  "mutation_status": 403,
+  "shared_trace": true,
+  "passed": true
+}

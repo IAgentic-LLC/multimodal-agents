@@ -1,0 +1,260 @@
+services:
+  specialist-vision:
+    build:
+      context: ../..
+      dockerfile: deploy/specialist/Dockerfile
+    image: iagentic-multimodal-specialist:local
+    container_name: multimodal-specialist-vision
+    restart: unless-stopped
+    environment:
+      SPECIALIST_ROLE: vision
+      AUTH_MODE: auth0
+      AUTH0_DOMAIN: ${AUTH0_DOMAIN:?required}
+      AUTH0_AUDIENCE: ${AUTH0_AUDIENCE:?required}
+      A2A_REQUIRED_SCOPE: read:sessions
+      A2A_ALLOWED_ORGANIZATION: ${AUTH0_ORGANIZATION:?required}
+      A2A_PUBLIC_BASE_URL: ${VISION_PUBLIC_URL:?required}
+    ports:
+      - "127.0.0.1:8761:8000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+    networks: [orchestration-private, orchestration-egress]
+
+  specialist-retrieval:
+    image: iagentic-multimodal-specialist:local
+    container_name: multimodal-specialist-retrieval
+    restart: unless-stopped
+    environment:
+      SPECIALIST_ROLE: retrieval
+      AUTH_MODE: auth0
+      AUTH0_DOMAIN: ${AUTH0_DOMAIN:?required}
+      AUTH0_AUDIENCE: ${AUTH0_AUDIENCE:?required}
+      A2A_REQUIRED_SCOPE: read:sessions
+      A2A_ALLOWED_ORGANIZATION: ${AUTH0_ORGANIZATION:?required}
+      A2A_PUBLIC_BASE_URL: ${RETRIEVAL_PUBLIC_URL:?required}
+    ports:
+      - "127.0.0.1:8762:8000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    depends_on:
+      specialist-vision:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+    networks: [orchestration-private, orchestration-egress]
+
+  opensearch:
+    image: opensearchproject/opensearch:2.19.1
+    container_name: multimodal-opensearch
+    restart: unless-stopped
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"
+      DISABLE_INSTALL_DEMO_CONFIG: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+      bootstrap.memory_lock: "true"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    deploy:
+      resources:
+        limits:
+          memory: 1200M
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://127.0.0.1:9200/_cluster/health || exit 1"]
+      interval: 5s
+      timeout: 8s
+      retries: 20
+    security_opt:
+      - no-new-privileges:true
+    # Internal-only: never publish a port. This is the only safety boundary
+    # since DISABLE_SECURITY_PLUGIN is true.
+    networks: [orchestration-private]
+
+  specialist-analysis:
+    image: iagentic-multimodal-specialist:local
+    container_name: multimodal-specialist-analysis
+    restart: unless-stopped
+    environment:
+      SPECIALIST_ROLE: analysis
+      AUTH_MODE: auth0
+      AUTH0_DOMAIN: ${AUTH0_DOMAIN:?required}
+      AUTH0_AUDIENCE: ${AUTH0_AUDIENCE:?required}
+      A2A_REQUIRED_SCOPE: read:sessions
+      A2A_ALLOWED_ORGANIZATION: ${AUTH0_ORGANIZATION:?required}
+      A2A_PUBLIC_BASE_URL: ${ANALYSIS_PUBLIC_URL:?required}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?required}
+      OPENSEARCH_URL: ${OPENSEARCH_URL:-http://opensearch:9200}
+    ports:
+      - "127.0.0.1:8763:8000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+    networks: [orchestration-private, orchestration-egress]
+
+  specialist-visualization:
+    image: iagentic-multimodal-specialist:local
+    container_name: multimodal-specialist-visualization
+    restart: unless-stopped
+    environment:
+      SPECIALIST_ROLE: visualization
+      AUTH_MODE: auth0
+      AUTH0_DOMAIN: ${AUTH0_DOMAIN:?required}
+      AUTH0_AUDIENCE: ${AUTH0_AUDIENCE:?required}
+      A2A_REQUIRED_SCOPE: read:sessions
+      A2A_ALLOWED_ORGANIZATION: ${AUTH0_ORGANIZATION:?required}
+      A2A_PUBLIC_BASE_URL: ${VISUALIZATION_PUBLIC_URL:?required}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?required}
+      OPENSEARCH_URL: ${OPENSEARCH_URL:-http://opensearch:9200}
+    ports:
+      - "127.0.0.1:8764:8000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+    networks: [orchestration-private, orchestration-egress]
+
+  specialist-edit-proposal:
+    image: iagentic-multimodal-specialist:local
+    container_name: multimodal-specialist-edit-proposal
+    restart: unless-stopped
+    environment:
+      SPECIALIST_ROLE: edit-proposal
+      AUTH_MODE: auth0
+      AUTH0_DOMAIN: ${AUTH0_DOMAIN:?required}
+      AUTH0_AUDIENCE: ${AUTH0_AUDIENCE:?required}
+      A2A_REQUIRED_SCOPE: read:sessions
+      A2A_ALLOWED_ORGANIZATION: ${AUTH0_ORGANIZATION:?required}
+      A2A_PUBLIC_BASE_URL: ${EDIT_PROPOSAL_PUBLIC_URL:?required}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?required}
+      OPENSEARCH_URL: ${OPENSEARCH_URL:-http://opensearch:9200}
+    ports:
+      - "127.0.0.1:8765:8000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+    networks: [orchestration-private, orchestration-egress]
+
+  orchestration-coordinator:
+    build:
+      context: ../..
+      dockerfile: deploy/coordinator/Dockerfile
+    image: iagentic-multimodal-coordinator:local
+    container_name: multimodal-orchestration-coordinator
+    restart: unless-stopped
+    environment:
+      AUTH0_DOMAIN: ${AUTH0_DOMAIN:?required}
+      AUTH0_AUDIENCE: ${AUTH0_AUDIENCE:?required}
+      AUTH0_CLIENT_ID: ${AUTH0_CLIENT_ID:?required}
+      AUTH0_CLIENT_SECRET: ${AUTH0_CLIENT_SECRET:?required}
+      AUTH0_ORGANIZATION: ${AUTH0_ORGANIZATION:?required}
+      VISION_A2A_URL: http://specialist-vision:8000
+      RETRIEVAL_A2A_URL: http://specialist-retrieval:8000
+      ANALYSIS_A2A_URL: http://specialist-analysis:8000
+      VISUALIZATION_A2A_URL: http://specialist-visualization:8000
+      EDIT_PROPOSAL_A2A_URL: http://specialist-edit-proposal:8000
+      LANGFUSE_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:-}
+      LANGFUSE_SECRET_KEY: ${LANGFUSE_SECRET_KEY:-}
+      LANGFUSE_BASE_URL: ${LANGFUSE_BASE_URL:-http://host.docker.internal:3001}
+      LANGFUSE_ENVIRONMENT: ${LANGFUSE_ENVIRONMENT:-development}
+      APP_RELEASE: ${APP_RELEASE:-book6-local}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?required}
+      OPENSEARCH_URL: http://opensearch:9200
+    depends_on:
+      specialist-vision:
+        condition: service_healthy
+      specialist-retrieval:
+        condition: service_healthy
+      specialist-analysis:
+        condition: service_healthy
+      specialist-visualization:
+        condition: service_healthy
+      specialist-edit-proposal:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+    read_only: true
+    # 16m was fine before the capstone's uploads and decision log; a real
+    # NIfTI upload can be up to 200MB, and nothing here ever evicts old
+    # uploads from this tmpfs, so a production deployment should add real
+    # cleanup (a TTL sweep, or move uploads to a real persistent volume)
+    # rather than relying on this cap alone once there are real users.
+    tmpfs:
+      - /tmp:size=512m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    healthcheck:
+      # 3s was fine for the original fastapi/langfuse-only image; this
+      # image is now much heavier (torch, opencv, scikit-image, ...), and
+      # spawning a fresh python interpreter for the check itself can
+      # occasionally exceed 3s under load on a resource-constrained dev
+      # host, even though /healthz itself answers instantly once the
+      # process is up (verified: curl against the published port
+      # returns 200 while this check was still reporting unhealthy).
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+    networks: [orchestration-private, orchestration-edge]
+
+volumes:
+  opensearch-data:
+
+networks:
+  orchestration-private:
+    internal: true
+  orchestration-edge:
+    name: multimodal-orchestration-edge
+  orchestration-egress:

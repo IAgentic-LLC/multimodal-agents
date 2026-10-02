@@ -1,0 +1,13 @@
+{
+  "trace_found": true,
+  "trace_name": "multimodal-orchestration",
+  "environment": "development",
+  "observation_names": [
+    "delegate-retrieval",
+    "delegate-vision",
+    "multimodal-orchestration"
+  ],
+  "root_and_two_children": true,
+  "raw_question_absent": true,
+  "credentials_absent": true
+}

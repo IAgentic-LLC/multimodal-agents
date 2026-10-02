@@ -50,6 +50,7 @@ services:
   multimodal-studio:
     build:
       context: ../../frontend
+      dockerfile: Dockerfile.static
     image: iagentic-multimodal-studio:local
     container_name: multimodal-studio
     restart: unless-stopped

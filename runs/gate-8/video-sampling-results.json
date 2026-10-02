@@ -9,12 +9,12 @@
     "end_ms": 1600
   },
   "default_video": {
-    "latency_ms": 2241,
+    "latency_ms": 4814,
     "input_tokens": 438,
-    "candidate_tokens": 86,
-    "thought_tokens": 233,
-    "billed_output_tokens": 319,
-    "total_tokens": 757,
+    "candidate_tokens": 97,
+    "thought_tokens": 208,
+    "billed_output_tokens": 305,
+    "total_tokens": 743,
     "response": {
       "yellow_triangle_present": true,
       "start_ms": 1000,
@@ -22,16 +22,16 @@
       "evidence_timestamps_ms": [
         1000
       ],
-      "explanation": "A yellow triangle appears to the right of the blue circle at 1000 ms (00:01)."
+      "explanation": "A yellow triangle appears to the right of the blue circle at timestamp 00:01 (1000 ms) and is not visible in any other frames."
     }
   },
   "explicit_five_fps": {
-    "latency_ms": 4038,
+    "latency_ms": 6353,
     "input_tokens": 33275,
-    "candidate_tokens": 106,
-    "thought_tokens": 442,
-    "billed_output_tokens": 548,
-    "total_tokens": 33823,
+    "candidate_tokens": 121,
+    "thought_tokens": 475,
+    "billed_output_tokens": 596,
+    "total_tokens": 33871,
     "response": {
       "yellow_triangle_present": true,
       "start_ms": 1200,
@@ -41,7 +41,7 @@
         1400,
         1600
       ],
-      "explanation": "A yellow triangle appears to the right of the blue circle from 1200 ms to 1600 ms."
+      "explanation": "A yellow triangle appears to the right of the blue circle starting at 1200 ms and remains visible through 1600 ms, after which it disappears by 1800 ms."
     }
   }
 }

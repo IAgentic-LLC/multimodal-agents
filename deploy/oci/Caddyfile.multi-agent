@@ -1,0 +1,18 @@
+# Existing Voice Studio endpoint.
+130-61-18-181.sslip.io {
+	reverse_proxy 127.0.0.1:8032
+}
+
+# Book 6 production demonstration UI and its same-origin coordinator API.
+multimodal.130-61-18-181.sslip.io {
+	reverse_proxy 127.0.0.1:8092
+}
+
+# Public A2A discovery and OAuth-protected protocol endpoints.
+vision.130-61-18-181.sslip.io {
+	reverse_proxy 127.0.0.1:8761
+}
+
+retrieval.130-61-18-181.sslip.io {
+	reverse_proxy 127.0.0.1:8762
+}

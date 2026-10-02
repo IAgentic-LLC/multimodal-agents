@@ -55,9 +55,9 @@
         "text": "Checkout incident review\nThe chart and table describe the same two services.",
         "region": {
           "left": 0.05,
-          "top": 0.11,
-          "right": 0.47,
-          "bottom": 0.25
+          "top": 0.075,
+          "right": 0.474,
+          "bottom": 0.166
         }
       },
       {
@@ -66,9 +66,9 @@
         "text": "Measured latency\nService p95 latency\nCatalog 180 ms\nCheckout 410 ms\nThreshold: 300 ms. Checkout exceeds it.",
         "region": {
           "left": 0.05,
-          "top": 0.21,
-          "right": 0.49,
-          "bottom": 0.84
+          "top": 0.213,
+          "right": 0.486,
+          "bottom": 0.835
         }
       },
       {
@@ -76,10 +76,10 @@
         "kind": "chart",
         "text": "p95 latency by service\nCatalog: 180\nCheckout: 410",
         "region": {
-          "left": 0.55,
-          "top": 0.24,
-          "right": 0.92,
-          "bottom": 0.86
+          "left": 0.547,
+          "top": 0.241,
+          "right": 0.916,
+          "bottom": 0.865
         }
       }
     ],
@@ -90,26 +90,26 @@
         "target_id": "latency-table"
       }
     ],
-    "latency_ms": 23117,
+    "latency_ms": 7442,
     "input_tokens": 1155,
-    "output_tokens": 5595
+    "output_tokens": 1406
   },
   "score": {
     "kind_recall": 1.0,
-    "mean_region_iou": 0.5838463497879172,
+    "mean_region_iou": 0.7022720121971315,
     "relation_recall": 1.0,
     "unsupported_relations": 0
   },
   "provider_trace": {
     "provider": "google",
     "model": "gemini-3.8-flash",
-    "latency_ms": 23117,
-    "response_id": "e865ap-pBIGkvdIPnMejgAM",
+    "latency_ms": 7442,
+    "response_id": "xVm-aoubHOKtxN8PxvzdiAQ",
     "input_tokens": 1155,
-    "candidate_tokens": 368,
-    "thought_tokens": 5227,
-    "billed_output_tokens": 5595,
-    "total_tokens": 6750,
+    "candidate_tokens": 378,
+    "thought_tokens": 1028,
+    "billed_output_tokens": 1406,
+    "total_tokens": 2561,
     "response": {
       "elements": [
         {
@@ -117,27 +117,27 @@
           "kind": "title",
           "text": "Checkout incident review\nThe chart and table describe the same two services.",
           "left": 0.05,
-          "top": 0.11,
-          "right": 0.47,
-          "bottom": 0.25
+          "top": 0.075,
+          "right": 0.474,
+          "bottom": 0.166
         },
         {
           "element_id": "latency-table",
           "kind": "table",
           "text": "Measured latency\nService p95 latency\nCatalog 180 ms\nCheckout 410 ms\nThreshold: 300 ms. Checkout exceeds it.",
           "left": 0.05,
-          "top": 0.21,
-          "right": 0.49,
-          "bottom": 0.84
+          "top": 0.213,
+          "right": 0.486,
+          "bottom": 0.835
         },
         {
           "element_id": "latency-chart",
           "kind": "chart",
           "text": "p95 latency by service\nCatalog: 180\nCheckout: 410",
-          "left": 0.55,
-          "top": 0.24,
-          "right": 0.92,
-          "bottom": 0.86
+          "left": 0.547,
+          "top": 0.241,
+          "right": 0.916,
+          "bottom": 0.865
         }
       ],
       "relations": [

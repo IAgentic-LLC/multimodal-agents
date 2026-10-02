@@ -1,0 +1,42 @@
+{
+  "gate": 35,
+  "provider": "Oracle Cloud Infrastructure",
+  "region": "eu-frankfurt-1",
+  "architecture": "arm64",
+  "deployment": "two independent specialist containers on a private Docker network",
+  "observed": {
+    "agent_cards": 2,
+    "delegated_tasks_completed": 2,
+    "success_statuses": [200, 200],
+    "invalid_token_status": 401,
+    "cross_tenant_status": 403,
+    "forbidden_mutation_status": 403,
+    "shared_trace": true,
+    "specialist_user": "10002",
+    "read_only_root_filesystem": true,
+    "capabilities_dropped": ["ALL"],
+    "no_new_privileges": true,
+    "published_specialist_ports": 0,
+    "healthy_specialists": 2,
+    "vision_status_during_retrieval_outage": 200,
+    "retrieval_recovered": true
+    ,
+    "studio_binding": "127.0.0.1:8092",
+    "studio_health_status": 200,
+    "studio_user": "101",
+    "studio_read_only_root_filesystem": true,
+    "studio_capabilities_dropped": ["ALL"],
+    "studio_no_new_privileges": true,
+    "playwright_mobile_overflow": false,
+    "playwright_desktop_overflow": false,
+    "playwright_static_requests": 3,
+    "playwright_static_failures": 0
+  },
+  "scope": {
+    "publicly_exposed": false,
+    "existing_voice_stack_modified": false,
+    "existing_multimodal_stack_modified": false,
+    "remote_protocol_claim": "HTTP service boundary with A2A-inspired discovery and task semantics; not full A2A conformance"
+  },
+  "passed": true
+}

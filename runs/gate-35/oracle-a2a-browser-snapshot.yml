@@ -1,0 +1,42 @@
+- region [ref=f4e1034] [box=192,478,1040,492]:
+  - generic [ref=f4e1035] [box=223,509,979,59]:
+    - generic [ref=f4e1036] [box=223,509,395,59]:
+      - paragraph [ref=f4e1037] [box=223,509,395,18]: LIVE A2A ORCHESTRATION
+      - heading "Delegate capabilities, not trust" [level=2] [ref=f4e1038] [box=223,537,395,31]
+    - generic [ref=f4e1039] [box=1137,509,64,15]: COMPLETED
+  - generic [ref=f4e1040] [box=223,590,979,72]:
+    - generic [ref=f4e1041] [box=223,590,979,19]: Question for the specialists
+    - generic [ref=f4e1042] [box=223,616,979,46]:
+      - textbox "Question for the specialists" [ref=f4e1043] [box=223,616,764,46]: Is the loading-bay door closed?
+      - button "Run live orchestration" [ref=f4e1044] [cursor=pointer] [box=997,616,204,46]
+  - generic [ref=f4e1045] [box=223,685,979,196]:
+    - generic [ref=f4e1046] [box=223,685,707,196]:
+      - generic [ref=f4e1047] [box=242,700,673,34]:
+        - generic [ref=f4e1048] [box=242,707,125,15]: FastAPI coordinator
+        - generic [ref=f4e1049] [box=811,706,103,16]: trace-bfea816bf0c8
+      - article [ref=f4e1065] [box=242,742,219,122]:
+        - generic [ref=f4e1066] [box=254,754,196,15]: COMPLETED
+        - generic [ref=f4e1067] [box=254,776,196,15]: vision specialist
+        - generic [ref=f4e1068] [box=254,798,196,14]: door appears closed
+        - code [ref=f4e1069] [box=254,819,196,13]: frame-087#region-door
+        - emphasis [ref=f4e1070] [box=254,839,196,14]: 99 ms
+      - article [ref=f4e1071] [box=469,742,219,122]:
+        - generic [ref=f4e1072] [box=481,754,196,15]: COMPLETED
+        - generic [ref=f4e1073] [box=481,776,196,15]: retrieval specialist
+        - generic [ref=f4e1074] [box=481,798,196,14]: sensor event reports closed
+        - code [ref=f4e1075] [box=481,819,196,13]: sensor-door-441
+        - emphasis [ref=f4e1076] [box=481,839,196,14]: 99 ms
+    - generic [ref=f4e1051] [box=944,685,257,196]:
+      - generic [ref=f4e1052] [box=944,685,123,100]:
+        - generic [ref=f4e1053] [box=958,698,96,13]: DELEGATED
+        - strong [ref=f4e1054] [box=958,719,96,23]: "2"
+      - generic [ref=f4e1055] [box=1075,685,126,100]:
+        - generic [ref=f4e1056] [box=1089,698,99,25]: EVIDENCE CLAIMS
+        - strong [ref=f4e1057] [box=1089,732,99,23]: "2"
+      - generic [ref=f4e1058] [box=944,793,123,88]:
+        - generic [ref=f4e1059] [box=958,806,96,13]: END-TO-END
+        - strong [ref=f4e1060] [box=958,827,96,23]: 99 ms
+      - generic [ref=f4e1061] [box=1075,793,126,88]:
+        - generic [ref=f4e1062] [box=1089,806,99,13]: ACTION GATE
+        - strong [ref=f4e1063] [box=1089,827,99,23]: BLOCKED
+  - generic [ref=f4e1064] [box=223,895,979,44]: Auth0 M2M · A2A 1.0 · shared trace · evidence IDs · observe-only authority

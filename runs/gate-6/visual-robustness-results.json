@@ -2,7 +2,7 @@
   "summary": {
     "present_resolution_rate": 1.0,
     "absent_rejection_rate": 1.0,
-    "mean_present_iou": 0.9806551968493107,
+    "mean_present_iou": 0.9699910938805605,
     "protected_violations": 0
   },
   "rows": [
@@ -13,7 +13,7 @@
       "result": {
         "resolved": true,
         "object_name": "red rectangle",
-        "description": "A vertical solid red rectangle positioned on the left side of the image.",
+        "description": "a solid red vertical rectangle",
         "region": {
           "left": 0.125,
           "top": 0.25,
@@ -21,9 +21,9 @@
           "bottom": 0.75
         },
         "confidence": 1.0,
-        "latency_ms": 3357,
+        "latency_ms": 4200,
         "input_tokens": 1127,
-        "output_tokens": 596
+        "output_tokens": 601
       },
       "score": {
         "correct_resolution": true,
@@ -35,17 +35,17 @@
       "provider_trace": {
         "provider": "google",
         "model": "gemini-3.8-flash",
-        "latency_ms": 3357,
-        "response_id": "x8-5ap3BNaKGxs0Ps4nkqQ8",
+        "latency_ms": 4200,
+        "response_id": "w1i-apikDrf4nsEPlKiWgA8",
         "input_tokens": 1127,
-        "candidate_tokens": 97,
-        "thought_tokens": 499,
-        "billed_output_tokens": 596,
-        "total_tokens": 1723,
+        "candidate_tokens": 88,
+        "thought_tokens": 513,
+        "billed_output_tokens": 601,
+        "total_tokens": 1728,
         "response": {
           "resolved": true,
           "object_name": "red rectangle",
-          "description": "A vertical solid red rectangle positioned on the left side of the image.",
+          "description": "a solid red vertical rectangle",
           "left": 0.125,
           "top": 0.25,
           "right": 0.375,
@@ -61,12 +61,12 @@
       "result": {
         "resolved": false,
         "object_name": "green triangle",
-        "description": "The requested object 'green triangle' is absent from the image.",
+        "description": "The green triangle is not present in the image; only a red rectangle and a blue circle are visible.",
         "region": null,
-        "confidence": 0,
-        "latency_ms": 1294,
+        "confidence": 0.0,
+        "latency_ms": 1594,
         "input_tokens": 1127,
-        "output_tokens": 130
+        "output_tokens": 151
       },
       "score": {
         "correct_resolution": true,
@@ -78,22 +78,22 @@
       "provider_trace": {
         "provider": "google",
         "model": "gemini-3.8-flash",
-        "latency_ms": 1294,
-        "response_id": "y8-5asjbB_Lsxs0PlNqOaA",
+        "latency_ms": 1594,
+        "response_id": "x1i-apa_ENy7nsEP4c3A6AI",
         "input_tokens": 1127,
-        "candidate_tokens": 79,
-        "thought_tokens": 51,
-        "billed_output_tokens": 130,
-        "total_tokens": 1257,
+        "candidate_tokens": 97,
+        "thought_tokens": 54,
+        "billed_output_tokens": 151,
+        "total_tokens": 1278,
         "response": {
           "resolved": false,
           "object_name": "green triangle",
-          "description": "The requested object 'green triangle' is absent from the image.",
-          "left": 0,
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "confidence": 0
+          "description": "The green triangle is not present in the image; only a red rectangle and a blue circle are visible.",
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "confidence": 0.0
         }
       }
     },
@@ -104,43 +104,43 @@
       "result": {
         "resolved": true,
         "object_name": "red rectangle",
-        "description": "A blurry red rectangle located on the left side of the image.",
+        "description": "a blurred vertical red rectangle on the left side of the image",
         "region": {
-          "left": 0.118,
-          "top": 0.24,
-          "right": 0.381,
-          "bottom": 0.755
+          "left": 0.11,
+          "top": 0.23,
+          "right": 0.38,
+          "bottom": 0.76
         },
         "confidence": 0.98,
-        "latency_ms": 2529,
+        "latency_ms": 3364,
         "input_tokens": 1127,
-        "output_tokens": 325
+        "output_tokens": 390
       },
       "score": {
         "correct_resolution": true,
         "correct_object": true,
-        "region_iou": 0.9228838273838087,
+        "region_iou": 0.8735150244584207,
         "localized_at_50": true,
         "protected_violations": 0
       },
       "provider_trace": {
         "provider": "google",
         "model": "gemini-3.8-flash",
-        "latency_ms": 2529,
-        "response_id": "zM-5aterGs2BvdIPjZGPYA",
+        "latency_ms": 3364,
+        "response_id": "yFi-aqbPN6X4nsEP4IbU4QI",
         "input_tokens": 1127,
-        "candidate_tokens": 97,
-        "thought_tokens": 228,
-        "billed_output_tokens": 325,
-        "total_tokens": 1452,
+        "candidate_tokens": 94,
+        "thought_tokens": 296,
+        "billed_output_tokens": 390,
+        "total_tokens": 1517,
         "response": {
           "resolved": true,
           "object_name": "red rectangle",
-          "description": "A blurry red rectangle located on the left side of the image.",
-          "left": 0.118,
-          "top": 0.24,
-          "right": 0.381,
-          "bottom": 0.755,
+          "description": "a blurred vertical red rectangle on the left side of the image",
+          "left": 0.11,
+          "top": 0.23,
+          "right": 0.38,
+          "bottom": 0.76,
           "confidence": 0.98
         }
       }
@@ -152,12 +152,12 @@
       "result": {
         "resolved": false,
         "object_name": "green triangle",
-        "description": "The requested object 'green triangle' is absent from the image, which only contains a red rectangle and a blue circle.",
+        "description": "The requested green triangle is not present in the image, which only contains a red rectangle and a blue circle.",
         "region": null,
         "confidence": 0.0,
-        "latency_ms": 1472,
+        "latency_ms": 2158,
         "input_tokens": 1127,
-        "output_tokens": 158
+        "output_tokens": 154
       },
       "score": {
         "correct_resolution": true,
@@ -169,17 +169,17 @@
       "provider_trace": {
         "provider": "google",
         "model": "gemini-3.8-flash",
-        "latency_ms": 1472,
-        "response_id": "zs-5asWAOoacxN8Pgp6TmQo",
+        "latency_ms": 2158,
+        "response_id": "zFi-atOhEen1kdUPgaip6QI",
         "input_tokens": 1127,
-        "candidate_tokens": 100,
-        "thought_tokens": 58,
-        "billed_output_tokens": 158,
-        "total_tokens": 1285,
+        "candidate_tokens": 98,
+        "thought_tokens": 56,
+        "billed_output_tokens": 154,
+        "total_tokens": 1281,
         "response": {
           "resolved": false,
           "object_name": "green triangle",
-          "description": "The requested object 'green triangle' is absent from the image, which only contains a red rectangle and a blue circle.",
+          "description": "The requested green triangle is not present in the image, which only contains a red rectangle and a blue circle.",
           "left": 0.0,
           "top": 0.0,
           "right": 0.0,
@@ -190,188 +190,6 @@
     },
     {
       "variant": "low-resolution",
-      "query": "red rectangle",
-      "expected_present": true,
-      "result": {
-        "resolved": true,
-        "object_name": "red rectangle",
-        "description": "A vertically oriented red rectangle located on the left side of the image.",
-        "region": {
-          "left": 0.125,
-          "top": 0.245,
-          "right": 0.375,
-          "bottom": 0.755
-        },
-        "confidence": 0.99,
-        "latency_ms": 3373,
-        "input_tokens": 1127,
-        "output_tokens": 501
-      },
-      "score": {
-        "correct_resolution": true,
-        "correct_object": true,
-        "region_iou": 0.9803921568627451,
-        "localized_at_50": true,
-        "protected_violations": 0
-      },
-      "provider_trace": {
-        "provider": "google",
-        "model": "gemini-3.8-flash",
-        "latency_ms": 3373,
-        "response_id": "0M-5aoTAGd75xN8PjInhkQs",
-        "input_tokens": 1127,
-        "candidate_tokens": 68,
-        "thought_tokens": 433,
-        "billed_output_tokens": 501,
-        "total_tokens": 1628,
-        "response": {
-          "resolved": true,
-          "object_name": "red rectangle",
-          "description": "A vertically oriented red rectangle located on the left side of the image.",
-          "left": 0.125,
-          "top": 0.245,
-          "right": 0.375,
-          "bottom": 0.755,
-          "confidence": 0.99
-        }
-      }
-    },
-    {
-      "variant": "low-resolution",
-      "query": "green triangle",
-      "expected_present": false,
-      "result": {
-        "resolved": false,
-        "object_name": "green triangle",
-        "description": "The requested green triangle is absent from the image, which only contains a red rectangle and a blue circle.",
-        "region": null,
-        "confidence": 0,
-        "latency_ms": 2286,
-        "input_tokens": 1127,
-        "output_tokens": 138
-      },
-      "score": {
-        "correct_resolution": true,
-        "correct_object": true,
-        "region_iou": null,
-        "localized_at_50": null,
-        "protected_violations": 0
-      },
-      "provider_trace": {
-        "provider": "google",
-        "model": "gemini-3.8-flash",
-        "latency_ms": 2286,
-        "response_id": "08-5atXdL-yjxN8P6e6M0Qg",
-        "input_tokens": 1127,
-        "candidate_tokens": 87,
-        "thought_tokens": 51,
-        "billed_output_tokens": 138,
-        "total_tokens": 1265,
-        "response": {
-          "resolved": false,
-          "object_name": "green triangle",
-          "description": "The requested green triangle is absent from the image, which only contains a red rectangle and a blue circle.",
-          "left": 0,
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "confidence": 0
-        }
-      }
-    },
-    {
-      "variant": "dark",
-      "query": "red rectangle",
-      "expected_present": true,
-      "result": {
-        "resolved": true,
-        "object_name": "red rectangle",
-        "description": "A dark red rectangular shape located on the left side of the image.",
-        "region": {
-          "left": 0.125,
-          "top": 0.25,
-          "right": 0.375,
-          "bottom": 0.75
-        },
-        "confidence": 0.98,
-        "latency_ms": 3255,
-        "input_tokens": 1127,
-        "output_tokens": 507
-      },
-      "score": {
-        "correct_resolution": true,
-        "correct_object": true,
-        "region_iou": 1.0,
-        "localized_at_50": true,
-        "protected_violations": 0
-      },
-      "provider_trace": {
-        "provider": "google",
-        "model": "gemini-3.8-flash",
-        "latency_ms": 3255,
-        "response_id": "1s-5aoiyBbfkxN8Pg7mx4Aw",
-        "input_tokens": 1127,
-        "candidate_tokens": 97,
-        "thought_tokens": 410,
-        "billed_output_tokens": 507,
-        "total_tokens": 1634,
-        "response": {
-          "resolved": true,
-          "object_name": "red rectangle",
-          "description": "A dark red rectangular shape located on the left side of the image.",
-          "left": 0.125,
-          "top": 0.25,
-          "right": 0.375,
-          "bottom": 0.75,
-          "confidence": 0.98
-        }
-      }
-    },
-    {
-      "variant": "dark",
-      "query": "green triangle",
-      "expected_present": false,
-      "result": {
-        "resolved": false,
-        "object_name": "green triangle",
-        "description": "The requested green triangle is absent from the image.",
-        "region": null,
-        "confidence": 0.0,
-        "latency_ms": 2212,
-        "input_tokens": 1127,
-        "output_tokens": 144
-      },
-      "score": {
-        "correct_resolution": true,
-        "correct_object": true,
-        "region_iou": null,
-        "localized_at_50": null,
-        "protected_violations": 0
-      },
-      "provider_trace": {
-        "provider": "google",
-        "model": "gemini-3.8-flash",
-        "latency_ms": 2212,
-        "response_id": "2c-5ar7GFMOVvdIPyY3EqAc",
-        "input_tokens": 1127,
-        "candidate_tokens": 86,
-        "thought_tokens": 58,
-        "billed_output_tokens": 144,
-        "total_tokens": 1271,
-        "response": {
-          "resolved": false,
-          "object_name": "green triangle",
-          "description": "The requested green triangle is absent from the image.",
-          "left": 0.0,
-          "top": 0.0,
-          "right": 0.0,
-          "bottom": 0.0,
-          "confidence": 0.0
-        }
-      }
-    },
-    {
-      "variant": "jpeg",
       "query": "red rectangle",
       "expected_present": true,
       "result": {
@@ -379,47 +197,47 @@
         "object_name": "red rectangle",
         "description": "A solid red vertical rectangle located on the left side of the white background.",
         "region": {
-          "left": 0.125,
-          "top": 0.25,
-          "right": 0.375,
-          "bottom": 0.75
+          "left": 0.124,
+          "top": 0.246,
+          "right": 0.376,
+          "bottom": 0.754
         },
         "confidence": 0.99,
-        "latency_ms": 5051,
+        "latency_ms": 8186,
         "input_tokens": 1127,
-        "output_tokens": 516
+        "output_tokens": 486
       },
       "score": {
         "correct_resolution": true,
         "correct_object": true,
-        "region_iou": 1.0,
+        "region_iou": 0.9764404449443818,
         "localized_at_50": true,
         "protected_violations": 0
       },
       "provider_trace": {
         "provider": "google",
         "model": "gemini-3.8-flash",
-        "latency_ms": 5051,
-        "response_id": "28-5ase1IdH7xs0Pub2ziQ0",
+        "latency_ms": 8186,
+        "response_id": "zli-ao64GMzhnsEPm4SvmQs",
         "input_tokens": 1127,
-        "candidate_tokens": 98,
-        "thought_tokens": 418,
-        "billed_output_tokens": 516,
-        "total_tokens": 1643,
+        "candidate_tokens": 100,
+        "thought_tokens": 386,
+        "billed_output_tokens": 486,
+        "total_tokens": 1613,
         "response": {
           "resolved": true,
           "object_name": "red rectangle",
           "description": "A solid red vertical rectangle located on the left side of the white background.",
-          "left": 0.125,
-          "top": 0.25,
-          "right": 0.375,
-          "bottom": 0.75,
+          "left": 0.124,
+          "top": 0.246,
+          "right": 0.376,
+          "bottom": 0.754,
           "confidence": 0.99
         }
       }
     },
     {
-      "variant": "jpeg",
+      "variant": "low-resolution",
       "query": "green triangle",
       "expected_present": false,
       "result": {
@@ -427,10 +245,10 @@
         "object_name": "green triangle",
         "description": "The requested object 'green triangle' is absent from the image.",
         "region": null,
-        "confidence": 0,
-        "latency_ms": 2905,
+        "confidence": 0.0,
+        "latency_ms": 1810,
         "input_tokens": 1127,
-        "output_tokens": 130
+        "output_tokens": 140
       },
       "score": {
         "correct_resolution": true,
@@ -442,17 +260,199 @@
       "provider_trace": {
         "provider": "google",
         "model": "gemini-3.8-flash",
-        "latency_ms": 2905,
-        "response_id": "4M-5aruUJIyGxs0P05G18AE",
+        "latency_ms": 1810,
+        "response_id": "1li-ar_wIqiR3boPt52_yQ4",
         "input_tokens": 1127,
-        "candidate_tokens": 79,
+        "candidate_tokens": 89,
         "thought_tokens": 51,
-        "billed_output_tokens": 130,
-        "total_tokens": 1257,
+        "billed_output_tokens": 140,
+        "total_tokens": 1267,
         "response": {
           "resolved": false,
           "object_name": "green triangle",
           "description": "The requested object 'green triangle' is absent from the image.",
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "confidence": 0.0
+        }
+      }
+    },
+    {
+      "variant": "dark",
+      "query": "red rectangle",
+      "expected_present": true,
+      "result": {
+        "resolved": true,
+        "object_name": "red rectangle",
+        "description": "dark red vertical rectangle located on the left side of the frame",
+        "region": {
+          "left": 0.125,
+          "top": 0.25,
+          "right": 0.375,
+          "bottom": 0.75
+        },
+        "confidence": 0.98,
+        "latency_ms": 3991,
+        "input_tokens": 1127,
+        "output_tokens": 625
+      },
+      "score": {
+        "correct_resolution": true,
+        "correct_object": true,
+        "region_iou": 1.0,
+        "localized_at_50": true,
+        "protected_violations": 0
+      },
+      "provider_trace": {
+        "provider": "google",
+        "model": "gemini-3.8-flash",
+        "latency_ms": 3991,
+        "response_id": "2Fi-avj6GeuVkdUPxPPD8QI",
+        "input_tokens": 1127,
+        "candidate_tokens": 97,
+        "thought_tokens": 528,
+        "billed_output_tokens": 625,
+        "total_tokens": 1752,
+        "response": {
+          "resolved": true,
+          "object_name": "red rectangle",
+          "description": "dark red vertical rectangle located on the left side of the frame",
+          "left": 0.125,
+          "top": 0.25,
+          "right": 0.375,
+          "bottom": 0.75,
+          "confidence": 0.98
+        }
+      }
+    },
+    {
+      "variant": "dark",
+      "query": "green triangle",
+      "expected_present": false,
+      "result": {
+        "resolved": false,
+        "object_name": "green triangle",
+        "description": "No green triangle is present in the image; only a dark red rectangle and a dark blue circle are shown.",
+        "region": null,
+        "confidence": 0,
+        "latency_ms": 4864,
+        "input_tokens": 1127,
+        "output_tokens": 141
+      },
+      "score": {
+        "correct_resolution": true,
+        "correct_object": true,
+        "region_iou": null,
+        "localized_at_50": null,
+        "protected_violations": 0
+      },
+      "provider_trace": {
+        "provider": "google",
+        "model": "gemini-3.8-flash",
+        "latency_ms": 4864,
+        "response_id": "3Fi-apWpGJrlnsEP0uG2kAs",
+        "input_tokens": 1127,
+        "candidate_tokens": 88,
+        "thought_tokens": 53,
+        "billed_output_tokens": 141,
+        "total_tokens": 1268,
+        "response": {
+          "resolved": false,
+          "object_name": "green triangle",
+          "description": "No green triangle is present in the image; only a dark red rectangle and a dark blue circle are shown.",
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "confidence": 0
+        }
+      }
+    },
+    {
+      "variant": "jpeg",
+      "query": "red rectangle",
+      "expected_present": true,
+      "result": {
+        "resolved": true,
+        "object_name": "red rectangle",
+        "description": "A vertical red rectangle located on the left side of the image.",
+        "region": {
+          "left": 0.125,
+          "top": 0.25,
+          "right": 0.375,
+          "bottom": 0.75
+        },
+        "confidence": 1.0,
+        "latency_ms": 3998,
+        "input_tokens": 1127,
+        "output_tokens": 493
+      },
+      "score": {
+        "correct_resolution": true,
+        "correct_object": true,
+        "region_iou": 1.0,
+        "localized_at_50": true,
+        "protected_violations": 0
+      },
+      "provider_trace": {
+        "provider": "google",
+        "model": "gemini-3.8-flash",
+        "latency_ms": 3998,
+        "response_id": "4Vi-auWsD_Df7M8P4PHFwA4",
+        "input_tokens": 1127,
+        "candidate_tokens": 95,
+        "thought_tokens": 398,
+        "billed_output_tokens": 493,
+        "total_tokens": 1620,
+        "response": {
+          "resolved": true,
+          "object_name": "red rectangle",
+          "description": "A vertical red rectangle located on the left side of the image.",
+          "left": 0.125,
+          "top": 0.25,
+          "right": 0.375,
+          "bottom": 0.75,
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "variant": "jpeg",
+      "query": "green triangle",
+      "expected_present": false,
+      "result": {
+        "resolved": false,
+        "object_name": "green triangle",
+        "description": "The requested green triangle is absent from the image.",
+        "region": null,
+        "confidence": 0,
+        "latency_ms": 5778,
+        "input_tokens": 1127,
+        "output_tokens": 126
+      },
+      "score": {
+        "correct_resolution": true,
+        "correct_object": true,
+        "region_iou": null,
+        "localized_at_50": null,
+        "protected_violations": 0
+      },
+      "provider_trace": {
+        "provider": "google",
+        "model": "gemini-3.8-flash",
+        "latency_ms": 5778,
+        "response_id": "5Vi-atTvDqGB3boPkZClsAs",
+        "input_tokens": 1127,
+        "candidate_tokens": 76,
+        "thought_tokens": 50,
+        "billed_output_tokens": 126,
+        "total_tokens": 1253,
+        "response": {
+          "resolved": false,
+          "object_name": "green triangle",
+          "description": "The requested green triangle is absent from the image.",
           "left": 0,
           "top": 0,
           "right": 0,

@@ -1,0 +1,61 @@
+{
+  "capability": "microscopy-segmentation-tracking",
+  "claim": "Otsu baseline instance count matches real annotated ground truth at 0 of 5 real timepoints; the real dataset's own lineage graph tracks 29 real nuclei across all 5 timepoints with 24 real lineage edges",
+  "comparisons": [
+    {
+      "baseline_instance_count": 3,
+      "ground_truth_instance_count": 6,
+      "matches_ground_truth": false,
+      "timepoint": 0
+    },
+    {
+      "baseline_instance_count": 2,
+      "ground_truth_instance_count": 6,
+      "matches_ground_truth": false,
+      "timepoint": 1
+    },
+    {
+      "baseline_instance_count": 2,
+      "ground_truth_instance_count": 5,
+      "matches_ground_truth": false,
+      "timepoint": 2
+    },
+    {
+      "baseline_instance_count": 1,
+      "ground_truth_instance_count": 6,
+      "matches_ground_truth": false,
+      "timepoint": 3
+    },
+    {
+      "baseline_instance_count": 3,
+      "ground_truth_instance_count": 6,
+      "matches_ground_truth": false,
+      "timepoint": 4
+    }
+  ],
+  "evidence_ids": [
+    "timepoint-0",
+    "timepoint-1",
+    "timepoint-2",
+    "timepoint-3",
+    "timepoint-4"
+  ],
+  "ground_truth": {
+    "leaf_nodes": 0,
+    "merge_nodes": 1,
+    "root_nodes": 0,
+    "split_nodes": 1,
+    "total_lineage_edges": 24,
+    "total_tracked_nuclei": 29
+  },
+  "model": "otsu-threshold-connected-components, checked against real annotated ground truth",
+  "source": "Zenodo DOI 10.5281/zenodo.22078388, 001-mini tier, real nuclear-tracked light-sheet organoid data, CC-BY 4.0",
+  "status": "completed",
+  "volume_shape": [
+    5,
+    2,
+    25,
+    110,
+    100
+  ]
+}

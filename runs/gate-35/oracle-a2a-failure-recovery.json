@@ -1,0 +1,8 @@
+{
+  "environment": "oracle-public-https",
+  "degraded_status": "partial_failure",
+  "degraded_claims": 1,
+  "recovered_status": "completed",
+  "recovered_claims": 2,
+  "passed": true
+}

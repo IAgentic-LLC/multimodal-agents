@@ -1,0 +1,90 @@
+{
+  "trace_id": "trace-multi-035",
+  "delegations": [
+    {
+      "task_id": "task-vision",
+      "specialist": "vision",
+      "capability": "locate door",
+      "evidence_ids": [
+        "frame-087"
+      ],
+      "deadline_ms": 100,
+      "authority": "observe"
+    },
+    {
+      "task_id": "task-search",
+      "specialist": "retrieval",
+      "capability": "find door state",
+      "evidence_ids": [
+        "event-441"
+      ],
+      "deadline_ms": 100,
+      "authority": "observe"
+    },
+    {
+      "task_id": "task-verify",
+      "specialist": "verifier",
+      "capability": "corroborate",
+      "evidence_ids": [
+        "frame-087"
+      ],
+      "deadline_ms": 5,
+      "authority": "observe"
+    },
+    {
+      "task_id": "task-action",
+      "specialist": "vision",
+      "capability": "open door",
+      "evidence_ids": [
+        "frame-087"
+      ],
+      "deadline_ms": 100,
+      "authority": "mutate"
+    }
+  ],
+  "results": [
+    {
+      "task_id": "task-vision",
+      "specialist": "vision",
+      "status": "completed",
+      "claim": "door appears closed",
+      "evidence_ids": [
+        "frame-087#region-door"
+      ],
+      "trace_id": "trace-multi-035"
+    },
+    {
+      "task_id": "task-search",
+      "specialist": "retrieval",
+      "status": "completed",
+      "claim": "sensor event reports closed",
+      "evidence_ids": [
+        "sensor-door-441"
+      ],
+      "trace_id": "trace-multi-035"
+    },
+    {
+      "task_id": "task-verify",
+      "specialist": "verifier",
+      "status": "timed_out",
+      "claim": "deadline expired",
+      "evidence_ids": [],
+      "trace_id": "trace-multi-035"
+    },
+    {
+      "task_id": "task-action",
+      "specialist": "vision",
+      "status": "refused",
+      "claim": "coordinator cannot delegate mutation",
+      "evidence_ids": [],
+      "trace_id": "trace-multi-035"
+    }
+  ],
+  "supported_claims": 2,
+  "evidence_ids": [
+    "frame-087#region-door",
+    "sensor-door-441"
+  ],
+  "partial_failure": true,
+  "action_allowed": true
+}

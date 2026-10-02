@@ -1,0 +1,1189 @@
+{
+  "capability": "microscopy-segmentation-tracking",
+  "claim": "23 of 24 candidate nuclei persist across 5 consecutive z-slices",
+  "evidence_ids": [
+    "track-0",
+    "track-1",
+    "track-2",
+    "track-3",
+    "track-4",
+    "track-5",
+    "track-6",
+    "track-7",
+    "track-8",
+    "track-9",
+    "track-10",
+    "track-11",
+    "track-12",
+    "track-13",
+    "track-14",
+    "track-15",
+    "track-16",
+    "track-17",
+    "track-18",
+    "track-19",
+    "track-20",
+    "track-21",
+    "track-22"
+  ],
+  "model": "otsu-threshold + nearest-centroid",
+  "source": "skimage.data.cells3d (Allen Institute, bundled with scikit-image)",
+  "status": "completed",
+  "tracks": [
+    {
+      "observations": [
+        {
+          "area": 981,
+          "centroid": [
+            16.1,
+            27.7
+          ],
+          "label": 1,
+          "slice_index": 27
+        },
+        {
+          "area": 1066,
+          "centroid": [
+            17.0,
+            27.5
+          ],
+          "label": 1,
+          "slice_index": 28
+        },
+        {
+          "area": 1036,
+          "centroid": [
+            17.7,
+            27.1
+          ],
+          "label": 1,
+          "slice_index": 29
+        },
+        {
+          "area": 1037,
+          "centroid": [
+            18.3,
+            26.9
+          ],
+          "label": 1,
+          "slice_index": 30
+        },
+        {
+          "area": 1041,
+          "centroid": [
+            18.8,
+            26.7
+          ],
+          "label": 2,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-0"
+    },
+    {
+      "observations": [
+        {
+          "area": 73,
+          "centroid": [
+            1.5,
+            78.8
+          ],
+          "label": 3,
+          "slice_index": 27
+        },
+        {
+          "area": 105,
+          "centroid": [
+            2.0,
+            78.3
+          ],
+          "label": 2,
+          "slice_index": 28
+        },
+        {
+          "area": 119,
+          "centroid": [
+            2.3,
+            78.4
+          ],
+          "label": 3,
+          "slice_index": 29
+        },
+        {
+          "area": 137,
+          "centroid": [
+            2.7,
+            77.1
+          ],
+          "label": 2,
+          "slice_index": 30
+        },
+        {
+          "area": 159,
+          "centroid": [
+            2.9,
+            78.0
+          ],
+          "label": 3,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-1"
+    },
+    {
+      "observations": [
+        {
+          "area": 804,
+          "centroid": [
+            12.6,
+            151.2
+          ],
+          "label": 5,
+          "slice_index": 27
+        },
+        {
+          "area": 884,
+          "centroid": [
+            13.1,
+            150.7
+          ],
+          "label": 4,
+          "slice_index": 28
+        },
+        {
+          "area": 908,
+          "centroid": [
+            13.7,
+            150.6
+          ],
+          "label": 7,
+          "slice_index": 29
+        },
+        {
+          "area": 961,
+          "centroid": [
+            14.4,
+            149.9
+          ],
+          "label": 4,
+          "slice_index": 30
+        },
+        {
+          "area": 1025,
+          "centroid": [
+            15.0,
+            149.8
+          ],
+          "label": 5,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-2"
+    },
+    {
+      "observations": [
+        {
+          "area": 1227,
+          "centroid": [
+            32.1,
+            81.6
+          ],
+          "label": 15,
+          "slice_index": 27
+        },
+        {
+          "area": 1299,
+          "centroid": [
+            31.9,
+            81.5
+          ],
+          "label": 9,
+          "slice_index": 28
+        },
+        {
+          "area": 1299,
+          "centroid": [
+            32.0,
+            81.2
+          ],
+          "label": 14,
+          "slice_index": 29
+        },
+        {
+          "area": 1346,
+          "centroid": [
+            32.0,
+            80.8
+          ],
+          "label": 11,
+          "slice_index": 30
+        },
+        {
+          "area": 1352,
+          "centroid": [
+            32.1,
+            80.6
+          ],
+          "label": 8,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-3"
+    },
+    {
+      "observations": [
+        {
+          "area": 1156,
+          "centroid": [
+            46.9,
+            224.3
+          ],
+          "label": 17,
+          "slice_index": 27
+        },
+        {
+          "area": 1223,
+          "centroid": [
+            47.1,
+            224.7
+          ],
+          "label": 11,
+          "slice_index": 28
+        },
+        {
+          "area": 1228,
+          "centroid": [
+            46.9,
+            224.4
+          ],
+          "label": 17,
+          "slice_index": 29
+        },
+        {
+          "area": 1301,
+          "centroid": [
+            47.1,
+            224.9
+          ],
+          "label": 17,
+          "slice_index": 30
+        },
+        {
+          "area": 1299,
+          "centroid": [
+            47.1,
+            225.2
+          ],
+          "label": 14,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-4"
+    },
+    {
+      "observations": [
+        {
+          "area": 899,
+          "centroid": [
+            44.8,
+            179.4
+          ],
+          "label": 19,
+          "slice_index": 27
+        },
+        {
+          "area": 1030,
+          "centroid": [
+            45.3,
+            179.6
+          ],
+          "label": 13,
+          "slice_index": 28
+        },
+        {
+          "area": 1111,
+          "centroid": [
+            45.7,
+            180.0
+          ],
+          "label": 19,
+          "slice_index": 29
+        },
+        {
+          "area": 1200,
+          "centroid": [
+            46.5,
+            180.3
+          ],
+          "label": 19,
+          "slice_index": 30
+        },
+        {
+          "area": 1244,
+          "centroid": [
+            46.9,
+            180.5
+          ],
+          "label": 16,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-5"
+    },
+    {
+      "observations": [
+        {
+          "area": 1218,
+          "centroid": [
+            74.8,
+            112.2
+          ],
+          "label": 23,
+          "slice_index": 27
+        },
+        {
+          "area": 1220,
+          "centroid": [
+            74.8,
+            112.3
+          ],
+          "label": 18,
+          "slice_index": 28
+        },
+        {
+          "area": 1243,
+          "centroid": [
+            74.6,
+            112.2
+          ],
+          "label": 26,
+          "slice_index": 29
+        },
+        {
+          "area": 1302,
+          "centroid": [
+            74.2,
+            112.4
+          ],
+          "label": 30,
+          "slice_index": 30
+        },
+        {
+          "area": 1333,
+          "centroid": [
+            73.8,
+            112.5
+          ],
+          "label": 25,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-6"
+    },
+    {
+      "observations": [
+        {
+          "area": 680,
+          "centroid": [
+            89.3,
+            54.3
+          ],
+          "label": 30,
+          "slice_index": 27
+        },
+        {
+          "area": 703,
+          "centroid": [
+            89.2,
+            54.5
+          ],
+          "label": 24,
+          "slice_index": 28
+        },
+        {
+          "area": 689,
+          "centroid": [
+            89.3,
+            54.5
+          ],
+          "label": 39,
+          "slice_index": 29
+        },
+        {
+          "area": 690,
+          "centroid": [
+            89.1,
+            54.7
+          ],
+          "label": 46,
+          "slice_index": 30
+        },
+        {
+          "area": 685,
+          "centroid": [
+            89.1,
+            54.7
+          ],
+          "label": 36,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-7"
+    },
+    {
+      "observations": [
+        {
+          "area": 1373,
+          "centroid": [
+            96.2,
+            160.8
+          ],
+          "label": 42,
+          "slice_index": 27
+        },
+        {
+          "area": 1418,
+          "centroid": [
+            96.4,
+            160.7
+          ],
+          "label": 33,
+          "slice_index": 28
+        },
+        {
+          "area": 1462,
+          "centroid": [
+            96.7,
+            160.7
+          ],
+          "label": 46,
+          "slice_index": 29
+        },
+        {
+          "area": 1467,
+          "centroid": [
+            97.1,
+            160.7
+          ],
+          "label": 53,
+          "slice_index": 30
+        },
+        {
+          "area": 1509,
+          "centroid": [
+            97.2,
+            160.7
+          ],
+          "label": 43,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-8"
+    },
+    {
+      "observations": [
+        {
+          "area": 413,
+          "centroid": [
+            94.5,
+            248.8
+          ],
+          "label": 45,
+          "slice_index": 27
+        },
+        {
+          "area": 464,
+          "centroid": [
+            95.6,
+            248.6
+          ],
+          "label": 36,
+          "slice_index": 28
+        },
+        {
+          "area": 493,
+          "centroid": [
+            96.9,
+            248.2
+          ],
+          "label": 53,
+          "slice_index": 29
+        },
+        {
+          "area": 526,
+          "centroid": [
+            97.8,
+            247.8
+          ],
+          "label": 59,
+          "slice_index": 30
+        },
+        {
+          "area": 552,
+          "centroid": [
+            99.0,
+            247.8
+          ],
+          "label": 47,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-9"
+    },
+    {
+      "observations": [
+        {
+          "area": 1786,
+          "centroid": [
+            141.9,
+            189.0
+          ],
+          "label": 47,
+          "slice_index": 27
+        },
+        {
+          "area": 1848,
+          "centroid": [
+            141.9,
+            188.9
+          ],
+          "label": 42,
+          "slice_index": 28
+        },
+        {
+          "area": 1983,
+          "centroid": [
+            142.0,
+            188.7
+          ],
+          "label": 57,
+          "slice_index": 29
+        },
+        {
+          "area": 1985,
+          "centroid": [
+            141.9,
+            188.8
+          ],
+          "label": 63,
+          "slice_index": 30
+        },
+        {
+          "area": 1998,
+          "centroid": [
+            142.2,
+            188.9
+          ],
+          "label": 51,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-10"
+    },
+    {
+      "observations": [
+        {
+          "area": 1338,
+          "centroid": [
+            134.1,
+            38.9
+          ],
+          "label": 48,
+          "slice_index": 27
+        },
+        {
+          "area": 1414,
+          "centroid": [
+            134.5,
+            39.4
+          ],
+          "label": 43,
+          "slice_index": 28
+        },
+        {
+          "area": 1483,
+          "centroid": [
+            135.4,
+            39.8
+          ],
+          "label": 58,
+          "slice_index": 29
+        },
+        {
+          "area": 1545,
+          "centroid": [
+            136.0,
+            39.9
+          ],
+          "label": 64,
+          "slice_index": 30
+        },
+        {
+          "area": 1565,
+          "centroid": [
+            136.3,
+            40.1
+          ],
+          "label": 52,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-11"
+    },
+    {
+      "observations": [
+        {
+          "area": 1235,
+          "centroid": [
+            144.7,
+            238.9
+          ],
+          "label": 49,
+          "slice_index": 27
+        },
+        {
+          "area": 1283,
+          "centroid": [
+            145.0,
+            238.8
+          ],
+          "label": 44,
+          "slice_index": 28
+        },
+        {
+          "area": 1290,
+          "centroid": [
+            145.1,
+            238.7
+          ],
+          "label": 59,
+          "slice_index": 29
+        },
+        {
+          "area": 1332,
+          "centroid": [
+            145.4,
+            238.5
+          ],
+          "label": 65,
+          "slice_index": 30
+        },
+        {
+          "area": 1308,
+          "centroid": [
+            145.1,
+            238.5
+          ],
+          "label": 54,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-12"
+    },
+    {
+      "observations": [
+        {
+          "area": 1461,
+          "centroid": [
+            154.6,
+            113.5
+          ],
+          "label": 50,
+          "slice_index": 27
+        },
+        {
+          "area": 1524,
+          "centroid": [
+            154.9,
+            113.2
+          ],
+          "label": 45,
+          "slice_index": 28
+        },
+        {
+          "area": 1584,
+          "centroid": [
+            155.3,
+            112.7
+          ],
+          "label": 60,
+          "slice_index": 29
+        },
+        {
+          "area": 1626,
+          "centroid": [
+            155.7,
+            112.5
+          ],
+          "label": 66,
+          "slice_index": 30
+        },
+        {
+          "area": 1644,
+          "centroid": [
+            155.9,
+            112.2
+          ],
+          "label": 56,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-13"
+    },
+    {
+      "observations": [
+        {
+          "area": 1291,
+          "centroid": [
+            181.6,
+            50.2
+          ],
+          "label": 52,
+          "slice_index": 27
+        },
+        {
+          "area": 1358,
+          "centroid": [
+            181.9,
+            50.1
+          ],
+          "label": 46,
+          "slice_index": 28
+        },
+        {
+          "area": 1393,
+          "centroid": [
+            181.9,
+            50.3
+          ],
+          "label": 61,
+          "slice_index": 29
+        },
+        {
+          "area": 1437,
+          "centroid": [
+            182.2,
+            50.1
+          ],
+          "label": 68,
+          "slice_index": 30
+        },
+        {
+          "area": 1462,
+          "centroid": [
+            182.3,
+            50.6
+          ],
+          "label": 57,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-14"
+    },
+    {
+      "observations": [
+        {
+          "area": 105,
+          "centroid": [
+            187.9,
+            3.0
+          ],
+          "label": 54,
+          "slice_index": 27
+        },
+        {
+          "area": 125,
+          "centroid": [
+            186.5,
+            3.0
+          ],
+          "label": 47,
+          "slice_index": 28
+        },
+        {
+          "area": 154,
+          "centroid": [
+            185.6,
+            3.0
+          ],
+          "label": 62,
+          "slice_index": 29
+        },
+        {
+          "area": 179,
+          "centroid": [
+            186.3,
+            3.4
+          ],
+          "label": 69,
+          "slice_index": 30
+        },
+        {
+          "area": 196,
+          "centroid": [
+            187.4,
+            3.2
+          ],
+          "label": 60,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-15"
+    },
+    {
+      "observations": [
+        {
+          "area": 2072,
+          "centroid": [
+            201.4,
+            173.5
+          ],
+          "label": 55,
+          "slice_index": 27
+        },
+        {
+          "area": 2130,
+          "centroid": [
+            201.2,
+            173.5
+          ],
+          "label": 48,
+          "slice_index": 28
+        },
+        {
+          "area": 2113,
+          "centroid": [
+            201.3,
+            173.5
+          ],
+          "label": 63,
+          "slice_index": 29
+        },
+        {
+          "area": 2089,
+          "centroid": [
+            201.1,
+            173.3
+          ],
+          "label": 70,
+          "slice_index": 30
+        },
+        {
+          "area": 2096,
+          "centroid": [
+            201.1,
+            173.3
+          ],
+          "label": 61,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-16"
+    },
+    {
+      "observations": [
+        {
+          "area": 1953,
+          "centroid": [
+            221.2,
+            79.7
+          ],
+          "label": 56,
+          "slice_index": 27
+        },
+        {
+          "area": 2017,
+          "centroid": [
+            221.1,
+            80.0
+          ],
+          "label": 50,
+          "slice_index": 28
+        },
+        {
+          "area": 2067,
+          "centroid": [
+            221.0,
+            80.6
+          ],
+          "label": 65,
+          "slice_index": 29
+        },
+        {
+          "area": 2101,
+          "centroid": [
+            220.8,
+            80.9
+          ],
+          "label": 72,
+          "slice_index": 30
+        },
+        {
+          "area": 2079,
+          "centroid": [
+            220.8,
+            81.2
+          ],
+          "label": 62,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-17"
+    },
+    {
+      "observations": [
+        {
+          "area": 800,
+          "centroid": [
+            218.4,
+            245.0
+          ],
+          "label": 57,
+          "slice_index": 27
+        },
+        {
+          "area": 861,
+          "centroid": [
+            218.7,
+            244.6
+          ],
+          "label": 51,
+          "slice_index": 28
+        },
+        {
+          "area": 916,
+          "centroid": [
+            219.3,
+            244.4
+          ],
+          "label": 66,
+          "slice_index": 29
+        },
+        {
+          "area": 958,
+          "centroid": [
+            219.4,
+            244.1
+          ],
+          "label": 73,
+          "slice_index": 30
+        },
+        {
+          "area": 967,
+          "centroid": [
+            219.6,
+            244.1
+          ],
+          "label": 64,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-18"
+    },
+    {
+      "observations": [
+        {
+          "area": 1613,
+          "centroid": [
+            237.9,
+            130.7
+          ],
+          "label": 60,
+          "slice_index": 27
+        },
+        {
+          "area": 1662,
+          "centroid": [
+            237.6,
+            130.7
+          ],
+          "label": 57,
+          "slice_index": 28
+        },
+        {
+          "area": 1661,
+          "centroid": [
+            237.2,
+            131.0
+          ],
+          "label": 73,
+          "slice_index": 29
+        },
+        {
+          "area": 1679,
+          "centroid": [
+            237.4,
+            131.2
+          ],
+          "label": 78,
+          "slice_index": 30
+        },
+        {
+          "area": 1667,
+          "centroid": [
+            237.4,
+            131.5
+          ],
+          "label": 65,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-19"
+    },
+    {
+      "observations": [
+        {
+          "area": 668,
+          "centroid": [
+            245.7,
+            207.0
+          ],
+          "label": 61,
+          "slice_index": 27
+        },
+        {
+          "area": 624,
+          "centroid": [
+            245.4,
+            206.6
+          ],
+          "label": 58,
+          "slice_index": 28
+        },
+        {
+          "area": 539,
+          "centroid": [
+            244.5,
+            205.8
+          ],
+          "label": 74,
+          "slice_index": 29
+        },
+        {
+          "area": 552,
+          "centroid": [
+            245.0,
+            205.9
+          ],
+          "label": 79,
+          "slice_index": 30
+        },
+        {
+          "area": 490,
+          "centroid": [
+            244.8,
+            205.7
+          ],
+          "label": 66,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-20"
+    },
+    {
+      "observations": [
+        {
+          "area": 43,
+          "centroid": [
+            254.2,
+            50.8
+          ],
+          "label": 63,
+          "slice_index": 27
+        },
+        {
+          "area": 50,
+          "centroid": [
+            254.1,
+            51.3
+          ],
+          "label": 60,
+          "slice_index": 28
+        },
+        {
+          "area": 49,
+          "centroid": [
+            253.8,
+            51.5
+          ],
+          "label": 81,
+          "slice_index": 29
+        },
+        {
+          "area": 53,
+          "centroid": [
+            253.8,
+            51.6
+          ],
+          "label": 91,
+          "slice_index": 30
+        },
+        {
+          "area": 48,
+          "centroid": [
+            253.8,
+            51.5
+          ],
+          "label": 81,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-21"
+    },
+    {
+      "observations": [
+        {
+          "area": 45,
+          "centroid": [
+            2.0,
+            210.0
+          ],
+          "label": 5,
+          "slice_index": 28
+        },
+        {
+          "area": 72,
+          "centroid": [
+            2.9,
+            209.3
+          ],
+          "label": 8,
+          "slice_index": 29
+        },
+        {
+          "area": 148,
+          "centroid": [
+            3.2,
+            211.4
+          ],
+          "label": 6,
+          "slice_index": 30
+        },
+        {
+          "area": 166,
+          "centroid": [
+            3.6,
+            210.8
+          ],
+          "label": 6,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-22"
+    },
+    {
+      "observations": [
+        {
+          "area": 37,
+          "centroid": [
+            25.7,
+            254.2
+          ],
+          "label": 11,
+          "slice_index": 31
+        }
+      ],
+      "track_id": "track-23"
+    }
+  ]
+}

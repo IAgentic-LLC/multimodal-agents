@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multi-agent orchestration, retained deterministic run</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1060px; height: 510px; }
+    body { font: 16px Inter, Arial, sans-serif; padding: 16px; background: #f4f2eb; }
+    .runtime-lab { margin: 0; padding: 30px; border: 1px solid #9aa3ab; border-radius: 0; background: #10182b; color: #eef3ff; }
+    .runtime-head { display: flex; justify-content: space-between; gap: 24px; align-items: start; }
+    .runtime-head p.eyebrow { margin: 0; letter-spacing: .06em; font-size: .78rem; font-weight: 700; color: #9faccc; text-transform: uppercase; }
+    .runtime-head h2 { margin: 5px 0 0; }
+    .runtime-head > span { color: #9faccc; font-family: monospace; }
+    .runtime-body { display: grid; grid-template-columns: 2.2fr .8fr; gap: 14px; margin-top: 23px; }
+    .span-tree { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; padding: 15px; border-left: 3px solid #8eafff; background: #091122; }
+    .root-span { grid-column: 1 / -1; display: flex; justify-content: space-between; padding-bottom: 11px; border-bottom: 1px solid #34496e; margin-bottom: 4px; }
+    .root-span span { color: #9faccc; }
+    .span-tree article { padding: 11px; border-radius: 0; background: #17233e; border-left: 4px solid #3a4a6b; }
+    .span-tree article[data-status="completed"] { border-left-color: #2fae79; }
+    .span-tree article[data-status="timed_out"] { border-left-color: #ffb86b; }
+    .span-tree article[data-status="refused"] { border-left-color: #b42318; }
+    .span-tree small, .span-tree b, .span-tree span { display: block; }
+    .span-tree small { color: #88a9ff; letter-spacing: .04em; }
+    .span-tree b { margin-top: 7px; font-size: .82rem; }
+    .span-tree span { margin-top: 6px; color: #bdc8df; font-size: .75rem; }
+    .span-tree article code { display: block; margin-top: 7px; font-size: .72rem; color: #8ec1ff; overflow-wrap: anywhere; }
+    .runtime-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .runtime-metrics div { padding: 13px; border-radius: 0; background: #192540; }
+    .runtime-metrics small, .runtime-metrics strong { display: block; }
+    .runtime-metrics small { color: #9faccc; font-size: .68rem; letter-spacing: .04em; }
+    .runtime-metrics strong { margin-top: 8px; color: #63d799; font-size: 1.25rem; }
+    .runtime-metrics .warn { color: #ffb86b; }
+    .runtime-lab footer { margin-top: 15px; padding: 12px; border-radius: 0; background: #192540; color: #bdc8df; font-size: .82rem; }
+  </style>
+</head>
+<body>
+  <section class="runtime-lab" aria-labelledby="multi-agent-heading">
+    <div class="runtime-head">
+      <div>
+        <p class="eyebrow">DETERMINISTIC ORCHESTRATION</p>
+        <h2 id="multi-agent-heading">Delegate capabilities, not trust</h2>
+      </div>
+      <span>PARTIAL_FAILURE</span>
+    </div>
+    <div class="runtime-body">
+      <div class="span-tree">
+        <div class="root-span"><b>Coordinator</b><span>trace-multi-035</span></div>
+        <article data-status="completed">
+          <small>COMPLETED</small>
+          <b>vision specialist</b>
+          <span>door appears closed</span>
+          <code>frame-087#region-door</code>
+        </article>
+        <article data-status="completed">
+          <small>COMPLETED</small>
+          <b>retrieval specialist</b>
+          <span>sensor event reports closed</span>
+          <code>sensor-door-441</code>
+        </article>
+        <article data-status="timed_out">
+          <small>TIMED OUT</small>
+          <b>verifier specialist</b>
+          <span>deadline expired</span>
+          <code>5 ms deadline, no evidence</code>
+        </article>
+        <article data-status="refused">
+          <small>REFUSED</small>
+          <b>vision specialist (mutate)</b>
+          <span>coordinator cannot delegate mutation</span>
+          <code>no evidence</code>
+        </article>
+      </div>
+      <div class="runtime-metrics">
+        <div><small>DELEGATED</small><strong>4</strong></div>
+        <div><small>COMPLETED</small><strong>2</strong></div>
+        <div><small>PARTIAL FAILURE</small><strong class="warn">YES</strong></div>
+        <div><small>EVIDENCE GATE</small><strong>READY</strong></div>
+      </div>
+    </div>
+    <footer>Observe-only authority &middot; 2 evidence-backed claims &middot; shared trace trace-multi-035</footer>
+  </section>
+</body>
+</html>

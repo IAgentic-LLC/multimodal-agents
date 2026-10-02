@@ -1,0 +1,1487 @@
+{
+  "capability": "medical-segmentation",
+  "claim": "98 high-intensity region(s) across 24 slices and 2 timepoints (50 at t=0, 48 at t=1)",
+  "evidence_ids": [
+    "region-t0-z5-2",
+    "region-t0-z6-4",
+    "region-t0-z7-6",
+    "region-t0-z8-6",
+    "region-t0-z8-31",
+    "region-t0-z9-6",
+    "region-t0-z9-48",
+    "region-t0-z10-6",
+    "region-t0-z10-39",
+    "region-t0-z11-11",
+    "region-t0-z11-27",
+    "region-t0-z11-46",
+    "region-t0-z11-47",
+    "region-t0-z12-10",
+    "region-t0-z12-54",
+    "region-t0-z12-57",
+    "region-t0-z13-8",
+    "region-t0-z13-40",
+    "region-t0-z14-10",
+    "region-t0-z14-53",
+    "region-t0-z14-58",
+    "region-t0-z15-12",
+    "region-t0-z15-53",
+    "region-t0-z16-13",
+    "region-t0-z16-36",
+    "region-t0-z16-49",
+    "region-t0-z16-50",
+    "region-t0-z17-11",
+    "region-t0-z17-41",
+    "region-t0-z17-49",
+    "region-t0-z17-50",
+    "region-t0-z18-11",
+    "region-t0-z18-36",
+    "region-t0-z18-46",
+    "region-t0-z18-48",
+    "region-t0-z18-53",
+    "region-t0-z19-46",
+    "region-t0-z19-57",
+    "region-t0-z19-62",
+    "region-t0-z20-29",
+    "region-t0-z20-32",
+    "region-t0-z20-46",
+    "region-t0-z20-51",
+    "region-t0-z21-25",
+    "region-t0-z21-41",
+    "region-t0-z22-24",
+    "region-t0-z22-40",
+    "region-t0-z23-6",
+    "region-t0-z23-21",
+    "region-t0-z23-28",
+    "region-t1-z4-19",
+    "region-t1-z5-4",
+    "region-t1-z6-4",
+    "region-t1-z6-16",
+    "region-t1-z7-6",
+    "region-t1-z8-6",
+    "region-t1-z8-36",
+    "region-t1-z8-37",
+    "region-t1-z9-6",
+    "region-t1-z10-7",
+    "region-t1-z11-9",
+    "region-t1-z11-41",
+    "region-t1-z11-42",
+    "region-t1-z12-10",
+    "region-t1-z12-44",
+    "region-t1-z12-48",
+    "region-t1-z13-8",
+    "region-t1-z13-40",
+    "region-t1-z14-10",
+    "region-t1-z14-41",
+    "region-t1-z14-56",
+    "region-t1-z15-14",
+    "region-t1-z15-52",
+    "region-t1-z16-15",
+    "region-t1-z16-35",
+    "region-t1-z16-50",
+    "region-t1-z16-54",
+    "region-t1-z17-13",
+    "region-t1-z17-41",
+    "region-t1-z17-48",
+    "region-t1-z18-8",
+    "region-t1-z18-32",
+    "region-t1-z18-41",
+    "region-t1-z18-43",
+    "region-t1-z19-45",
+    "region-t1-z19-57",
+    "region-t1-z19-60",
+    "region-t1-z20-26",
+    "region-t1-z20-31",
+    "region-t1-z20-48",
+    "region-t1-z20-52",
+    "region-t1-z21-23",
+    "region-t1-z21-41",
+    "region-t1-z22-25",
+    "region-t1-z22-43",
+    "region-t1-z23-6",
+    "region-t1-z23-19",
+    "region-t1-z23-27"
+  ],
+  "model": "percentile-threshold-connected-components",
+  "regions": [
+    {
+      "bbox": [
+        48,
+        75,
+        67,
+        85
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 745.5,
+      "region_id": "region-t0-z5-2",
+      "slice_index": 5,
+      "timepoint": 0,
+      "voxel_count": 73
+    },
+    {
+      "bbox": [
+        47,
+        76,
+        72,
+        86
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 723.7,
+      "region_id": "region-t0-z6-4",
+      "slice_index": 6,
+      "timepoint": 0,
+      "voxel_count": 135
+    },
+    {
+      "bbox": [
+        47,
+        77,
+        82,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 738.6,
+      "region_id": "region-t0-z7-6",
+      "slice_index": 7,
+      "timepoint": 0,
+      "voxel_count": 170
+    },
+    {
+      "bbox": [
+        46,
+        76,
+        81,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 723.5,
+      "region_id": "region-t0-z8-6",
+      "slice_index": 8,
+      "timepoint": 0,
+      "voxel_count": 166
+    },
+    {
+      "bbox": [
+        79,
+        69,
+        90,
+        82
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 696.7,
+      "region_id": "region-t0-z8-31",
+      "slice_index": 8,
+      "timepoint": 0,
+      "voxel_count": 48
+    },
+    {
+      "bbox": [
+        46,
+        78,
+        80,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 734.5,
+      "region_id": "region-t0-z9-6",
+      "slice_index": 9,
+      "timepoint": 0,
+      "voxel_count": 148
+    },
+    {
+      "bbox": [
+        81,
+        14,
+        89,
+        22
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 683.4,
+      "region_id": "region-t0-z9-48",
+      "slice_index": 9,
+      "timepoint": 0,
+      "voxel_count": 42
+    },
+    {
+      "bbox": [
+        49,
+        72,
+        88,
+        88
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 737.0,
+      "region_id": "region-t0-z10-6",
+      "slice_index": 10,
+      "timepoint": 0,
+      "voxel_count": 201
+    },
+    {
+      "bbox": [
+        83,
+        14,
+        91,
+        24
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 686.8,
+      "region_id": "region-t0-z10-39",
+      "slice_index": 10,
+      "timepoint": 0,
+      "voxel_count": 41
+    },
+    {
+      "bbox": [
+        50,
+        79,
+        63,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 764.0,
+      "region_id": "region-t0-z11-11",
+      "slice_index": 11,
+      "timepoint": 0,
+      "voxel_count": 65
+    },
+    {
+      "bbox": [
+        64,
+        75,
+        79,
+        86
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 728.0,
+      "region_id": "region-t0-z11-27",
+      "slice_index": 11,
+      "timepoint": 0,
+      "voxel_count": 69
+    },
+    {
+      "bbox": [
+        78,
+        11,
+        91,
+        25
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 682.0,
+      "region_id": "region-t0-z11-46",
+      "slice_index": 11,
+      "timepoint": 0,
+      "voxel_count": 49
+    },
+    {
+      "bbox": [
+        78,
+        70,
+        87,
+        82
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 690.7,
+      "region_id": "region-t0-z11-47",
+      "slice_index": 11,
+      "timepoint": 0,
+      "voxel_count": 56
+    },
+    {
+      "bbox": [
+        47,
+        75,
+        77,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 716.1,
+      "region_id": "region-t0-z12-10",
+      "slice_index": 12,
+      "timepoint": 0,
+      "voxel_count": 131
+    },
+    {
+      "bbox": [
+        79,
+        70,
+        88,
+        81
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 683.6,
+      "region_id": "region-t0-z12-54",
+      "slice_index": 12,
+      "timepoint": 0,
+      "voxel_count": 50
+    },
+    {
+      "bbox": [
+        82,
+        14,
+        91,
+        26
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 681.2,
+      "region_id": "region-t0-z12-57",
+      "slice_index": 12,
+      "timepoint": 0,
+      "voxel_count": 54
+    },
+    {
+      "bbox": [
+        52,
+        76,
+        67,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 697.0,
+      "region_id": "region-t0-z13-8",
+      "slice_index": 13,
+      "timepoint": 0,
+      "voxel_count": 83
+    },
+    {
+      "bbox": [
+        76,
+        70,
+        88,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 699.4,
+      "region_id": "region-t0-z13-40",
+      "slice_index": 13,
+      "timepoint": 0,
+      "voxel_count": 80
+    },
+    {
+      "bbox": [
+        48,
+        77,
+        72,
+        88
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 701.3,
+      "region_id": "region-t0-z14-10",
+      "slice_index": 14,
+      "timepoint": 0,
+      "voxel_count": 106
+    },
+    {
+      "bbox": [
+        74,
+        70,
+        88,
+        85
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 707.8,
+      "region_id": "region-t0-z14-53",
+      "slice_index": 14,
+      "timepoint": 0,
+      "voxel_count": 72
+    },
+    {
+      "bbox": [
+        80,
+        10,
+        90,
+        25
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 695.5,
+      "region_id": "region-t0-z14-58",
+      "slice_index": 14,
+      "timepoint": 0,
+      "voxel_count": 61
+    },
+    {
+      "bbox": [
+        52,
+        78,
+        68,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 707.1,
+      "region_id": "region-t0-z15-12",
+      "slice_index": 15,
+      "timepoint": 0,
+      "voxel_count": 74
+    },
+    {
+      "bbox": [
+        74,
+        63,
+        91,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 698.5,
+      "region_id": "region-t0-z15-53",
+      "slice_index": 15,
+      "timepoint": 0,
+      "voxel_count": 73
+    },
+    {
+      "bbox": [
+        50,
+        76,
+        71,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 690.3,
+      "region_id": "region-t0-z16-13",
+      "slice_index": 16,
+      "timepoint": 0,
+      "voxel_count": 87
+    },
+    {
+      "bbox": [
+        65,
+        31,
+        72,
+        44
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 657.3,
+      "region_id": "region-t0-z16-36",
+      "slice_index": 16,
+      "timepoint": 0,
+      "voxel_count": 50
+    },
+    {
+      "bbox": [
+        72,
+        8,
+        85,
+        17
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 685.1,
+      "region_id": "region-t0-z16-49",
+      "slice_index": 16,
+      "timepoint": 0,
+      "voxel_count": 53
+    },
+    {
+      "bbox": [
+        73,
+        73,
+        87,
+        83
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 703.5,
+      "region_id": "region-t0-z16-50",
+      "slice_index": 16,
+      "timepoint": 0,
+      "voxel_count": 48
+    },
+    {
+      "bbox": [
+        50,
+        77,
+        71,
+        88
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 688.3,
+      "region_id": "region-t0-z17-11",
+      "slice_index": 17,
+      "timepoint": 0,
+      "voxel_count": 102
+    },
+    {
+      "bbox": [
+        64,
+        33,
+        72,
+        45
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 658.0,
+      "region_id": "region-t0-z17-41",
+      "slice_index": 17,
+      "timepoint": 0,
+      "voxel_count": 48
+    },
+    {
+      "bbox": [
+        71,
+        7,
+        91,
+        25
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 675.9,
+      "region_id": "region-t0-z17-49",
+      "slice_index": 17,
+      "timepoint": 0,
+      "voxel_count": 118
+    },
+    {
+      "bbox": [
+        73,
+        74,
+        85,
+        82
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 682.3,
+      "region_id": "region-t0-z17-50",
+      "slice_index": 17,
+      "timepoint": 0,
+      "voxel_count": 45
+    },
+    {
+      "bbox": [
+        49,
+        78,
+        73,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 690.6,
+      "region_id": "region-t0-z18-11",
+      "slice_index": 18,
+      "timepoint": 0,
+      "voxel_count": 90
+    },
+    {
+      "bbox": [
+        64,
+        35,
+        72,
+        47
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 649.8,
+      "region_id": "region-t0-z18-36",
+      "slice_index": 18,
+      "timepoint": 0,
+      "voxel_count": 57
+    },
+    {
+      "bbox": [
+        71,
+        7,
+        79,
+        20
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 690.6,
+      "region_id": "region-t0-z18-46",
+      "slice_index": 18,
+      "timepoint": 0,
+      "voxel_count": 43
+    },
+    {
+      "bbox": [
+        76,
+        14,
+        87,
+        22
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 675.1,
+      "region_id": "region-t0-z18-48",
+      "slice_index": 18,
+      "timepoint": 0,
+      "voxel_count": 47
+    },
+    {
+      "bbox": [
+        81,
+        22,
+        93,
+        35
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 676.0,
+      "region_id": "region-t0-z18-53",
+      "slice_index": 18,
+      "timepoint": 0,
+      "voxel_count": 54
+    },
+    {
+      "bbox": [
+        65,
+        36,
+        71,
+        50
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 652.4,
+      "region_id": "region-t0-z19-46",
+      "slice_index": 19,
+      "timepoint": 0,
+      "voxel_count": 54
+    },
+    {
+      "bbox": [
+        70,
+        7,
+        79,
+        20
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 680.3,
+      "region_id": "region-t0-z19-57",
+      "slice_index": 19,
+      "timepoint": 0,
+      "voxel_count": 45
+    },
+    {
+      "bbox": [
+        76,
+        14,
+        93,
+        35
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 678.1,
+      "region_id": "region-t0-z19-62",
+      "slice_index": 19,
+      "timepoint": 0,
+      "voxel_count": 121
+    },
+    {
+      "bbox": [
+        56,
+        38,
+        61,
+        52
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 645.2,
+      "region_id": "region-t0-z20-29",
+      "slice_index": 20,
+      "timepoint": 0,
+      "voxel_count": 53
+    },
+    {
+      "bbox": [
+        57,
+        75,
+        65,
+        86
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 715.9,
+      "region_id": "region-t0-z20-32",
+      "slice_index": 20,
+      "timepoint": 0,
+      "voxel_count": 44
+    },
+    {
+      "bbox": [
+        69,
+        7,
+        75,
+        22
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 680.9,
+      "region_id": "region-t0-z20-46",
+      "slice_index": 20,
+      "timepoint": 0,
+      "voxel_count": 45
+    },
+    {
+      "bbox": [
+        76,
+        13,
+        93,
+        34
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 697.1,
+      "region_id": "region-t0-z20-51",
+      "slice_index": 20,
+      "timepoint": 0,
+      "voxel_count": 138
+    },
+    {
+      "bbox": [
+        53,
+        75,
+        75,
+        85
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 699.8,
+      "region_id": "region-t0-z21-25",
+      "slice_index": 21,
+      "timepoint": 0,
+      "voxel_count": 92
+    },
+    {
+      "bbox": [
+        67,
+        8,
+        92,
+        35
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 695.3,
+      "region_id": "region-t0-z21-41",
+      "slice_index": 21,
+      "timepoint": 0,
+      "voxel_count": 194
+    },
+    {
+      "bbox": [
+        55,
+        74,
+        72,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 696.7,
+      "region_id": "region-t0-z22-24",
+      "slice_index": 22,
+      "timepoint": 0,
+      "voxel_count": 83
+    },
+    {
+      "bbox": [
+        69,
+        10,
+        93,
+        37
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 704.5,
+      "region_id": "region-t0-z22-40",
+      "slice_index": 22,
+      "timepoint": 0,
+      "voxel_count": 207
+    },
+    {
+      "bbox": [
+        39,
+        14,
+        48,
+        26
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 673.9,
+      "region_id": "region-t0-z23-6",
+      "slice_index": 23,
+      "timepoint": 0,
+      "voxel_count": 49
+    },
+    {
+      "bbox": [
+        55,
+        73,
+        71,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 697.0,
+      "region_id": "region-t0-z23-21",
+      "slice_index": 23,
+      "timepoint": 0,
+      "voxel_count": 74
+    },
+    {
+      "bbox": [
+        63,
+        11,
+        92,
+        36
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 702.7,
+      "region_id": "region-t0-z23-28",
+      "slice_index": 23,
+      "timepoint": 0,
+      "voxel_count": 275
+    },
+    {
+      "bbox": [
+        72,
+        73,
+        88,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 702.8,
+      "region_id": "region-t1-z4-19",
+      "slice_index": 4,
+      "timepoint": 1,
+      "voxel_count": 60
+    },
+    {
+      "bbox": [
+        48,
+        76,
+        67,
+        85
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 747.5,
+      "region_id": "region-t1-z5-4",
+      "slice_index": 5,
+      "timepoint": 1,
+      "voxel_count": 71
+    },
+    {
+      "bbox": [
+        47,
+        76,
+        72,
+        86
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 723.0,
+      "region_id": "region-t1-z6-4",
+      "slice_index": 6,
+      "timepoint": 1,
+      "voxel_count": 131
+    },
+    {
+      "bbox": [
+        70,
+        76,
+        84,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 699.6,
+      "region_id": "region-t1-z6-16",
+      "slice_index": 6,
+      "timepoint": 1,
+      "voxel_count": 49
+    },
+    {
+      "bbox": [
+        47,
+        77,
+        82,
+        86
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 739.4,
+      "region_id": "region-t1-z7-6",
+      "slice_index": 7,
+      "timepoint": 1,
+      "voxel_count": 173
+    },
+    {
+      "bbox": [
+        46,
+        78,
+        82,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 728.2,
+      "region_id": "region-t1-z8-6",
+      "slice_index": 8,
+      "timepoint": 1,
+      "voxel_count": 161
+    },
+    {
+      "bbox": [
+        79,
+        69,
+        90,
+        80
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 696.4,
+      "region_id": "region-t1-z8-36",
+      "slice_index": 8,
+      "timepoint": 1,
+      "voxel_count": 47
+    },
+    {
+      "bbox": [
+        80,
+        14,
+        90,
+        24
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 658.7,
+      "region_id": "region-t1-z8-37",
+      "slice_index": 8,
+      "timepoint": 1,
+      "voxel_count": 50
+    },
+    {
+      "bbox": [
+        46,
+        78,
+        80,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 737.5,
+      "region_id": "region-t1-z9-6",
+      "slice_index": 9,
+      "timepoint": 1,
+      "voxel_count": 147
+    },
+    {
+      "bbox": [
+        49,
+        69,
+        90,
+        88
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 735.8,
+      "region_id": "region-t1-z10-7",
+      "slice_index": 10,
+      "timepoint": 1,
+      "voxel_count": 201
+    },
+    {
+      "bbox": [
+        49,
+        76,
+        79,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 748.2,
+      "region_id": "region-t1-z11-9",
+      "slice_index": 11,
+      "timepoint": 1,
+      "voxel_count": 133
+    },
+    {
+      "bbox": [
+        78,
+        11,
+        91,
+        26
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 680.7,
+      "region_id": "region-t1-z11-41",
+      "slice_index": 11,
+      "timepoint": 1,
+      "voxel_count": 51
+    },
+    {
+      "bbox": [
+        78,
+        70,
+        87,
+        82
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 692.4,
+      "region_id": "region-t1-z11-42",
+      "slice_index": 11,
+      "timepoint": 1,
+      "voxel_count": 59
+    },
+    {
+      "bbox": [
+        47,
+        75,
+        77,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 716.2,
+      "region_id": "region-t1-z12-10",
+      "slice_index": 12,
+      "timepoint": 1,
+      "voxel_count": 132
+    },
+    {
+      "bbox": [
+        75,
+        70,
+        88,
+        81
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 674.1,
+      "region_id": "region-t1-z12-44",
+      "slice_index": 12,
+      "timepoint": 1,
+      "voxel_count": 65
+    },
+    {
+      "bbox": [
+        82,
+        14,
+        91,
+        26
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 683.7,
+      "region_id": "region-t1-z12-48",
+      "slice_index": 12,
+      "timepoint": 1,
+      "voxel_count": 52
+    },
+    {
+      "bbox": [
+        52,
+        76,
+        67,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 698.8,
+      "region_id": "region-t1-z13-8",
+      "slice_index": 13,
+      "timepoint": 1,
+      "voxel_count": 84
+    },
+    {
+      "bbox": [
+        76,
+        70,
+        88,
+        85
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 700.2,
+      "region_id": "region-t1-z13-40",
+      "slice_index": 13,
+      "timepoint": 1,
+      "voxel_count": 77
+    },
+    {
+      "bbox": [
+        48,
+        77,
+        67,
+        88
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 704.5,
+      "region_id": "region-t1-z14-10",
+      "slice_index": 14,
+      "timepoint": 1,
+      "voxel_count": 96
+    },
+    {
+      "bbox": [
+        67,
+        70,
+        88,
+        88
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 703.1,
+      "region_id": "region-t1-z14-41",
+      "slice_index": 14,
+      "timepoint": 1,
+      "voxel_count": 84
+    },
+    {
+      "bbox": [
+        79,
+        10,
+        90,
+        25
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 692.5,
+      "region_id": "region-t1-z14-56",
+      "slice_index": 14,
+      "timepoint": 1,
+      "voxel_count": 64
+    },
+    {
+      "bbox": [
+        52,
+        78,
+        67,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 710.5,
+      "region_id": "region-t1-z15-14",
+      "slice_index": 15,
+      "timepoint": 1,
+      "voxel_count": 74
+    },
+    {
+      "bbox": [
+        74,
+        69,
+        88,
+        83
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 697.4,
+      "region_id": "region-t1-z15-52",
+      "slice_index": 15,
+      "timepoint": 1,
+      "voxel_count": 59
+    },
+    {
+      "bbox": [
+        50,
+        76,
+        71,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 692.3,
+      "region_id": "region-t1-z16-15",
+      "slice_index": 16,
+      "timepoint": 1,
+      "voxel_count": 83
+    },
+    {
+      "bbox": [
+        65,
+        31,
+        72,
+        44
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 656.8,
+      "region_id": "region-t1-z16-35",
+      "slice_index": 16,
+      "timepoint": 1,
+      "voxel_count": 46
+    },
+    {
+      "bbox": [
+        72,
+        8,
+        85,
+        17
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 686.4,
+      "region_id": "region-t1-z16-50",
+      "slice_index": 16,
+      "timepoint": 1,
+      "voxel_count": 47
+    },
+    {
+      "bbox": [
+        75,
+        73,
+        87,
+        83
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 707.3,
+      "region_id": "region-t1-z16-54",
+      "slice_index": 16,
+      "timepoint": 1,
+      "voxel_count": 44
+    },
+    {
+      "bbox": [
+        50,
+        79,
+        71,
+        88
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 693.1,
+      "region_id": "region-t1-z17-13",
+      "slice_index": 17,
+      "timepoint": 1,
+      "voxel_count": 96
+    },
+    {
+      "bbox": [
+        65,
+        33,
+        72,
+        45
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 656.3,
+      "region_id": "region-t1-z17-41",
+      "slice_index": 17,
+      "timepoint": 1,
+      "voxel_count": 48
+    },
+    {
+      "bbox": [
+        71,
+        7,
+        88,
+        22
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 679.7,
+      "region_id": "region-t1-z17-48",
+      "slice_index": 17,
+      "timepoint": 1,
+      "voxel_count": 92
+    },
+    {
+      "bbox": [
+        49,
+        78,
+        76,
+        87
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 688.2,
+      "region_id": "region-t1-z18-8",
+      "slice_index": 18,
+      "timepoint": 1,
+      "voxel_count": 98
+    },
+    {
+      "bbox": [
+        64,
+        35,
+        72,
+        49
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 648.0,
+      "region_id": "region-t1-z18-32",
+      "slice_index": 18,
+      "timepoint": 1,
+      "voxel_count": 61
+    },
+    {
+      "bbox": [
+        71,
+        7,
+        79,
+        19
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 690.6,
+      "region_id": "region-t1-z18-41",
+      "slice_index": 18,
+      "timepoint": 1,
+      "voxel_count": 40
+    },
+    {
+      "bbox": [
+        76,
+        14,
+        93,
+        35
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 674.5,
+      "region_id": "region-t1-z18-43",
+      "slice_index": 18,
+      "timepoint": 1,
+      "voxel_count": 106
+    },
+    {
+      "bbox": [
+        65,
+        36,
+        71,
+        47
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 654.1,
+      "region_id": "region-t1-z19-45",
+      "slice_index": 19,
+      "timepoint": 1,
+      "voxel_count": 49
+    },
+    {
+      "bbox": [
+        70,
+        7,
+        79,
+        20
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 677.8,
+      "region_id": "region-t1-z19-57",
+      "slice_index": 19,
+      "timepoint": 1,
+      "voxel_count": 45
+    },
+    {
+      "bbox": [
+        76,
+        14,
+        93,
+        36
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 674.4,
+      "region_id": "region-t1-z19-60",
+      "slice_index": 19,
+      "timepoint": 1,
+      "voxel_count": 124
+    },
+    {
+      "bbox": [
+        55,
+        37,
+        61,
+        51
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 646.1,
+      "region_id": "region-t1-z20-26",
+      "slice_index": 20,
+      "timepoint": 1,
+      "voxel_count": 51
+    },
+    {
+      "bbox": [
+        57,
+        74,
+        65,
+        86
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 708.4,
+      "region_id": "region-t1-z20-31",
+      "slice_index": 20,
+      "timepoint": 1,
+      "voxel_count": 47
+    },
+    {
+      "bbox": [
+        69,
+        7,
+        75,
+        22
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 678.8,
+      "region_id": "region-t1-z20-48",
+      "slice_index": 20,
+      "timepoint": 1,
+      "voxel_count": 44
+    },
+    {
+      "bbox": [
+        76,
+        13,
+        93,
+        34
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 693.7,
+      "region_id": "region-t1-z20-52",
+      "slice_index": 20,
+      "timepoint": 1,
+      "voxel_count": 143
+    },
+    {
+      "bbox": [
+        49,
+        75,
+        74,
+        85
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 693.8,
+      "region_id": "region-t1-z21-23",
+      "slice_index": 21,
+      "timepoint": 1,
+      "voxel_count": 103
+    },
+    {
+      "bbox": [
+        68,
+        8,
+        92,
+        35
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 695.8,
+      "region_id": "region-t1-z21-41",
+      "slice_index": 21,
+      "timepoint": 1,
+      "voxel_count": 190
+    },
+    {
+      "bbox": [
+        56,
+        75,
+        72,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 700.9,
+      "region_id": "region-t1-z22-25",
+      "slice_index": 22,
+      "timepoint": 1,
+      "voxel_count": 74
+    },
+    {
+      "bbox": [
+        69,
+        11,
+        93,
+        38
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 704.5,
+      "region_id": "region-t1-z22-43",
+      "slice_index": 22,
+      "timepoint": 1,
+      "voxel_count": 200
+    },
+    {
+      "bbox": [
+        39,
+        14,
+        48,
+        26
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 672.2,
+      "region_id": "region-t1-z23-6",
+      "slice_index": 23,
+      "timepoint": 1,
+      "voxel_count": 49
+    },
+    {
+      "bbox": [
+        55,
+        73,
+        71,
+        84
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 696.3,
+      "region_id": "region-t1-z23-19",
+      "slice_index": 23,
+      "timepoint": 1,
+      "voxel_count": 74
+    },
+    {
+      "bbox": [
+        63,
+        11,
+        92,
+        36
+      ],
+      "label": "high-intensity candidate",
+      "mean_intensity": 702.9,
+      "region_id": "region-t1-z23-27",
+      "slice_index": 23,
+      "timepoint": 1,
+      "voxel_count": 275
+    }
+  ],
+  "source": "C:\\Users\\HomePC\\Desktop\\Project\\multimodal-agents\\.venv\\Lib\\site-packages\\nibabel\\tests\\data\\example4d.nii.gz",
+  "status": "completed",
+  "volume_shape": [
+    128,
+    96,
+    24,
+    2
+  ]
+}

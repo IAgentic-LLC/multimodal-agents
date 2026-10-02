@@ -1,0 +1,72 @@
+{
+  "capability": "capstone-multimodal-specialists",
+  "claim": "the analysis, visualization, and edit-proposal specialists answer with cited real evidence when supported and refuse when not, gated by real raw lexical or visual confidence rather than the hybrid pipeline normalized score",
+  "index": "multimodal_evidence (OpenSearch, 44 real text + 39 real image documents, gemini-embedding-2)",
+  "cases": [
+    {
+      "specialist": "analysis",
+      "question": "how many tracked objects kept their identity in the video?",
+      "result": {
+        "specialist": "analysis",
+        "claim": "5 of 5 tracked objects hold the same identity across all 5 frames",
+        "evidence_ids": [
+          "runs/gate-36/video-tracking.json"
+        ],
+        "chapter": 9
+      }
+    },
+    {
+      "specialist": "visualization",
+      "question": "show me the real nuclear lineage graph with arrows",
+      "result": {
+        "specialist": "visualization",
+        "claim": "chapter 9 figure best answers this: multimodal-agents-book/figures/ch09-lineage-tree.png",
+        "evidence_ids": [
+          "multimodal-agents-book/figures/ch09-lineage-tree.png"
+        ],
+        "chapter": 9
+      }
+    },
+    {
+      "specialist": "edit-proposal",
+      "question": "what high-intensity region count was found in the MRI segmentation",
+      "result": {
+        "specialist": "edit-proposal",
+        "claim": "proposed edit grounded in runs/gate-36/medical-segmentation.json: what high-intensity region count was found in the MRI segmentation",
+        "evidence_ids": [
+          "runs/gate-36/medical-segmentation.json"
+        ],
+        "chapter": 9,
+        "status": "proposed_pending_approval"
+      }
+    },
+    {
+      "specialist": "edit-proposal",
+      "question": "move the mask boundary for the organoid nucleus at timepoint 2",
+      "result": {
+        "specialist": "edit-proposal",
+        "claim": "no supported evidence to ground an edit proposal",
+        "evidence_ids": [],
+        "status": "refused"
+      }
+    },
+    {
+      "specialist": "analysis",
+      "question": "what is the capital of France",
+      "result": {
+        "specialist": "analysis",
+        "claim": "no supported evidence above the confidence floor",
+        "evidence_ids": []
+      }
+    },
+    {
+      "specialist": "visualization",
+      "question": "best pizza recipe dough hydration ratio",
+      "result": {
+        "specialist": "visualization",
+        "claim": "no retained figure matches this question",
+        "evidence_ids": []
+      }
+    }
+  ]
+}

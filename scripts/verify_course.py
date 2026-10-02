@@ -22,10 +22,10 @@ def main() -> None:
     episodes = data["episodes"]
     chapters = sorted((BOOK / "chapters").glob("[0-9][0-9]-*.md"))
 
-    if [item["chapter"] for item in episodes] != list(range(1, 35)):
-        fail("course_manifest.json must contain chapters 1 through 34 in order")
-    if len(chapters) != 34:
-        fail(f"expected 34 numbered chapter files, found {len(chapters)}")
+    if [item["chapter"] for item in episodes] != list(range(1, 38)):
+        fail("course_manifest.json must contain chapters 1 through 37 in order")
+    if len(chapters) != 37:
+        fail(f"expected 37 numbered chapter files, found {len(chapters)}")
 
     for episode, chapter_path in zip(episodes, chapters, strict=True):
         number = episode["chapter"]
@@ -54,12 +54,12 @@ def main() -> None:
         check=True,
     )
     subprocess.run(
-        [sys.executable, "scripts/verify_chapter.py", "34"],
+        [sys.executable, "scripts/verify_chapter.py", "37"],
         cwd=ROOT,
         check=True,
     )
     print(
-        "course contract passed: 34 chapters, all source paths and lesson "
+        "course contract passed: 37 chapters, all source paths and lesson "
         "instructions validated; boundary chapter tests passed"
     )
 

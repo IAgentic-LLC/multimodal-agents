@@ -1,0 +1,18 @@
+{
+  "transport": "A2A 1.0 JSON-RPC over public TLS",
+  "agent_card_statuses": {
+    "vision": 200,
+    "retrieval": 200
+  },
+  "oauth_missing_status": 401,
+  "oauth_invalid_status": 401,
+  "cross_organization_status": 403,
+  "delegation_statuses": {
+    "vision": 200,
+    "retrieval": 200
+  },
+  "coordinator_status": 200,
+  "coordinator_result": "completed",
+  "evidence_backed_claims": 2,
+  "passed": true
+}

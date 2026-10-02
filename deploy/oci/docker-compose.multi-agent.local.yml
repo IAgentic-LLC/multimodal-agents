@@ -1,0 +1,18 @@
+# Local-only overlay: the UI reaches the coordinator over Docker networking,
+# so the specialists do not need host ports. This also avoids Windows reserved
+# port ranges after Docker Desktop or the laptop restarts.
+services:
+  specialist-vision:
+    ports: !reset []
+  specialist-retrieval:
+    ports: !reset []
+  specialist-analysis:
+    ports: !reset []
+  specialist-visualization:
+    ports: !reset []
+  specialist-edit-proposal:
+    ports: !reset []
+  orchestration-coordinator:
+    environment:
+      # `localhost` inside the container is the container itself.
+      LANGFUSE_BASE_URL: http://host.docker.internal:3001

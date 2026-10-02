@@ -1,0 +1,41 @@
+{
+  "provider_trace": {
+    "audio_latency_ms": 2556,
+    "audio_usage": {
+      "billed_output": 121,
+      "candidate": 36,
+      "input": 67,
+      "thought": 85,
+      "total": 188
+    },
+    "grounding": {
+      "bottom": 0.0,
+      "confidence": 0.0,
+      "description": "The transcript 'You take care.' is not visible or depicted anywhere in the image.",
+      "left": 0.0,
+      "object_name": "You take care.",
+      "resolved": false,
+      "right": 0.0,
+      "top": 0.0
+    },
+    "grounding_latency_ms": 2574,
+    "grounding_usage": {
+      "billed_output": 156,
+      "candidate": 94,
+      "input": 1136,
+      "thought": 62,
+      "total": 1292
+    },
+    "input_tokens": 1203,
+    "model": "gemini-3.8-flash",
+    "output_tokens": 277,
+    "provider": "google",
+    "transcription": {
+      "confidence": 0.95,
+      "has_intelligible_speech": true,
+      "transcript": "You take care."
+    }
+  },
+  "reason": "The transcript 'You take care.' is not visible or depicted anywhere in the image.",
+  "status": "unresolved"
+}

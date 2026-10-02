@@ -40,39 +40,41 @@ local artifact or starts the live path where one exists.
 | 6 | `uv run python -m multimodal_agents.run_image_grounding` |
 | 7 | `uv run python -m multimodal_agents.run_scene_reading` |
 | 8 | `uv run python -m multimodal_agents.run_visual_robustness` |
-| 9 | `uv run python -m multimodal_agents.run_temporal` |
-| 10 | `uv run python -m multimodal_agents.run_video_sampling` |
-| 11 | `uv run python scripts/verify_chapter.py 11` |
-| 12–16 | `cd frontend && npx playwright test tests/capture.spec.ts` |
-| 17 | `uv run python -m multimodal_agents.run_document_layout` |
-| 18 | `uv run python -m multimodal_agents.run_qdrant_search` |
-| 19 | `uv run python -m multimodal_agents.run_cross_modal_search` |
-| 20 | `uv run python -m multimodal_agents.run_hybrid_search` |
-| 21 | `uv run python -m multimodal_agents.run_multimodal_rag` |
-| 22 | `uv run python -m multimodal_agents.run_event_store` |
-| 23 | `uv run python -m multimodal_agents.run_memory_queries` |
-| 24 | `uv run python -m multimodal_agents.run_acoustic_events` |
-| 25 | `uv run python -m multimodal_agents.run_sensor_world` |
-| 26 | `uv run python -m multimodal_agents.run_contradictions` |
-| 27 | `uv run python -m multimodal_agents.run_policy_gate` |
-| 28 | `uv run python -m multimodal_agents.run_sandbox` |
-| 29 | `uv run python -m multimodal_agents.run_evaluation` |
-| 30 | `uv run python -m multimodal_agents.run_failure_injection` |
-| 31 | `uv run python -m multimodal_agents.run_runtime_observability` |
-| 32 | `cd frontend && npx playwright test --grep "studio coordinates"` |
-| 33 | `uv run python -m multimodal_agents.run_production_controls` |
-| 34 | `uv run python scripts/run_release_gate.py` |
+| 10 | `uv run python -m multimodal_agents.run_temporal` |
+| 11 | `uv run python -m multimodal_agents.run_video_sampling` |
+| 12 | `uv run python scripts/verify_chapter.py 12` |
+| 13–17 | `cd frontend && npx playwright test tests/capture.spec.ts` |
+| 18 | `uv run python -m multimodal_agents.run_document_layout` |
+| 19 | `uv run python -m multimodal_agents.run_qdrant_search` |
+| 20 | `uv run python -m multimodal_agents.run_cross_modal_search` |
+| 21 | `uv run python -m multimodal_agents.run_hybrid_search` |
+| 22 | `uv run python -m multimodal_agents.run_multimodal_rag` |
+| 23 | `uv run python -m multimodal_agents.run_event_store` |
+| 24 | `uv run python -m multimodal_agents.run_memory_queries` |
+| 25 | `uv run python -m multimodal_agents.run_acoustic_events` |
+| 26 | `uv run python -m multimodal_agents.run_sensor_world` |
+| 27 | `uv run python -m multimodal_agents.run_contradictions` |
+| 28 | `uv run python -m multimodal_agents.run_policy_gate` |
+| 29 | `uv run python -m multimodal_agents.run_sandbox` |
+| 30 | `uv run python -m multimodal_agents.run_evaluation` |
+| 31 | `uv run python -m multimodal_agents.run_failure_injection` |
+| 32 | `uv run python -m multimodal_agents.run_runtime_observability` |
+| 33 | `cd frontend && npx playwright test --grep "studio coordinates"` |
+| 34 | `uv run python -m multimodal_agents.run_production_controls` |
+| 35 | `uv run python scripts/run_release_gate.py` |
+| 36 | `uv run python scripts/smoke_multi_agent_live.py` |
 
 | Chapters | Gates | New live-run dependency |
 |---|---|---|
 | 1–4 | 0–2 | Camera, microphone, and Gemini where stated |
 | 5–8 | 3–6 | Gemini for new perception runs |
-| 9–12 | 7–10 | FFmpeg and Gemini for new video runs |
-| 13–16 | 11–14 | Chromium through Playwright |
-| 17–21 | 15–20 | Tika, Qdrant, and Gemini embeddings where stated |
-| 22–27 | 21–26 | Deterministic local fixtures |
-| 28–32 | 27–31 | Docker for the production-shaped stack |
-| 33–34 | 32–34 | Oracle Cloud and Auth0 for new live evidence |
+| 10–13 | 7–10 | FFmpeg and Gemini for new video runs |
+| 14–17 | 11–14 | Chromium through Playwright |
+| 18–22 | 15–20 | Tika, Qdrant, and Gemini embeddings where stated |
+| 23–28 | 21–26 | Deterministic local fixtures |
+| 29–33 | 27–31 | Docker for the production-shaped stack |
+| 34–35 | 32–34 | Oracle Cloud and Auth0 for new live evidence |
+| 36 | 35 | Deterministic local orchestration; remote A2A is optional |
 
 Run the full deterministic and browser regression suite with:
 
@@ -85,7 +87,7 @@ npm run test:e2e
 
 `npm run test:e2e` starts the local application server itself and excludes
 the manuscript-only review audit. In the author's combined book-and-code
-workspace, render the book to HTML and run `npm run test:book` to check all 34
+workspace, render the book to HTML and run `npm run test:book` to check all 35
 chapter figures at desktop and mobile sizes.
 
 The checked-in `runs/gate-*` artifacts reproduce the reported observations
