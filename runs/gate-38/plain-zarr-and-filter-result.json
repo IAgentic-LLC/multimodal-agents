@@ -1,0 +1,21 @@
+{
+  "capability": "plain zarr format support and real filter pipeline",
+  "dataset_url": "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr/2",
+  "axis_hint": "CZYX",
+  "channel_count": 2,
+  "filter_step": {
+    "filter": "gaussian_blur",
+    "params": {"sigma": 1.0},
+    "channel_index": 0,
+    "timepoint": 0
+  },
+  "before": {"min": 5.0, "max": 4095.0, "mean": 66.67288970947266},
+  "after": {"min": 7.94, "max": 1795.86, "mean": 66.67288970947266},
+  "verified_against": "production host https://multimodal.130-61-18-181.sslip.io",
+  "agent_driven_confirmation": {
+    "tool_called": "apply_live_filter_pipeline",
+    "filter": "sharpen",
+    "params": {"amount": 1.5},
+    "result": "status: sent, confirmed via get_live_viewer_state lastFilterResult"
+  }
+}

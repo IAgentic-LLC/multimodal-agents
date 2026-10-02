@@ -19,6 +19,17 @@ from multimodal_agents.live_viewer_sessions import (
 )
 
 
+@pytest.fixture(autouse=True)
+def _clear_global_session_registry():
+    """Other test modules register real sessions in the same process-wide
+    registry and do not all clean up; this file's own assertions assume a
+    registry scoped to just what each test registers.
+    """
+    live_viewer_sessions._sessions.clear()
+    yield
+    live_viewer_sessions._sessions.clear()
+
+
 def test_register_session_returns_a_real_unique_session_id():
     first = register_session("lab-one", "volume")
     second = register_session("lab-one", "volume")

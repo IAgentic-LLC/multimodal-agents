@@ -1,0 +1,10 @@
+{
+  "capability": "plain TIFF and OME-TIFF upload",
+  "file": "cells3d.tif",
+  "source": "scikit-image sample data (skimage.data.cells3d)",
+  "volume_shape_czyx": [2, 60, 256, 256],
+  "channel_count": 2,
+  "instances_per_timepoint": 193,
+  "timepoint_count": 1,
+  "verified_against": "production host https://multimodal.130-61-18-181.sslip.io"
+}

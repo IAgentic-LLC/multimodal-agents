@@ -1,0 +1,19 @@
+{
+  "capability": "real multi-object video tracking with live-agent control",
+  "file": "vtest.avi",
+  "source": "OpenCV own public sample test video (opencv/opencv samples/data/vtest.avi)",
+  "model": "yolo11n + bytetrack.yaml (ultralytics model.track, persist=True)",
+  "frames_sampled": 30,
+  "persistent_track_count": 2,
+  "total_detected_track_count_by_environment": {
+    "local_dev_machine": 16,
+    "production_oci_host": 18,
+    "note": "identical ultralytics 8.4.171, torch 2.14.1+cpu, lap 0.5.13, cv2 5.0.0 on both; the persistent-track-count of 2 was stable and reproduced twice on each environment, the total detected count differs because CPU floating-point reduction order differs by machine, not because of any code or version difference"
+  },
+  "agent_driven_confirmation": {
+    "tool_called": "set_live_track_display",
+    "params": {"frame_index": 10, "highlighted_track_id": 1},
+    "verified_against": "production host https://multimodal.130-61-18-181.sslip.io",
+    "result": "frame slider moved to 10 in the live browser tab, confirmed via get_live_viewer_state and a direct browser check"
+  }
+}

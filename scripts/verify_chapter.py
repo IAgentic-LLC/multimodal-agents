@@ -56,6 +56,16 @@ TESTS = {
         "tests/test_capstone_approval_api.py",
         "tests/test_orchestration_api.py",
     ),
+    38: (
+        "tests/test_tenant_zarr.py",
+        "tests/test_tenant_tiff.py",
+        "tests/test_tenant_filters.py",
+        "tests/test_tenant_video_tracking.py",
+        "tests/test_tenant_studio_api.py",
+        "tests/test_live_viewer_sessions.py",
+        "tests/test_studio_mcp_server.py",
+        "tests/test_microscopy_segmentation_tracking.py",
+    ),
 }
 
 GATES = {
@@ -96,6 +106,7 @@ GATES = {
     35: ("gate-34",),
     36: ("gate-35",),
     37: ("gate-37",),
+    38: ("gate-38",),
 }
 
 
@@ -120,7 +131,7 @@ def validate_gate(name: str) -> int:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("chapter", type=int, choices=list(range(1, 38)))
+    parser.add_argument("chapter", type=int, choices=list(range(1, 39)))
     args = parser.parse_args()
     tests = TESTS[args.chapter]
     command = [sys.executable, "-m", "pytest", "-q", *tests]

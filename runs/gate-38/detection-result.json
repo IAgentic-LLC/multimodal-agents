@@ -1,0 +1,10 @@
+{
+  "capability": "real object detection with live-agent confidence control",
+  "file": "bus.jpg",
+  "source": "ultralytics own bundled ASSETS sample image",
+  "model": "yolo11n",
+  "detections": {"bus": 1, "person": 4},
+  "confidence_threshold_tested": 0.6,
+  "verified_against": "production host https://multimodal.130-61-18-181.sslip.io",
+  "live_control_tool": "set_detection_display"
+}

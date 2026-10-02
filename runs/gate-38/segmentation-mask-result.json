@@ -1,0 +1,9 @@
+{
+  "capability": "segmentation mask rendered as an extra volume channel",
+  "method": "Otsu threshold, segment_timepoint_with_mask",
+  "nuclear_channel_index": 1,
+  "source_kind": "plain_zarr",
+  "mask_rendered_as": "independent-components channel appended to the same vtkDataArray",
+  "verified_against": "production host https://multimodal.130-61-18-181.sslip.io",
+  "live_control_tool": "set_segmentation_mask_visible"
+}

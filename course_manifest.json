@@ -196,7 +196,7 @@
       "test": "uv run python scripts/verify_chapter.py 13",
       "artifact": "runs/gate-10",
       "mode": "Browser simulation; camera optional",
-      "demo": "Resolve \u2018this\u2019 against event time rather than the newest frame."
+      "demo": "Resolve ‘this’ against event time rather than the newest frame."
     },
     {
       "chapter": 14,
@@ -523,7 +523,7 @@
       "test": "uv run python scripts/verify_chapter.py 35",
       "artifact": "runs/gate-34",
       "mode": "Offline release replay by default; --live requires two Auth0 organization tokens and PostgreSQL",
-      "demo": "Prove two tenants can read their own evidence and cannot read each other\u2019s rows."
+      "demo": "Prove two tenants can read their own evidence and cannot read each other’s rows."
     },
     {
       "chapter": 36,
@@ -559,6 +559,28 @@
       "artifact": "runs/gate-37",
       "mode": "Local OpenSearch plus Gemini embeddings; one-time uv run python src/multimodal_agents/run_opensearch_index.py --reset before the demo",
       "demo": "Answer a supported question with cited evidence, refuse an unsupported one, and approve or reject a proposed edit without ever mutating retained evidence."
+    },
+    {
+      "chapter": 38,
+      "title": "Give the Agent the Same Controls",
+      "build": "Open plain zarr and TIFF/OME-TIFF formats, add a real filter pipeline, and give an agent live control over filters, a segmentation mask, object detection, and multi-frame tracking.",
+      "files": [
+        "src/multimodal_agents/tenant_zarr.py",
+        "src/multimodal_agents/tenant_tiff.py",
+        "src/multimodal_agents/tenant_filters.py",
+        "src/multimodal_agents/tenant_video_tracking.py",
+        "src/multimodal_agents/live_viewer_sessions.py",
+        "src/multimodal_agents/studio_mcp_server.py",
+        "frontend/src/FilterPanel.tsx",
+        "frontend/src/StudioTiffWorkbench.tsx",
+        "frontend/src/StudioDetectionWorkbench.tsx",
+        "frontend/src/StudioTrackingWorkbench.tsx"
+      ],
+      "run": "uv run pytest tests/test_tenant_filters.py -q",
+      "test": "uv run python scripts/verify_chapter.py 38",
+      "artifact": "runs/gate-38",
+      "mode": "Local Studio and coordinator for tests; a deployed host and GEMINI_API_KEY for the live agent-driven demo",
+      "demo": "Open a plain zarr array with an axis hint, filter it, upload a real TIFF stack, detect objects in a real photo, toggle a segmentation mask, track objects in a real video, and let an agent drive each one live through its own session id."
     }
   ]
 }
