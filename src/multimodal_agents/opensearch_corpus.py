@@ -80,10 +80,10 @@ def normalize_gate_file(path: Path) -> tuple[str, tuple[str, ...]]:
 
 def iter_text_documents() -> Iterator[TextDocument]:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-    for episode in manifest["episodes"]:
-        chapter = episode["chapter"]
-        title = episode["title"]
-        gate_dir = REPO_ROOT / episode["artifact"]
+    for lesson in manifest["lessons"]:
+        chapter = lesson["chapter"]
+        title = lesson["title"]
+        gate_dir = REPO_ROOT / lesson["artifact"]
         if not gate_dir.exists():
             continue
         for json_path in sorted(gate_dir.glob("*.json")):
@@ -105,7 +105,7 @@ def iter_text_documents() -> Iterator[TextDocument]:
 
 def iter_image_documents() -> Iterator[ImageDocument]:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-    titles = {episode["chapter"]: episode["title"] for episode in manifest["episodes"]}
+    titles = {lesson["chapter"]: lesson["title"] for lesson in manifest["lessons"]}
     if not FIGURES_DIR.exists():
         return
     for image_path in sorted(FIGURES_DIR.glob("ch*.png")):

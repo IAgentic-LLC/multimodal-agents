@@ -6,7 +6,7 @@
     "all_tests": "uv run pytest -q",
     "frontend_tests": "cd frontend; npm run build; npx playwright test"
   },
-  "episodes": [
+  "lessons": [
     {
       "chapter": 1,
       "title": "The Frame Behind This",

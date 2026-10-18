@@ -86,3 +86,7 @@
 {"action": "capture_screenshot", "params": {}, "recorded_at": "2026-10-18T21:17:10Z", "session_id": "9a6c512b-3b0e-45cd-9af7-96ad29815de0", "subject": null, "tenant_id": "lab-one", "viewer_type": "volume"}
 {"action": "set_window_level", "params": {"level": 100, "window": 500}, "recorded_at": "2026-10-18T21:18:14Z", "session_id": "67dbe825-94a2-4c8b-8d4b-d1689f9acbb9", "subject": "user-1", "tenant_id": "lab-one", "viewer_type": "volume"}
 {"action": "capture_screenshot", "params": {}, "recorded_at": "2026-10-18T21:18:15Z", "session_id": "44b12042-b3fb-4432-b073-5d003c2b9a35", "subject": "user-1", "tenant_id": "lab-one", "viewer_type": "volume"}
+{"action": "set_window_level", "params": {"level": 100, "window": 500}, "recorded_at": "2026-10-18T23:08:18Z", "session_id": "42f6a204-7960-4f4b-a0c6-615dea72638f", "subject": "user-1", "tenant_id": "lab-one", "viewer_type": "volume"}
+{"action": "capture_screenshot", "params": {}, "recorded_at": "2026-10-18T23:08:19Z", "session_id": "d7c6de95-e9dc-4b05-a48c-c9d08691df6a", "subject": "user-1", "tenant_id": "lab-one", "viewer_type": "volume"}
+{"action": "set_window_level", "params": {"level": 5, "window": 10}, "recorded_at": "2026-10-18T23:08:19Z", "session_id": "d45e636f-3690-4d81-ba85-b317f636aea5", "subject": null, "tenant_id": "lab-one", "viewer_type": "volume"}
+{"action": "capture_screenshot", "params": {}, "recorded_at": "2026-10-18T23:08:19Z", "session_id": "a7c657d2-60a4-4dc3-8b45-ea682db40fe4", "subject": null, "tenant_id": "lab-one", "viewer_type": "volume"}
