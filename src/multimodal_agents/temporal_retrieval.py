@@ -31,7 +31,7 @@ def score_interval(
     predicted_duration = predicted.end_ms - predicted.start_ms
     expected_duration = expected.end_ms - expected.start_ms
     return IntervalScore(
-        temporal_iou=intersection / union if union else 1.0,
+        temporal_iou=intersection / union if union else 0.0,
         start_error_ms=abs(predicted.start_ms - expected.start_ms),
         end_error_ms=abs(predicted.end_ms - expected.end_ms),
         duration_error_ms=abs(predicted_duration - expected_duration),

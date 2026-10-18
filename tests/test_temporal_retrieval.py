@@ -30,6 +30,13 @@ class TemporalRetrievalTests(unittest.TestCase):
         )
         self.assertAlmostEqual(score.temporal_iou, 1 / 3)
 
+    def test_coincident_points_have_zero_overlap_not_a_false_match(self) -> None:
+        score = score_interval(
+            TimeInterval(1000, 1000),
+            TimeInterval(1000, 1000),
+        )
+        self.assertEqual(score.temporal_iou, 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
