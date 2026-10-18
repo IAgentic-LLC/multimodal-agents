@@ -8,10 +8,12 @@ from multimodal_agents.live_viewer_sessions import (
     InvalidLiveCommandError,
     RateLimitExceededError,
     UnknownLiveSessionError,
+    get_screenshot,
     get_state,
     list_sessions,
     push_command,
     register_session,
+    report_screenshot,
     report_state,
     session_queue,
     unregister_session,
@@ -456,5 +458,71 @@ def test_get_state_rejects_a_caller_from_a_different_tenant():
     try:
         with pytest.raises(UnknownLiveSessionError):
             get_state(session.session_id, "lab-two")
+    finally:
+        unregister_session(session.session_id)
+
+
+# --- Screenshot readback ----------------------------------------------------
+
+
+def test_validate_command_accepts_capture_screenshot_with_no_params():
+    validate_command("capture_screenshot", {})
+
+
+def test_validate_command_rejects_capture_screenshot_with_any_param():
+    with pytest.raises(InvalidLiveCommandError):
+        validate_command("capture_screenshot", {"window": 1})
+
+
+def test_report_screenshot_and_get_screenshot_round_trip_a_real_image():
+    session = register_session("lab-one", "volume")
+    try:
+        report_screenshot(session.session_id, "lab-one", "data:image/png;base64,AA==")
+        result = get_screenshot(session.session_id, "lab-one")
+        assert result["image_base64"] == "data:image/png;base64,AA=="
+        assert result["reported_at"] is not None
+    finally:
+        unregister_session(session.session_id)
+
+
+def test_get_screenshot_before_any_report_returns_no_real_image():
+    session = register_session("lab-one", "volume")
+    try:
+        result = get_screenshot(session.session_id, "lab-one")
+        assert result == {"image_base64": None, "reported_at": None}
+    finally:
+        unregister_session(session.session_id)
+
+
+def test_report_screenshot_rejects_a_caller_from_a_different_tenant():
+    session = register_session("lab-one", "volume")
+    try:
+        with pytest.raises(UnknownLiveSessionError):
+            report_screenshot(session.session_id, "lab-two", "data:image/png;base64,AA==")
+    finally:
+        unregister_session(session.session_id)
+
+
+def test_get_screenshot_rejects_a_caller_from_a_different_tenant():
+    session = register_session("lab-one", "volume")
+    try:
+        with pytest.raises(UnknownLiveSessionError):
+            get_screenshot(session.session_id, "lab-two")
+    finally:
+        unregister_session(session.session_id)
+
+
+def test_push_command_queues_a_real_capture_screenshot_command():
+    session = register_session("lab-one", "volume")
+    try:
+
+        async def run() -> dict:
+            await push_command(
+                session.session_id, "lab-one", "capture_screenshot", {}
+            )
+            return await session_queue(session.session_id, "lab-one").get()
+
+        queued = asyncio.run(run())
+        assert queued == {"action": "capture_screenshot", "params": {}}
     finally:
         unregister_session(session.session_id)

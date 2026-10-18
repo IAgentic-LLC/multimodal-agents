@@ -774,12 +774,32 @@ def test_upload_dicom_rejects_a_bad_extension(monkeypatch, tmp_path):
     assert response.status_code == 400
 
 
+def _opensearch_is_reachable() -> bool:
+    import urllib.error
+    import urllib.request
+
+    from multimodal_agents.opensearch_index import BASE_URL
+
+    try:
+        urllib.request.urlopen(BASE_URL, timeout=1)
+        return True
+    except (urllib.error.URLError, OSError):
+        return False
+
+
 def make_client_for_tenant(monkeypatch, tmp_path, tenant_id: str) -> TestClient:
     """Like make_client, but against the real local OpenSearch index
     rather than a mocked no-op, since the volume-serving endpoint's own
     tenant-isolation guarantee can only be proven against the real
     alias-based lookup, not a stub that never actually writes anything.
+
+    Skips rather than fails when no local OpenSearch is running: this
+    repo's default `pytest -q` is not documented anywhere as requiring
+    OpenSearch, so a reader without it running should still see the
+    rest of the suite go green.
     """
+    if not _opensearch_is_reachable():
+        pytest.skip("no local OpenSearch reachable at OPENSEARCH_URL")
     app = FastAPI()
     app.include_router(router)
     app.dependency_overrides[current_identity] = lambda: Identity(
@@ -799,6 +819,8 @@ def make_client_for_tenant(monkeypatch, tmp_path, tenant_id: str) -> TestClient:
 def test_volume_endpoint_serves_only_the_owning_tenants_own_file(monkeypatch, tmp_path):
     from multimodal_agents.tenant_studio_index import ensure_tenant_index
 
+    if not _opensearch_is_reachable():
+        pytest.skip("no local OpenSearch reachable at OPENSEARCH_URL")
     ensure_tenant_index(reset=True)
 
     owner_client = make_client_for_tenant(monkeypatch, tmp_path, "lab-one")
@@ -945,3 +967,43 @@ def test_live_session_state_404s_for_a_session_from_a_different_tenant(monkeypat
     session_id = lab_one.post("/api/studio/live-sessions", json={"viewer_type": "volume"}).json()["session_id"]
     response = lab_two.get(f"/api/studio/live-sessions/{session_id}/state")
     assert response.status_code == 404
+
+
+def test_live_session_screenshot_round_trips_a_real_report(monkeypatch, tmp_path):
+    client = make_client(monkeypatch, tmp_path)
+    session_id = client.post("/api/studio/live-sessions", json={"viewer_type": "volume"}).json()["session_id"]
+    report = client.post(
+        f"/api/studio/live-sessions/{session_id}/screenshot",
+        json={"image_base64": "data:image/png;base64,AA=="},
+    )
+    assert report.status_code == 200
+    read_back = client.get(f"/api/studio/live-sessions/{session_id}/screenshot")
+    body = read_back.json()
+    assert body["image_base64"] == "data:image/png;base64,AA=="
+    assert body["reported_at"] is not None
+
+
+def test_live_session_screenshot_rejects_a_missing_image(monkeypatch, tmp_path):
+    client = make_client(monkeypatch, tmp_path)
+    session_id = client.post("/api/studio/live-sessions", json={"viewer_type": "volume"}).json()["session_id"]
+    response = client.post(f"/api/studio/live-sessions/{session_id}/screenshot", json={})
+    assert response.status_code == 400
+
+
+def test_live_session_screenshot_404s_for_a_session_from_a_different_tenant(monkeypatch, tmp_path):
+    lab_one = make_client_for_tenant(monkeypatch, tmp_path, "lab-one")
+    lab_two = make_client_for_tenant(monkeypatch, tmp_path, "lab-two")
+    session_id = lab_one.post("/api/studio/live-sessions", json={"viewer_type": "volume"}).json()["session_id"]
+    response = lab_two.get(f"/api/studio/live-sessions/{session_id}/screenshot")
+    assert response.status_code == 404
+
+
+def test_send_capture_screenshot_command_is_accepted(monkeypatch, tmp_path):
+    client = make_client(monkeypatch, tmp_path)
+    session_id = client.post("/api/studio/live-sessions", json={"viewer_type": "volume"}).json()["session_id"]
+    response = client.post(
+        f"/api/studio/live-sessions/{session_id}/commands",
+        json={"action": "capture_screenshot", "params": {}},
+    )
+    assert response.status_code == 200
+    assert response.json() == {"status": "sent"}

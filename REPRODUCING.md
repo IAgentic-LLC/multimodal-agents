@@ -63,6 +63,8 @@ local artifact or starts the live path where one exists.
 | 34 | `uv run python -m multimodal_agents.run_production_controls` |
 | 35 | `uv run python scripts/run_release_gate.py` |
 | 36 | `uv run python scripts/smoke_multi_agent_live.py` |
+| 37 | `uv run python src/multimodal_agents/run_opensearch_index.py --reset` |
+| 38 | `uv run pytest tests/test_tenant_filters.py -q` |
 
 | Chapters | Gates | New live-run dependency |
 |---|---|---|
@@ -75,6 +77,8 @@ local artifact or starts the live path where one exists.
 | 29–33 | 27–31 | Docker for the production-shaped stack |
 | 34–35 | 32–34 | Oracle Cloud and Auth0 for new live evidence |
 | 36 | 35 | Deterministic local orchestration; remote A2A is optional |
+| 37 | 37 | Local OpenSearch and Gemini embeddings for the capstone's hybrid index |
+| 38 | 38 | Deployed Studio and `GEMINI_API_KEY` for the live agent-driven demo |
 
 Run the full deterministic and browser regression suite with:
 
@@ -87,7 +91,7 @@ npm run test:e2e
 
 `npm run test:e2e` starts the local application server itself and excludes
 the manuscript-only review audit. In the author's combined book-and-code
-workspace, render the book to HTML and run `npm run test:book` to check all 35
+workspace, render the book to HTML and run `npm run test:book` to check all 38
 chapter figures at desktop and mobile sizes.
 
 The checked-in `runs/gate-*` artifacts reproduce the reported observations

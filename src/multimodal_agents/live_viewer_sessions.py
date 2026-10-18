@@ -85,6 +85,7 @@ _REQUIRED_PARAMS: dict[str, frozenset[str]] = {
     "set_detection_display": frozenset(),
     "set_segmentation_mask_visible": frozenset({"visible"}),
     "set_track_display": frozenset(),
+    "capture_screenshot": frozenset(),
 }
 _OPTIONAL_PARAMS: dict[str, frozenset[str]] = {
     "set_auto_rotate": frozenset({"direction"}),
@@ -243,6 +244,8 @@ class LiveSession:
         self.queue: Queue[dict] = Queue()
         self.last_known_state: dict = {}
         self.state_reported_at: float | None = None
+        self.last_known_screenshot: str | None = None
+        self.screenshot_reported_at: float | None = None
         self._recent_command_times: deque[float] = deque()
 
 
@@ -353,4 +356,25 @@ def get_state(session_id: str, tenant_id: str) -> dict:
     return {
         "state": session.last_known_state,
         "reported_at": session.state_reported_at,
+    }
+
+
+def report_screenshot(
+    session_id: str, tenant_id: str, image_base64: str
+) -> None:
+    """The browser's own real screenshot of its current canvas, taken
+    after a capture_screenshot command and reported back the same way
+    report_state is: this is what the viewer genuinely looked like at
+    screenshot_reported_at, not a render the backend produced itself.
+    """
+    session = _get_owned_session(session_id, tenant_id)
+    session.last_known_screenshot = image_base64
+    session.screenshot_reported_at = time.time()
+
+
+def get_screenshot(session_id: str, tenant_id: str) -> dict:
+    session = _get_owned_session(session_id, tenant_id)
+    return {
+        "image_base64": session.last_known_screenshot,
+        "reported_at": session.screenshot_reported_at,
     }

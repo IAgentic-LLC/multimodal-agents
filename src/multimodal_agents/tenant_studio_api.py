@@ -32,6 +32,9 @@ from multimodal_agents.live_viewer_sessions import (
     UnknownLiveSessionError,
 )
 from multimodal_agents.live_viewer_sessions import (
+    get_screenshot as get_live_session_screenshot,
+)
+from multimodal_agents.live_viewer_sessions import (
     get_state as get_live_session_state,
 )
 from multimodal_agents.live_viewer_sessions import (
@@ -42,6 +45,9 @@ from multimodal_agents.live_viewer_sessions import (
 )
 from multimodal_agents.live_viewer_sessions import (
     register_session as register_live_session,
+)
+from multimodal_agents.live_viewer_sessions import (
+    report_screenshot as report_live_session_screenshot,
 )
 from multimodal_agents.live_viewer_sessions import (
     report_state as report_live_session_state,
@@ -1245,5 +1251,43 @@ async def get_live_session_state_endpoint(
     """
     try:
         return get_live_session_state(session_id, identity.tenant_id)
+    except UnknownLiveSessionError as error:
+        raise HTTPException(404, str(error)) from error
+
+
+@router.post("/api/studio/live-sessions/{session_id}/screenshot")
+async def report_live_session_screenshot_endpoint(
+    session_id: str,
+    body: dict,
+    identity: Identity = Depends(current_identity),
+) -> dict:
+    """The browser's own real screenshot of its current canvas, taken
+    and reported after a capture_screenshot command, the same way
+    report_live_session_state_endpoint reports state. body must contain
+    a real base64-encoded PNG under "image_base64".
+    """
+    image_base64 = body.get("image_base64")
+    if not isinstance(image_base64, str) or not image_base64:
+        raise HTTPException(400, "image_base64 must be a real, non-empty string")
+    try:
+        report_live_session_screenshot(
+            session_id, identity.tenant_id, image_base64
+        )
+    except UnknownLiveSessionError as error:
+        raise HTTPException(404, str(error)) from error
+    return {"status": "recorded"}
+
+
+@router.get("/api/studio/live-sessions/{session_id}/screenshot")
+async def get_live_session_screenshot_endpoint(
+    session_id: str, identity: Identity = Depends(current_identity)
+) -> dict:
+    """The real last screenshot an already-open browser tab reported
+    for itself, so an agent calling capture_live_viewer_screenshot can
+    poll for a real, freshly-captured image rather than one the backend
+    fabricated.
+    """
+    try:
+        return get_live_session_screenshot(session_id, identity.tenant_id)
     except UnknownLiveSessionError as error:
         raise HTTPException(404, str(error)) from error

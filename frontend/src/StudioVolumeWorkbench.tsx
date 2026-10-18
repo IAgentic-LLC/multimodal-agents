@@ -43,6 +43,19 @@ export default function StudioVolumeWorkbench() {
       case "set_auto_rotate":
         viewer.setAutoRotating(Boolean(params.enabled), params.direction as 1 | -1 | undefined);
         break;
+      case "capture_screenshot": {
+        const dataUrl = viewer.captureScreenshot();
+        const sessionId = liveSessionIdRef.current;
+        const accessToken = tokenRef.current;
+        if (dataUrl && sessionId && accessToken) {
+          void fetch(`/api/studio/live-sessions/${sessionId}/screenshot`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
+            body: JSON.stringify({ image_base64: dataUrl }),
+          });
+        }
+        break;
+      }
       default:
         break;
     }

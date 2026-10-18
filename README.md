@@ -178,3 +178,38 @@ uv run python src/multimodal_agents/run_opensearch_index.py --reset
 This is a one-time manual step, the same spirit as the Langfuse project/key
 setup above. Re-run it (without `--reset`, or with it to rebuild from
 scratch) only when the retained evidence corpus changes.
+
+## Plug the Studio into Claude Code, Codex, or any MCP host
+
+`studio_mcp_server.py` is a standard stdio MCP server (`[project.scripts]`
+registers it as `studio-mcp-server`), so any MCP-compliant agent host can add
+it exactly the way it adds any other MCP server — there is nothing
+Claude-specific about it.
+
+**Claude Code**, from this repository's root (verified directly against a
+real Claude Code session):
+
+```bash
+claude mcp add studio -- uv run studio-mcp-server
+claude mcp list   # confirms "studio: uv run studio-mcp-server - Connected"
+```
+
+**Codex CLI**, by adding an entry to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.studio]
+command = "uv"
+args = ["run", "studio-mcp-server"]
+cwd = "/absolute/path/to/multimodal-agents"
+```
+
+Either way, the agent gets the full tool surface in one step: the offline
+analysis tools (`describe_tiff_file`, `apply_filters_to_ome_zarr_dataset`,
+`analyze_video_tracking`, and friends) that need only local files, and the
+live-control tools (`set_live_window_level`, `apply_live_filter_pipeline`,
+`capture_live_viewer_screenshot`, and friends) that reach into one specific
+already-open browser tab through `coordinator_url` and `access_token`. The
+live tools need a running coordinator (`docker compose -f
+deploy/oci/docker-compose.yml up -d`, or the local dev server) and a real
+`STUDIO_ACCESS_TOKEN` in the MCP server's own environment — see Chapter 38,
+*Give the Agent the Same Controls*, for the full walkthrough.

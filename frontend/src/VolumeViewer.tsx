@@ -199,6 +199,7 @@ export type VolumeViewerHandle = {
   setSegmentationVisible(visible: boolean): void;
   setGridVisible(visible: boolean): void;
   setAutoRotating(enabled: boolean, direction?: 1 | -1): void;
+  captureScreenshot(): string | null;
 };
 
 const VolumeViewer = forwardRef<VolumeViewerHandle, Props>(function VolumeViewer(
@@ -478,6 +479,13 @@ const VolumeViewer = forwardRef<VolumeViewerHandle, Props>(function VolumeViewer
       setAutoRotating(enabled: boolean, direction?: 1 | -1) {
         if (direction) setAutoRotateDirection(direction);
         setIsAutoRotating(enabled);
+      },
+      captureScreenshot() {
+        // vtk.js renders onto a real <canvas> inside the container; the
+        // canvas's own toDataURL is the real pixels currently on
+        // screen, not a backend-side re-render of the volume.
+        const canvas = containerRef.current?.querySelector("canvas");
+        return canvas ? canvas.toDataURL("image/png") : null;
       },
     }),
     [],

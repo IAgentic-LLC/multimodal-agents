@@ -23,8 +23,10 @@ crossing that same real auth boundary rather than hiding it.
 
 from __future__ import annotations
 
+import base64
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -872,6 +874,54 @@ def set_live_track_display(
         params["frame_index"] = frame_index
     return _send_live_command(
         coordinator_url, access_token, session_id, "set_track_display", params
+    )
+
+
+@mcp.tool()
+def capture_live_viewer_screenshot(
+    coordinator_url: str,
+    session_id: str,
+    access_token: str | None = None,
+    timeout_seconds: float = 8.0,
+) -> list:
+    """A real screenshot of exactly what an already-open live viewer
+    tab is showing right now, as an image the agent can see directly
+    in this same call, rather than inferring it from JSON state.
+    Sends capture_screenshot, then polls the real screenshot the
+    browser reports back until one newer than before this call
+    arrives or timeout_seconds elapses, since the browser must receive
+    and render the command before anything new exists to capture.
+    """
+    before = _live_session_request(
+        coordinator_url,
+        access_token,
+        "GET",
+        f"/api/studio/live-sessions/{session_id}/screenshot",
+    ).get("reported_at")
+    _send_live_command(
+        coordinator_url, access_token, session_id, "capture_screenshot", {}
+    )
+    deadline = time.monotonic() + timeout_seconds
+    while time.monotonic() < deadline:
+        result = _live_session_request(
+            coordinator_url,
+            access_token,
+            "GET",
+            f"/api/studio/live-sessions/{session_id}/screenshot",
+        )
+        reported_at = result.get("reported_at")
+        if reported_at is not None and reported_at != before:
+            image_base64 = result["image_base64"]
+            header, _, encoded = image_base64.partition(",")
+            png_bytes = base64.b64decode(encoded or header)
+            return [
+                json.dumps({"reported_at": reported_at}),
+                Image(data=png_bytes, format="png"),
+            ]
+        time.sleep(0.3)
+    raise ToolError(
+        f"no new screenshot reported within {timeout_seconds}s - is the "
+        "tab still open and connected?"
     )
 
 
