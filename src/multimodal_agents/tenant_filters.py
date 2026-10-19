@@ -112,7 +112,9 @@ FILTER_CATALOG = {
 
 
 def apply_filter(
-    volume: np.ndarray, filter_name: str, params: dict | None = None
+    volume: np.ndarray,
+    filter_name: str,
+    params: dict | None = None,
 ) -> np.ndarray:
     """Raises UnsupportedFilterError, not a plain TypeError, for an
     unknown filter name or a real wrong/extra keyword argument -
