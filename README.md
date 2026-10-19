@@ -74,11 +74,11 @@ Validate the complete book-to-code build-along contract:
 uv run python scripts/verify_course.py
 ```
 
-`course_manifest.json` is the canonical lesson map for the book and a future
-YouTube playlist. It names what each lesson builds, the exact files to type,
+`course_manifest.json` is the canonical lesson map for the book. It names
+what each lesson builds, the exact files to type,
 the smallest runnable demonstration, the deterministic verifier, retained
 evidence, environment requirements, and the on-screen result. The manuscript's
-37 “Follow along” sections are checked against this manifest so instructions
+38 “Follow along” sections are checked against this manifest so instructions
 cannot silently drift away from working code.
 
 The command runs the chapter's deterministic tests and validates its retained
