@@ -136,7 +136,8 @@ def apply_filter(
             if name != "volume"
         ]
         raise UnsupportedFilterError(
-            f"{filter_name}: {error}; real parameters are {real_params}"
+            f"{filter_name}: {error}; "
+            f"real parameters are {real_params}"
         ) from error
 
 

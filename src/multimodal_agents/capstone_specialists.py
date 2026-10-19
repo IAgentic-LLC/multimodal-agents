@@ -40,7 +40,9 @@ async def _best_supported_hit(question: str, modality: str) -> dict | None:
     """
     vector = await _embed(question)
     hits = await _search(question, vector, size=FULL_CORPUS_POOL)
-    candidates = [h for h in hits if h["_source"]["modality"] == modality]
+    candidates = [
+        h for h in hits if h["_source"]["modality"] == modality
+    ]
     if not candidates:
         return None
     top = candidates[0]

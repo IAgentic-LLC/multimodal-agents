@@ -126,7 +126,8 @@ class AxisHintNode:
             )
         self.metadata = {
             "axes": [
-                {"type": _AXIS_HINT_TYPES[letter]} for letter in letters
+                {"type": _AXIS_HINT_TYPES[letter]}
+                for letter in letters
             ]
         }
 
