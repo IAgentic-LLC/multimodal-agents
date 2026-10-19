@@ -7,9 +7,9 @@
   "spans": [
     {
       "name": "queue.publish",
-      "trace_id": "ea90710ad3fa0e0ed3037cf0aaadf482",
-      "span_id": "cd092574bd0eedcc",
-      "parent_span_id": "d4fb16cb576c5ca6",
+      "trace_id": "3a7d0fbeaf40565b5d973b5395918b82",
+      "span_id": "8ade9f30797d3b2f",
+      "parent_span_id": "a585468e9ca29a60",
       "attributes": {
         "event.id": "event-1",
         "event.kind": "video",
@@ -18,9 +18,9 @@
     },
     {
       "name": "queue.publish",
-      "trace_id": "ea90710ad3fa0e0ed3037cf0aaadf482",
-      "span_id": "905240f3e8094a21",
-      "parent_span_id": "d4fb16cb576c5ca6",
+      "trace_id": "3a7d0fbeaf40565b5d973b5395918b82",
+      "span_id": "78017675f809c1a3",
+      "parent_span_id": "a585468e9ca29a60",
       "attributes": {
         "event.id": "event-2",
         "event.kind": "audio",
@@ -29,9 +29,9 @@
     },
     {
       "name": "queue.publish",
-      "trace_id": "ea90710ad3fa0e0ed3037cf0aaadf482",
-      "span_id": "ce7c5ab9df5e89af",
-      "parent_span_id": "d4fb16cb576c5ca6",
+      "trace_id": "3a7d0fbeaf40565b5d973b5395918b82",
+      "span_id": "6dcf84126eb4c6d4",
+      "parent_span_id": "a585468e9ca29a60",
       "attributes": {
         "event.id": "event-3",
         "event.kind": "sensor",
@@ -40,9 +40,9 @@
     },
     {
       "name": "event.process",
-      "trace_id": "ea90710ad3fa0e0ed3037cf0aaadf482",
-      "span_id": "16ad5c66d3afe6ce",
-      "parent_span_id": "d4fb16cb576c5ca6",
+      "trace_id": "3a7d0fbeaf40565b5d973b5395918b82",
+      "span_id": "8f20d278058bdc13",
+      "parent_span_id": "a585468e9ca29a60",
       "attributes": {
         "event.id": "event-1",
         "evidence.retained": true
@@ -50,9 +50,9 @@
     },
     {
       "name": "event.process",
-      "trace_id": "ea90710ad3fa0e0ed3037cf0aaadf482",
-      "span_id": "f095e798a0b8e94f",
-      "parent_span_id": "d4fb16cb576c5ca6",
+      "trace_id": "3a7d0fbeaf40565b5d973b5395918b82",
+      "span_id": "c828da9ea1e1be73",
+      "parent_span_id": "a585468e9ca29a60",
       "attributes": {
         "event.id": "event-2",
         "evidence.retained": true
@@ -60,8 +60,8 @@
     },
     {
       "name": "session",
-      "trace_id": "ea90710ad3fa0e0ed3037cf0aaadf482",
-      "span_id": "d4fb16cb576c5ca6",
+      "trace_id": "3a7d0fbeaf40565b5d973b5395918b82",
+      "span_id": "a585468e9ca29a60",
       "parent_span_id": null,
       "attributes": {
         "session.id": "session-runtime-1",

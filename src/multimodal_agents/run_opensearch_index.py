@@ -24,17 +24,23 @@ def embed_text(client: genai.Client, text: str) -> list[float]:
     result = client.models.embed_content(
         model="gemini-embedding-2",
         contents=text,
-        config=types.EmbedContentConfig(output_dimensionality=EMBEDDING_DIMENSIONS),
+        config=types.EmbedContentConfig(
+            output_dimensionality=EMBEDDING_DIMENSIONS
+        ),
     )
     return list(result.embeddings[0].values or [])
 
 
 def embed_image(client: genai.Client, path: Path) -> list[float]:
-    part = types.Part.from_bytes(data=path.read_bytes(), mime_type="image/png")
+    part = types.Part.from_bytes(
+        data=path.read_bytes(), mime_type="image/png"
+    )
     result = client.models.embed_content(
         model="gemini-embedding-2",
         contents=part,
-        config=types.EmbedContentConfig(output_dimensionality=EMBEDDING_DIMENSIONS),
+        config=types.EmbedContentConfig(
+            output_dimensionality=EMBEDDING_DIMENSIONS
+        ),
     )
     return list(result.embeddings[0].values or [])
 

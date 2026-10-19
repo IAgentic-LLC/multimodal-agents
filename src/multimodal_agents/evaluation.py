@@ -12,7 +12,7 @@ def interval_iou(
     right: tuple[float, float],
 ) -> float:
     intersection = max(0.0, min(left[1], right[1]) - max(left[0], right[0]))
-    union = max(left[1], right[1]) - min(left[0], right[0])
+    union = (left[1] - left[0]) + (right[1] - right[0]) - intersection
     return intersection / union if union else 0.0
 
 
